@@ -1,6 +1,7 @@
 # VR Project Group 7
 
 ## Folder Structure
+```
 VR-Project
 └── Assets
     ├── Art
@@ -50,3 +51,5 @@ VR-Project
     │       └── Editor
     └── Unity.VisualScripting.Generated
         └── VisualScripting.Flow 
+```
+
