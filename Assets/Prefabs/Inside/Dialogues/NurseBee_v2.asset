@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9def5d3e14bbd4967b7898b2c46146d9, type: 3}
+  m_Name: NurseBee_v2
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueData
+  _speaker: Ape Nutrice
+  _mainlines:
+  - _line: "Ottimo lavoro! Adesso che hai visto gli appena nati puoi andare a trovare
+      gli appena morti, torna al piano terra, troverai la stanza davanti all\u2019entrata "
+    _shouldProcessed: 0
+  _otherLines:
+  - _line: "Ora vai dalla becchina. \xC8 meno dolce di me, ma ha molto da insegnarti."
+    _shouldProcessed: 0
+  - _line: "Ottimo lavoro! Adesso che hai visto gli appena nati puoi andare a trovare
+      gli appena morti, torna al piano terra, troverai la stanza davanti all\u2019entrata "
+    _shouldProcessed: 0
