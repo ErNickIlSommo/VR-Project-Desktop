@@ -45,5 +45,9 @@ MonoBehaviour:
   _otherLines:
   - _line: Ancora qui?
     _shouldProcessed: 0
-  - _line: Il secondo piano non si avvicina da solo.
+  - _line: "Come ti ho gi\xE0 detto, usa [Move] per muoverti"
+    _shouldProcessed: 1
+  - _line: e [Interact] per arrampicarti sui favi.
+    _shouldProcessed: 1
+  - _line: Adesso vai. Il secondo piano non si avvicina da solo.
     _shouldProcessed: 0
