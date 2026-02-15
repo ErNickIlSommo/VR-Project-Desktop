@@ -1,0 +1,49 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9def5d3e14bbd4967b7898b2c46146d9, type: 3}
+  m_Name: GuideBee
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueData
+  _speaker: Ape Guida
+  _mainlines:
+  - _line: Ben svegliata!
+    _shouldProcessed: 0
+  - _line: "Ci hai messo davvero un bel po\u2019 a crescere, sei l\u2019ultima della
+      nidiata."
+    _shouldProcessed: 0
+  - _line: Adesso dovrai imparare i tuoi ruoli in fretta e furia prima che diventi
+      troppo vecchia e che finisca nelle zampe delle api becchine.
+    _shouldProcessed: 0
+  - _line: "Inizia ad andare al secondo piano a salutare  le tue sorelle minori,
+      sicuramente l\u2019ape nutrice avr\xE0 qualche compito da darti."
+    _shouldProcessed: 0
+  - _line: Dai, muoviti devi arrivare al secondo piano.
+    _shouldProcessed: 0
+  - _line: ...
+    _shouldProcessed: 0
+  - _line: "Cos\u2019\xE8, ti devo dire tutto io?"
+    _shouldProcessed: 0
+  - _line: "Non \xE8 che solo perch\xE8 sono un\u2019ape guida vuol dire che ti devo
+      imboccare tutto."
+    _shouldProcessed: 0
+  - _line: ...
+    _shouldProcessed: 0
+  - _line: Urgh, e va bene.
+    _shouldProcessed: 0
+  - _line: Per muoverti usa i comandi [Move],
+    _shouldProcessed: 1
+  - _line: quando arrivi ai favi premi [Interact] per arrampicarti.
+    _shouldProcessed: 1
+  _otherLines:
+  - _line: Ancora qui?
+    _shouldProcessed: 0
+  - _line: Il secondo piano non si avvicina da solo.
+    _shouldProcessed: 0
