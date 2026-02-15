@@ -35,7 +35,6 @@ public class GrabbableObject : MonoBehaviour, IInteractable
         if (_rb)
         {
             _rb.isKinematic = true;
-            // _rb.detectCollisions = false;
         }
         
         interactor.PlayerInteractionStatus.SetGrabbedObject(_transform, true);
@@ -43,7 +42,7 @@ public class GrabbableObject : MonoBehaviour, IInteractable
         _transform.localPosition = Vector3.zero;
         _transform.localRotation = Quaternion.identity;
         
-        Debug.Log("Grabbed");
+        // Debug.Log("Grabbed");
     }
 
     private void Drop(Interactor interactor)
@@ -55,7 +54,7 @@ public class GrabbableObject : MonoBehaviour, IInteractable
         
         interactor.PlayerInteractionStatus.SetGrabbedObject(null, false);
         _transform.SetParent(null, true);
-        Debug.Log("Dropped");
+        // Debug.Log("Dropped");
     }
 
     private bool IsHoldingOther(Interactor interactor)
