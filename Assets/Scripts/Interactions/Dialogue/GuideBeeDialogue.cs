@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using UnityEngine.Rendering;
 
 public class GuideBeeDialogue : GeneralDialogue, IInteractable
 {
@@ -19,7 +18,7 @@ public class GuideBeeDialogue : GeneralDialogue, IInteractable
     private int _mainLength;
     private int _otherLength;
 
-    private int _index;
+    private int _index = 0;
 
     private bool _isMainDialogueDone = false;
 
