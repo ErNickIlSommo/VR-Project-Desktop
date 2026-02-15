@@ -43,7 +43,7 @@ public class ThirdPersonController : MonoBehaviour
     {
         m_controller = GetComponent<CharacterController>();
 
-        var map = inputActions.FindActionMap(actionMapName, true);
+        InputActionMap map = inputActions.FindActionMap(actionMapName, true);
         m_moveAction = map.FindAction(moveActionName, true);
         m_lookAction = map.FindAction(lookActionName, true);
 

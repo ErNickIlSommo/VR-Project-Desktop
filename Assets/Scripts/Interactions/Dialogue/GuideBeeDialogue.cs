@@ -1,7 +1,8 @@
 using System;
-using UnityEngine;
 using System.Collections.Generic;
 using TMPro;
+using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.Rendering;
 
 public class GuideBeeDialogue : MonoBehaviour, IInteractable
@@ -42,7 +43,7 @@ public class GuideBeeDialogue : MonoBehaviour, IInteractable
         if (!_dialogueAsset) return false;
         if (_index == 0)
         {
-            BlockMovement();
+            BlockMovement(interactor);
             // Show Panel
             _panel.SetActive(true);
         }
@@ -51,15 +52,16 @@ public class GuideBeeDialogue : MonoBehaviour, IInteractable
 
         if (IsDialogueFinished())
         {
-            UnlockMovement();
+            UnlockMovement(interactor);
             // Close action
         }
         return true;
     }
 
-    private void BlockMovement()
+    private void BlockMovement(Interactor interactor)
     {
-        Debug.Log("Block Movement");
+        InputActionMap map = interactor.InputActions.FindActionMap("Controls", true);
+        map.FindAction("Move", true).Disable();
     }
 
     private bool IsDialogueFinished()
@@ -83,9 +85,10 @@ public class GuideBeeDialogue : MonoBehaviour, IInteractable
         return true;
     }
 
-    private void UnlockMovement()
+    private void UnlockMovement(Interactor interactor)
     {
-        Debug.Log("Unlock Movement");
+        InputActionMap map = interactor.InputActions.FindActionMap("Controls", true);
+        map.FindAction("Move", true).Enable();
     }
 
     private void GoToNextLine()
