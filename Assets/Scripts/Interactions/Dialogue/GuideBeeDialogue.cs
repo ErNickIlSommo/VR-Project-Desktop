@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.Rendering;
 
-public class GuideBeeDialogue : MonoBehaviour, IInteractable
+public class GuideBeeDialogue : GeneralDialogue, IInteractable
 {
     [SerializeField] TextMeshProUGUI _ui;
     [SerializeField] private GameObject _panel;
@@ -25,6 +25,7 @@ public class GuideBeeDialogue : MonoBehaviour, IInteractable
 
     private void Awake()
     {
+        base.Awake();
         _panel.SetActive(false);
     }
 
