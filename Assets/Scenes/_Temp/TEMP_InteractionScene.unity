@@ -135,7 +135,7 @@ GameObject:
   - component: {fileID: 254392}
   m_Layer: 6
   m_Name: Cube Grabbable Interaction id 1
-  m_TagString: Untagged
+  m_TagString: Grabbable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -245,7 +245,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f818afe7fcd2940bdbf7ef35a307c393, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GrabbableObject
-  _objectData: {fileID: 0}
+  _objectData: {fileID: 11400000, guid: 9f96457d541c446cda5d622109822996, type: 2}
+  _isDropped: 1
 --- !u!54 &254392
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -924,7 +925,7 @@ GameObject:
   - component: {fileID: 230057462}
   m_Layer: 6
   m_Name: Cube Grabbable Interaction id 2
-  m_TagString: Untagged
+  m_TagString: Grabbable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -968,7 +969,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f818afe7fcd2940bdbf7ef35a307c393, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GrabbableObject
-  _objectData: {fileID: 0}
+  _objectData: {fileID: 11400000, guid: 36962e6cd1b4d442caee3f47b4b8faff, type: 2}
+  _isDropped: 1
 --- !u!65 &230057464
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1277,9 +1279,10 @@ GameObject:
   - component: {fileID: 610804795}
   - component: {fileID: 610804797}
   - component: {fileID: 610804796}
+  - component: {fileID: 610804798}
   m_Layer: 0
   m_Name: Larva
-  m_TagString: Untagged
+  m_TagString: Grabbable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1313,7 +1316,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8bc29d9d9452c4a6c8b944a0c6ca887a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Larva
-  _cooldown: 10
+  _cooldown: 20
   _isRequestRunning: 0
   _isRequestCorrect: 0
   _timer: 0
@@ -1333,6 +1336,27 @@ MonoBehaviour:
   _grabbableObjects:
   - {fileID: 11400000, guid: 9f96457d541c446cda5d622109822996, type: 2}
   - {fileID: 11400000, guid: 36962e6cd1b4d442caee3f47b4b8faff, type: 2}
+--- !u!65 &610804798
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 610804794}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 4, y: 4, z: 4}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &615825434
 GameObject:
   m_ObjectHideFlags: 0
