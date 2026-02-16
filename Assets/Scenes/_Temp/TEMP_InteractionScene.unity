@@ -1275,6 +1275,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 610804795}
+  - component: {fileID: 610804797}
+  - component: {fileID: 610804796}
   m_Layer: 0
   m_Name: Larva
   m_TagString: Untagged
@@ -1299,6 +1301,38 @@ Transform:
   - {fileID: 1654776902}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &610804796
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 610804794}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8bc29d9d9452c4a6c8b944a0c6ca887a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Larva
+  _cooldown: 10
+  _isRequestRunning: 0
+  _isRequestCorrect: 0
+  _timer: 0
+--- !u!114 &610804797
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 610804794}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d4ae5469ca084a65b5f2f5aae0ae3dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LarvaTester
+  _sendRequest: 0
+  _grabbableObjects:
+  - {fileID: 11400000, guid: 9f96457d541c446cda5d622109822996, type: 2}
+  - {fileID: 11400000, guid: 36962e6cd1b4d442caee3f47b4b8faff, type: 2}
 --- !u!1 &615825434
 GameObject:
   m_ObjectHideFlags: 0

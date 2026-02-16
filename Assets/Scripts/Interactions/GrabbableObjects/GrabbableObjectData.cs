@@ -4,4 +4,5 @@ using UnityEngine;
 public class GrabbableObjectData : ScriptableObject
 {
     [SerializeField] private int id;
+    public int Id => id;
 }
