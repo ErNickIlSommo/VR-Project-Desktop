@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9def5d3e14bbd4967b7898b2c46146d9, type: 3}
   m_Name: GraveDiggerBee_v3
   m_EditorClassIdentifier: Assembly-CSharp::DialogueData
-  _speaker: 
+  _speaker: Ape Becchina
   _mainlines:
   - _line: "Uh, sei meno male di quello che pensassi, magari dopotutto riuscirai
       a sopravvivere l\xE0 fuori."

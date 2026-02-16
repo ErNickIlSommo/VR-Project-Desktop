@@ -12,6 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9def5d3e14bbd4967b7898b2c46146d9, type: 3}
   m_Name: GraveDiggerBee_v1
   m_EditorClassIdentifier: Assembly-CSharp::DialogueData
-  _speaker: 
-  _mainlines: []
-  _otherLines: []
+  _speaker: Ape Becchina
+  _mainlines:
+  - _line: Hey!
+    _shouldProcessed: 0
+  - _line: Cosa vuoi?
+    _shouldProcessed: 0
+  - _line: Lasciami in pace, sono impegnata a differenza tua
+    _shouldProcessed: 0
+  _otherLines:
+  - _line: Non capisci la mia lingua? Va via!
+    _shouldProcessed: 0

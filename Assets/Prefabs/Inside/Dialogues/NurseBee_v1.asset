@@ -12,6 +12,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9def5d3e14bbd4967b7898b2c46146d9, type: 3}
   m_Name: NurseBee_v1
   m_EditorClassIdentifier: Assembly-CSharp::DialogueData
-  _speaker: 
-  _mainlines: []
-  _otherLines: []
+  _speaker: Ape Nutrice
+  _mainlines:
+  - _line: Carissima, non mi sembri una larva affamata
+    _shouldProcessed: 0
+  - _line: "Di sotto ci sta l'ape bottinatrice che ti pu\xF2 aiutare"
+    _shouldProcessed: 0
+  - _line: "Sapr\xE0 darti ottimi consigli su come muoverti in questo alveare"
+    _shouldProcessed: 0
+  _otherLines:
+  - _line: "Di sotto ci sta l'ape bottinatrice che ti pu\xF2 aiutare"
+    _shouldProcessed: 0
+  - _line: "Sapr\xE0 darti ottimi consigli su come muoverti in questo alveare"
+    _shouldProcessed: 0
+  - _line: La trovi vicino all'entrata al piano 0
+    _shouldProcessed: 0

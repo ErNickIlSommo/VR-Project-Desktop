@@ -12,28 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9def5d3e14bbd4967b7898b2c46146d9, type: 3}
   m_Name: ForagingBee_v3
   m_EditorClassIdentifier: Assembly-CSharp::DialogueData
-  _speaker: Ape Guida/Bottinatrice
+  _speaker: 
   _mainlines:
-  - _line: "Adesso che hai visto l\u2019interno dell\u2019alveare, vedrai il resto
-      del mondo."
+  - _line: "Complimenti, hai completato tutte le attivit\xE0 assegnate."
     _shouldProcessed: 0
-  - _line: Per oggi te la faccio facile ed andremo nei dintorni per questa volta,
-      in zone poco pericolose.
+  - _line: "Complimenti, hai completato tutte le attivit\xE0 assegnate."
     _shouldProcessed: 0
-  - _line: Per oggi te la faccio facile ed andremo nei dintorni per questa volta,
-      in zone poco pericolose.
+  - _line: Ora puoi gironzolare come meglio credi.
     _shouldProcessed: 0
-  - _line: Se ti facessi vedere alcune zone che ho visitato io perderesti sicuramente
-      le antenne dalla paura.
+  _otherLines:
+  - _line: Ora puoi gironzolare come meglio credi.
     _shouldProcessed: 0
-  - _line: Ce la fai a volare?
+  - _line: Ci vediamo!
     _shouldProcessed: 0
-  - _line: 'dovresti essere abbastanza grande per farlo: premi [Fly] per sbattere
-      le ali per prendere il volo.'
-    _shouldProcessed: 1
-  - _line: "Certo che impari in fretta, non sei cos\xEC scarso come pensavo."
-    _shouldProcessed: 0
-  - _line: "Dai, andiamo, adesso ti far\xF2 vedere il compito fondamentale di un'ape
-      bottinatrice."
-    _shouldProcessed: 0
-  _otherLines: []

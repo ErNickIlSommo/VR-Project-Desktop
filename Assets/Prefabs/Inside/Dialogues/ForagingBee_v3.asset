@@ -21,6 +21,8 @@ MonoBehaviour:
     _shouldProcessed: 0
   - _line: "Lo prender\xF3 per un s\xEC, adesso \xE8 ora di passare all\u2019esterno."
     _shouldProcessed: 0
+  - _line: Esci dall'alveare, io ti raggiungo tra un attimo
+    _shouldProcessed: 0
   _otherLines:
-  - _line: Allora, andiamo?
+  - _line: Esci dall'alveare, io ti raggiungo tra un attimo
     _shouldProcessed: 0

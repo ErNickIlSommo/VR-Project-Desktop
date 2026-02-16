@@ -13,5 +13,16 @@ MonoBehaviour:
   m_Name: ForagingBee_v2
   m_EditorClassIdentifier: Assembly-CSharp::DialogueData
   _speaker: 
-  _mainlines: []
-  _otherLines: []
+  _mainlines:
+  - _line: Vedo che hai completato il compito che ti ha assegnato l'ape nutrice,
+      Complimenti!
+    _shouldProcessed: 0
+  - _line: "Adesso vai dall'ape becchina, sicuramente avr\xE0 bisogno di aiuto"
+    _shouldProcessed: 0
+  - _line: La torvi in questo piano in fondo
+    _shouldProcessed: 0
+  _otherLines:
+  - _line: "Adesso vai dall'ape becchina, sicuramente avr\xE0 bisogno di aiuto"
+    _shouldProcessed: 0
+  - _line: La torvi in questo piano in fondo
+    _shouldProcessed: 0

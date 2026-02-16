@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9def5d3e14bbd4967b7898b2c46146d9, type: 3}
+  m_Name: ForagingBee_v1
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueData
+  _speaker: Ape Guida/Bottinatrice
+  _mainlines:
+  - _line: "Adesso che hai visto l\u2019interno dell\u2019alveare, vedrai il resto
+      del mondo."
+    _shouldProcessed: 0
+  - _line: Per oggi te la faccio facile ed andremo nei dintorni per questa volta,
+      in zone poco pericolose.
+    _shouldProcessed: 0
+  - _line: Se ti facessi vedere alcune zone che ho visitato io perderesti sicuramente
+      le antenne dalla paura.
+    _shouldProcessed: 0
+  - _line: Ce la fai a volare?
+    _shouldProcessed: 0
+  - _line: 'dovresti essere abbastanza grande per farlo: premi [Fly] per sbattere
+      le ali per prendere il volo.'
+    _shouldProcessed: 1
+  - _line: Raggiungimi in fondo e capiamo di che pasta sei fatto.
+    _shouldProcessed: 0
+  _otherLines:
+  - _line: "Dai, andiamo, adesso ti far\xF2 vedere il compito fondamentale di un'ape
+      bottinatrice."
+    _shouldProcessed: 0
+  - _line: Utilizza il tasto [Fly] per sbattere le ali e prendere il volo.
+    _shouldProcessed: 0
