@@ -5,7 +5,7 @@ using UnityEngine.InputSystem;
 
 public class NurseBeeDialogue : GeneralDialogue, IInteractable
 {
-    [SerializeField] TextMeshProUGUI _ui;
+    [SerializeField] private TextMeshProUGUI _ui;
     [SerializeField] private GameObject _panel;
     
     [SerializeField] private DialogueData[] _dialogueAssets;
