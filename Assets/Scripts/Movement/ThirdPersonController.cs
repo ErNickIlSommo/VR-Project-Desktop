@@ -10,8 +10,19 @@ public class ThirdPersonController : MonoBehaviour
     [SerializeField] private string moveActionName = "Move";
     [SerializeField] private string lookActionName = "Look";
 
+    //[Header("Status")]
+    //[SerializeField] private PlayerStatus status;
+
     [Header("Movement")]
     [SerializeField] private float walkSpeed = 5f;
+    [SerializeField] private float turnSpeed = 12f;
+
+    //[Header("Flight")]
+    //[SerializeField] private float flySpeed = 15f;
+    //[SerializeField] private bool isGrounded = true;
+    //[SerializeField] private float maxIncline = 15f;
+    //[SerializeField] private float minIncline = -15f;
+    //[SerializeField] private float heightChangeSpeed = 12f;
 
     [Header("Look")]
     [SerializeField] private float rotateSpeed = 5f;
@@ -19,6 +30,15 @@ public class ThirdPersonController : MonoBehaviour
     [SerializeField] private Transform cameraTarget;
     [SerializeField] private float minPitch = -70f;
     [SerializeField] private float maxPitch = 70f;
+
+    [Header("Animation")]
+    [SerializeField] private Animator animator;
+    //[SerializeField] private string speedParam = "Speed";
+    [SerializeField] private string movingParam = "IsWalking";
+    //[SerializeField] private string flyingParam = "IsFlying";
+    [SerializeField] private float animSmooth = 10f;
+
+    private float m_animSpeed;
 
     private float pitch;
     private float yaw;
@@ -58,6 +78,7 @@ public class ThirdPersonController : MonoBehaviour
 
         Move();
         RotateCamera();
+        UpdateAnimations();
 
     }
 
@@ -76,8 +97,11 @@ public class ThirdPersonController : MonoBehaviour
         Vector3 dir = right * m_moveValue.x + forward * m_moveValue.y;
 
         if (dir.sqrMagnitude > 0.0001f)
-            transform.forward = dir.normalized;
-
+        {
+            Quaternion targetRot = Quaternion.LookRotation(dir.normalized, Vector3.up);
+            transform.rotation = Quaternion.RotateTowards(transform.rotation, targetRot, turnSpeed * 360f * Time.deltaTime);
+        }
+        
         m_controller.Move(dir * walkSpeed * Time.deltaTime);
     }
 
@@ -91,5 +115,19 @@ public class ThirdPersonController : MonoBehaviour
         pitch = Mathf.Clamp(pitch, minPitch, maxPitch);
 
         cameraTarget.rotation = Quaternion.Euler(pitch, yaw, 0f);
+    }
+
+    private void UpdateAnimations()
+    {
+        if (animator == null) return;
+
+        float target = Mathf.Clamp01(m_moveValue.magnitude);
+
+        m_animSpeed = Mathf.Lerp(m_animSpeed, target, animSmooth * Time.deltaTime);
+
+        //animator.SetFloat(speedParam, m_animSpeed);
+
+        if (!string.IsNullOrEmpty(movingParam))
+            animator.SetBool(movingParam, m_animSpeed > 0.05f);
     }
 }
