@@ -128,14 +128,6 @@ PrefabInstance:
     m_TransformParent: {fileID: 51111014}
     m_Modifications:
     - target: {fileID: 2110131896315208820, guid: 4c072907a56f34b089433d1364076a84, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 16.100082
-      objectReference: {fileID: 0}
-    - target: {fileID: 6297309168555033227, guid: 4c072907a56f34b089433d1364076a84, type: 3}
-      propertyPath: m_Name
-      value: BeeNPCAnimated (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 2110131896315208820, guid: 4c072907a56f34b089433d1364076a84, type: 3}
       propertyPath: m_LocalPosition.x
       value: 80.34143
       objectReference: {fileID: 0}
@@ -174,6 +166,10 @@ PrefabInstance:
     - target: {fileID: 2110131896315208820, guid: 4c072907a56f34b089433d1364076a84, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6297309168555033227, guid: 4c072907a56f34b089433d1364076a84, type: 3}
+      propertyPath: m_Name
+      value: BeeNPCAnimated (1)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -262,22 +258,6 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 243.75916
       objectReference: {fileID: 0}
-    - target: {fileID: 6297309168555033227, guid: 4c072907a56f34b089433d1364076a84, type: 3}
-      propertyPath: m_Name
-      value: BeeNPCAnimated (11)
-      objectReference: {fileID: 0}
-    - target: {fileID: 2110131896315208820, guid: 4c072907a56f34b089433d1364076a84, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 17.341187
-      objectReference: {fileID: 0}
-    - target: {fileID: 2110131896315208820, guid: 4c072907a56f34b089433d1364076a84, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 32.945824
-      objectReference: {fileID: 0}
-    - target: {fileID: 2110131896315208820, guid: 4c072907a56f34b089433d1364076a84, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 243.75916
-      objectReference: {fileID: 0}
     - target: {fileID: 2110131896315208820, guid: 4c072907a56f34b089433d1364076a84, type: 3}
       propertyPath: m_LocalRotation.w
       value: 0.025805496
@@ -305,6 +285,10 @@ PrefabInstance:
     - target: {fileID: 2110131896315208820, guid: 4c072907a56f34b089433d1364076a84, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 176.421
+      objectReference: {fileID: 0}
+    - target: {fileID: 6297309168555033227, guid: 4c072907a56f34b089433d1364076a84, type: 3}
+      propertyPath: m_Name
+      value: BeeNPCAnimated (11)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -497,22 +481,6 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 245.92969
       objectReference: {fileID: 0}
-    - target: {fileID: 6297309168555033227, guid: 4c072907a56f34b089433d1364076a84, type: 3}
-      propertyPath: m_Name
-      value: BeeNPCAnimated (13)
-      objectReference: {fileID: 0}
-    - target: {fileID: 2110131896315208820, guid: 4c072907a56f34b089433d1364076a84, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 14.711304
-      objectReference: {fileID: 0}
-    - target: {fileID: 2110131896315208820, guid: 4c072907a56f34b089433d1364076a84, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 32.910954
-      objectReference: {fileID: 0}
-    - target: {fileID: 2110131896315208820, guid: 4c072907a56f34b089433d1364076a84, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 245.92969
-      objectReference: {fileID: 0}
     - target: {fileID: 2110131896315208820, guid: 4c072907a56f34b089433d1364076a84, type: 3}
       propertyPath: m_LocalRotation.w
       value: 0.006887931
@@ -541,6 +509,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 180.599
       objectReference: {fileID: 0}
+    - target: {fileID: 6297309168555033227, guid: 4c072907a56f34b089433d1364076a84, type: 3}
+      propertyPath: m_Name
+      value: BeeNPCAnimated (13)
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -559,22 +531,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1084246996}
     m_Modifications:
-    - target: {fileID: 2110131896315208820, guid: 4c072907a56f34b089433d1364076a84, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 12.212158
-      objectReference: {fileID: 0}
-    - target: {fileID: 2110131896315208820, guid: 4c072907a56f34b089433d1364076a84, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 32.867714
-      objectReference: {fileID: 0}
-    - target: {fileID: 2110131896315208820, guid: 4c072907a56f34b089433d1364076a84, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 248.35779
-      objectReference: {fileID: 0}
-    - target: {fileID: 6297309168555033227, guid: 4c072907a56f34b089433d1364076a84, type: 3}
-      propertyPath: m_Name
-      value: BeeNPCAnimated (16)
-      objectReference: {fileID: 0}
     - target: {fileID: 2110131896315208820, guid: 4c072907a56f34b089433d1364076a84, type: 3}
       propertyPath: m_LocalPosition.x
       value: 12.212158
@@ -614,6 +570,10 @@ PrefabInstance:
     - target: {fileID: 2110131896315208820, guid: 4c072907a56f34b089433d1364076a84, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 177.194
+      objectReference: {fileID: 0}
+    - target: {fileID: 6297309168555033227, guid: 4c072907a56f34b089433d1364076a84, type: 3}
+      propertyPath: m_Name
+      value: BeeNPCAnimated (16)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -696,14 +656,6 @@ PrefabInstance:
     m_TransformParent: {fileID: 302212145}
     m_Modifications:
     - target: {fileID: 2110131896315208820, guid: 4c072907a56f34b089433d1364076a84, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 333
-      objectReference: {fileID: 0}
-    - target: {fileID: 6297309168555033227, guid: 4c072907a56f34b089433d1364076a84, type: 3}
-      propertyPath: m_Name
-      value: BeeNPCAnimated (7)
-      objectReference: {fileID: 0}
-    - target: {fileID: 2110131896315208820, guid: 4c072907a56f34b089433d1364076a84, type: 3}
       propertyPath: m_LocalPosition.x
       value: -25.155762
       objectReference: {fileID: 0}
@@ -742,6 +694,10 @@ PrefabInstance:
     - target: {fileID: 2110131896315208820, guid: 4c072907a56f34b089433d1364076a84, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6297309168555033227, guid: 4c072907a56f34b089433d1364076a84, type: 3}
+      propertyPath: m_Name
+      value: BeeNPCAnimated (7)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -963,14 +919,6 @@ PrefabInstance:
     m_TransformParent: {fileID: 1115766886}
     m_Modifications:
     - target: {fileID: 2110131896315208820, guid: 4c072907a56f34b089433d1364076a84, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 16.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 6297309168555033227, guid: 4c072907a56f34b089433d1364076a84, type: 3}
-      propertyPath: m_Name
-      value: BeeNPCAnimated (12)
-      objectReference: {fileID: 0}
-    - target: {fileID: 2110131896315208820, guid: 4c072907a56f34b089433d1364076a84, type: 3}
       propertyPath: m_LocalPosition.x
       value: -31.970947
       objectReference: {fileID: 0}
@@ -1010,6 +958,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6297309168555033227, guid: 4c072907a56f34b089433d1364076a84, type: 3}
+      propertyPath: m_Name
+      value: BeeNPCAnimated (12)
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1028,22 +980,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1084246996}
     m_Modifications:
-    - target: {fileID: 2110131896315208820, guid: 4c072907a56f34b089433d1364076a84, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 12.468872
-      objectReference: {fileID: 0}
-    - target: {fileID: 2110131896315208820, guid: 4c072907a56f34b089433d1364076a84, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 33.18756
-      objectReference: {fileID: 0}
-    - target: {fileID: 2110131896315208820, guid: 4c072907a56f34b089433d1364076a84, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 242.67334
-      objectReference: {fileID: 0}
-    - target: {fileID: 6297309168555033227, guid: 4c072907a56f34b089433d1364076a84, type: 3}
-      propertyPath: m_Name
-      value: BeeNPCAnimated (7)
-      objectReference: {fileID: 0}
     - target: {fileID: 2110131896315208820, guid: 4c072907a56f34b089433d1364076a84, type: 3}
       propertyPath: m_LocalPosition.x
       value: 12.468872
@@ -1084,6 +1020,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 181.951
       objectReference: {fileID: 0}
+    - target: {fileID: 6297309168555033227, guid: 4c072907a56f34b089433d1364076a84, type: 3}
+      propertyPath: m_Name
+      value: BeeNPCAnimated (7)
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1102,22 +1042,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1084246996}
     m_Modifications:
-    - target: {fileID: 2110131896315208820, guid: 4c072907a56f34b089433d1364076a84, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 7.217041
-      objectReference: {fileID: 0}
-    - target: {fileID: 2110131896315208820, guid: 4c072907a56f34b089433d1364076a84, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 33.34268
-      objectReference: {fileID: 0}
-    - target: {fileID: 2110131896315208820, guid: 4c072907a56f34b089433d1364076a84, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 243.29514
-      objectReference: {fileID: 0}
-    - target: {fileID: 6297309168555033227, guid: 4c072907a56f34b089433d1364076a84, type: 3}
-      propertyPath: m_Name
-      value: BeeNPCAnimated (1)
-      objectReference: {fileID: 0}
     - target: {fileID: 2110131896315208820, guid: 4c072907a56f34b089433d1364076a84, type: 3}
       propertyPath: m_LocalPosition.x
       value: 7.217041
@@ -1157,6 +1081,10 @@ PrefabInstance:
     - target: {fileID: 2110131896315208820, guid: 4c072907a56f34b089433d1364076a84, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 176.241
+      objectReference: {fileID: 0}
+    - target: {fileID: 6297309168555033227, guid: 4c072907a56f34b089433d1364076a84, type: 3}
+      propertyPath: m_Name
+      value: BeeNPCAnimated (1)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1611,10 +1539,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1701949499}
     m_Modifications:
-    - target: {fileID: 6297309168555033227, guid: 4c072907a56f34b089433d1364076a84, type: 3}
-      propertyPath: m_Name
-      value: ape nutrice
-      objectReference: {fileID: 0}
     - target: {fileID: 2110131896315208820, guid: 4c072907a56f34b089433d1364076a84, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1430.46
@@ -1870,14 +1794,6 @@ PrefabInstance:
     m_TransformParent: {fileID: 1835567731}
     m_Modifications:
     - target: {fileID: 2110131896315208820, guid: 4c072907a56f34b089433d1364076a84, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 151.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6297309168555033227, guid: 4c072907a56f34b089433d1364076a84, type: 3}
-      propertyPath: m_Name
-      value: BeeNPCAnimated (5)
-      objectReference: {fileID: 0}
-    - target: {fileID: 2110131896315208820, guid: 4c072907a56f34b089433d1364076a84, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1112.4503
       objectReference: {fileID: 0}
@@ -1916,6 +1832,10 @@ PrefabInstance:
     - target: {fileID: 2110131896315208820, guid: 4c072907a56f34b089433d1364076a84, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6297309168555033227, guid: 4c072907a56f34b089433d1364076a84, type: 3}
+      propertyPath: m_Name
+      value: BeeNPCAnimated (5)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2610,22 +2530,6 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 246.73001
       objectReference: {fileID: 0}
-    - target: {fileID: 6297309168555033227, guid: 4c072907a56f34b089433d1364076a84, type: 3}
-      propertyPath: m_Name
-      value: BeeNPCAnimated (12)
-      objectReference: {fileID: 0}
-    - target: {fileID: 2110131896315208820, guid: 4c072907a56f34b089433d1364076a84, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 15.219971
-      objectReference: {fileID: 0}
-    - target: {fileID: 2110131896315208820, guid: 4c072907a56f34b089433d1364076a84, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 34.98
-      objectReference: {fileID: 0}
-    - target: {fileID: 2110131896315208820, guid: 4c072907a56f34b089433d1364076a84, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 246.73001
-      objectReference: {fileID: 0}
     - target: {fileID: 2110131896315208820, guid: 4c072907a56f34b089433d1364076a84, type: 3}
       propertyPath: m_LocalRotation.w
       value: 0.032328725
@@ -2653,6 +2557,10 @@ PrefabInstance:
     - target: {fileID: 2110131896315208820, guid: 4c072907a56f34b089433d1364076a84, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 180.347
+      objectReference: {fileID: 0}
+    - target: {fileID: 6297309168555033227, guid: 4c072907a56f34b089433d1364076a84, type: 3}
+      propertyPath: m_Name
+      value: BeeNPCAnimated (12)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2808,22 +2716,6 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 242.8601
       objectReference: {fileID: 0}
-    - target: {fileID: 6297309168555033227, guid: 4c072907a56f34b089433d1364076a84, type: 3}
-      propertyPath: m_Name
-      value: BeeNPCAnimated (9)
-      objectReference: {fileID: 0}
-    - target: {fileID: 2110131896315208820, guid: 4c072907a56f34b089433d1364076a84, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 8.511597
-      objectReference: {fileID: 0}
-    - target: {fileID: 2110131896315208820, guid: 4c072907a56f34b089433d1364076a84, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 35.194096
-      objectReference: {fileID: 0}
-    - target: {fileID: 2110131896315208820, guid: 4c072907a56f34b089433d1364076a84, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 242.8601
-      objectReference: {fileID: 0}
     - target: {fileID: 2110131896315208820, guid: 4c072907a56f34b089433d1364076a84, type: 3}
       propertyPath: m_LocalRotation.w
       value: 0.12208838
@@ -2851,6 +2743,10 @@ PrefabInstance:
     - target: {fileID: 2110131896315208820, guid: 4c072907a56f34b089433d1364076a84, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 205.99
+      objectReference: {fileID: 0}
+    - target: {fileID: 6297309168555033227, guid: 4c072907a56f34b089433d1364076a84, type: 3}
+      propertyPath: m_Name
+      value: BeeNPCAnimated (9)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3219,22 +3115,6 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 25.79
       objectReference: {fileID: 0}
-    - target: {fileID: 6297309168555033227, guid: 4c072907a56f34b089433d1364076a84, type: 3}
-      propertyPath: m_Name
-      value: BeeNPCAnimated (3)
-      objectReference: {fileID: 0}
-    - target: {fileID: 2110131896315208820, guid: 4c072907a56f34b089433d1364076a84, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 88.54
-      objectReference: {fileID: 0}
-    - target: {fileID: 2110131896315208820, guid: 4c072907a56f34b089433d1364076a84, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 170.07
-      objectReference: {fileID: 0}
-    - target: {fileID: 2110131896315208820, guid: 4c072907a56f34b089433d1364076a84, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 25.79
-      objectReference: {fileID: 0}
     - target: {fileID: 2110131896315208820, guid: 4c072907a56f34b089433d1364076a84, type: 3}
       propertyPath: m_LocalRotation.w
       value: 0.03682113
@@ -3263,6 +3143,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 181.433
       objectReference: {fileID: 0}
+    - target: {fileID: 6297309168555033227, guid: 4c072907a56f34b089433d1364076a84, type: 3}
+      propertyPath: m_Name
+      value: BeeNPCAnimated (3)
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3281,14 +3165,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 302212145}
     m_Modifications:
-    - target: {fileID: 2110131896315208820, guid: 4c072907a56f34b089433d1364076a84, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 333.04
-      objectReference: {fileID: 0}
-    - target: {fileID: 6297309168555033227, guid: 4c072907a56f34b089433d1364076a84, type: 3}
-      propertyPath: m_Name
-      value: BeeNPCAnimated (8)
-      objectReference: {fileID: 0}
     - target: {fileID: 2110131896315208820, guid: 4c072907a56f34b089433d1364076a84, type: 3}
       propertyPath: m_LocalPosition.x
       value: 50.09082
@@ -3328,6 +3204,10 @@ PrefabInstance:
     - target: {fileID: 2110131896315208820, guid: 4c072907a56f34b089433d1364076a84, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6297309168555033227, guid: 4c072907a56f34b089433d1364076a84, type: 3}
+      propertyPath: m_Name
+      value: BeeNPCAnimated (8)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3480,14 +3360,6 @@ PrefabInstance:
     m_TransformParent: {fileID: 1228238028}
     m_Modifications:
     - target: {fileID: 2110131896315208820, guid: 4c072907a56f34b089433d1364076a84, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 16.029999
-      objectReference: {fileID: 0}
-    - target: {fileID: 6297309168555033227, guid: 4c072907a56f34b089433d1364076a84, type: 3}
-      propertyPath: m_Name
-      value: ape becchina
-      objectReference: {fileID: 0}
-    - target: {fileID: 2110131896315208820, guid: 4c072907a56f34b089433d1364076a84, type: 3}
       propertyPath: m_LocalPosition.x
       value: -14.569092
       objectReference: {fileID: 0}
@@ -3550,14 +3422,6 @@ PrefabInstance:
     m_TransformParent: {fileID: 302212145}
     m_Modifications:
     - target: {fileID: 2110131896315208820, guid: 4c072907a56f34b089433d1364076a84, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 333.04
-      objectReference: {fileID: 0}
-    - target: {fileID: 6297309168555033227, guid: 4c072907a56f34b089433d1364076a84, type: 3}
-      propertyPath: m_Name
-      value: BeeNPCAnimated (10)
-      objectReference: {fileID: 0}
-    - target: {fileID: 2110131896315208820, guid: 4c072907a56f34b089433d1364076a84, type: 3}
       propertyPath: m_LocalPosition.x
       value: 71.3916
       objectReference: {fileID: 0}
@@ -3597,6 +3461,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6297309168555033227, guid: 4c072907a56f34b089433d1364076a84, type: 3}
+      propertyPath: m_Name
+      value: BeeNPCAnimated (10)
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3615,22 +3483,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1084246996}
     m_Modifications:
-    - target: {fileID: 2110131896315208820, guid: 4c072907a56f34b089433d1364076a84, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 4.3165283
-      objectReference: {fileID: 0}
-    - target: {fileID: 2110131896315208820, guid: 4c072907a56f34b089433d1364076a84, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 33.339478
-      objectReference: {fileID: 0}
-    - target: {fileID: 2110131896315208820, guid: 4c072907a56f34b089433d1364076a84, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 245.0882
-      objectReference: {fileID: 0}
-    - target: {fileID: 6297309168555033227, guid: 4c072907a56f34b089433d1364076a84, type: 3}
-      propertyPath: m_Name
-      value: BeeNPCAnimated (5)
-      objectReference: {fileID: 0}
     - target: {fileID: 2110131896315208820, guid: 4c072907a56f34b089433d1364076a84, type: 3}
       propertyPath: m_LocalPosition.x
       value: 4.3165283
@@ -3670,6 +3522,10 @@ PrefabInstance:
     - target: {fileID: 2110131896315208820, guid: 4c072907a56f34b089433d1364076a84, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 180.066
+      objectReference: {fileID: 0}
+    - target: {fileID: 6297309168555033227, guid: 4c072907a56f34b089433d1364076a84, type: 3}
+      propertyPath: m_Name
+      value: BeeNPCAnimated (5)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3739,20 +3595,8 @@ PrefabInstance:
       value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 6249675076047500930, guid: 4c072907a56f34b089433d1364076a84, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6249675076047500930, guid: 4c072907a56f34b089433d1364076a84, type: 3}
       propertyPath: m_LocalPosition.y
       value: -6.69
-      objectReference: {fileID: 0}
-    - target: {fileID: 6249675076047500930, guid: 4c072907a56f34b089433d1364076a84, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -6.69
-      objectReference: {fileID: 0}
-    - target: {fileID: 6249675076047500930, guid: 4c072907a56f34b089433d1364076a84, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6249675076047500930, guid: 4c072907a56f34b089433d1364076a84, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3824,22 +3668,6 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 251.40915
       objectReference: {fileID: 0}
-    - target: {fileID: 6297309168555033227, guid: 4c072907a56f34b089433d1364076a84, type: 3}
-      propertyPath: m_Name
-      value: BeeNPCAnimated (19)
-      objectReference: {fileID: 0}
-    - target: {fileID: 2110131896315208820, guid: 4c072907a56f34b089433d1364076a84, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 16.94629
-      objectReference: {fileID: 0}
-    - target: {fileID: 2110131896315208820, guid: 4c072907a56f34b089433d1364076a84, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 32.51679
-      objectReference: {fileID: 0}
-    - target: {fileID: 2110131896315208820, guid: 4c072907a56f34b089433d1364076a84, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 251.40915
-      objectReference: {fileID: 0}
     - target: {fileID: 2110131896315208820, guid: 4c072907a56f34b089433d1364076a84, type: 3}
       propertyPath: m_LocalRotation.w
       value: -0.033188455
@@ -3868,6 +3696,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 179.63
       objectReference: {fileID: 0}
+    - target: {fileID: 6297309168555033227, guid: 4c072907a56f34b089433d1364076a84, type: 3}
+      propertyPath: m_Name
+      value: BeeNPCAnimated (19)
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3886,22 +3718,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1084246996}
     m_Modifications:
-    - target: {fileID: 2110131896315208820, guid: 4c072907a56f34b089433d1364076a84, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 14.194092
-      objectReference: {fileID: 0}
-    - target: {fileID: 2110131896315208820, guid: 4c072907a56f34b089433d1364076a84, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 32.504944
-      objectReference: {fileID: 0}
-    - target: {fileID: 2110131896315208820, guid: 4c072907a56f34b089433d1364076a84, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 253.42242
-      objectReference: {fileID: 0}
-    - target: {fileID: 6297309168555033227, guid: 4c072907a56f34b089433d1364076a84, type: 3}
-      propertyPath: m_Name
-      value: BeeNPCAnimated (15)
-      objectReference: {fileID: 0}
     - target: {fileID: 2110131896315208820, guid: 4c072907a56f34b089433d1364076a84, type: 3}
       propertyPath: m_LocalPosition.x
       value: 14.194092
@@ -3941,6 +3757,10 @@ PrefabInstance:
     - target: {fileID: 2110131896315208820, guid: 4c072907a56f34b089433d1364076a84, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 183.665
+      objectReference: {fileID: 0}
+    - target: {fileID: 6297309168555033227, guid: 4c072907a56f34b089433d1364076a84, type: 3}
+      propertyPath: m_Name
+      value: BeeNPCAnimated (15)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4135,22 +3955,6 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 248.27002
       objectReference: {fileID: 0}
-    - target: {fileID: 6297309168555033227, guid: 4c072907a56f34b089433d1364076a84, type: 3}
-      propertyPath: m_Name
-      value: BeeNPCAnimated (14)
-      objectReference: {fileID: 0}
-    - target: {fileID: 2110131896315208820, guid: 4c072907a56f34b089433d1364076a84, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 20.70996
-      objectReference: {fileID: 0}
-    - target: {fileID: 2110131896315208820, guid: 4c072907a56f34b089433d1364076a84, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 32.56
-      objectReference: {fileID: 0}
-    - target: {fileID: 2110131896315208820, guid: 4c072907a56f34b089433d1364076a84, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 248.27002
-      objectReference: {fileID: 0}
     - target: {fileID: 2110131896315208820, guid: 4c072907a56f34b089433d1364076a84, type: 3}
       propertyPath: m_LocalRotation.w
       value: -0.03127079
@@ -4178,6 +3982,10 @@ PrefabInstance:
     - target: {fileID: 2110131896315208820, guid: 4c072907a56f34b089433d1364076a84, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 181.011
+      objectReference: {fileID: 0}
+    - target: {fileID: 6297309168555033227, guid: 4c072907a56f34b089433d1364076a84, type: 3}
+      propertyPath: m_Name
+      value: BeeNPCAnimated (14)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4215,7 +4023,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8716265329153622594, guid: 9a5e5a5540c61b740bb560b7f5c76ce0, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1183.8
+      value: 1185
       objectReference: {fileID: 0}
     - target: {fileID: 8716265329153622594, guid: 9a5e5a5540c61b740bb560b7f5c76ce0, type: 3}
       propertyPath: m_LocalPosition.y
@@ -4352,22 +4160,6 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 238.34999
       objectReference: {fileID: 0}
-    - target: {fileID: 6297309168555033227, guid: 4c072907a56f34b089433d1364076a84, type: 3}
-      propertyPath: m_Name
-      value: BeeNPCAnimated (6)
-      objectReference: {fileID: 0}
-    - target: {fileID: 2110131896315208820, guid: 4c072907a56f34b089433d1364076a84, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 9.170044
-      objectReference: {fileID: 0}
-    - target: {fileID: 2110131896315208820, guid: 4c072907a56f34b089433d1364076a84, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 33.56
-      objectReference: {fileID: 0}
-    - target: {fileID: 2110131896315208820, guid: 4c072907a56f34b089433d1364076a84, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 238.34999
-      objectReference: {fileID: 0}
     - target: {fileID: 2110131896315208820, guid: 4c072907a56f34b089433d1364076a84, type: 3}
       propertyPath: m_LocalRotation.w
       value: -0.023208812
@@ -4396,6 +4188,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 176.849
       objectReference: {fileID: 0}
+    - target: {fileID: 6297309168555033227, guid: 4c072907a56f34b089433d1364076a84, type: 3}
+      propertyPath: m_Name
+      value: BeeNPCAnimated (6)
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4414,14 +4210,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 51111014}
     m_Modifications:
-    - target: {fileID: 2110131896315208820, guid: 4c072907a56f34b089433d1364076a84, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 16.140076
-      objectReference: {fileID: 0}
-    - target: {fileID: 6297309168555033227, guid: 4c072907a56f34b089433d1364076a84, type: 3}
-      propertyPath: m_Name
-      value: BeeNPCAnimated (11)
-      objectReference: {fileID: 0}
     - target: {fileID: 2110131896315208820, guid: 4c072907a56f34b089433d1364076a84, type: 3}
       propertyPath: m_LocalPosition.x
       value: 17.473022
@@ -4461,6 +4249,10 @@ PrefabInstance:
     - target: {fileID: 2110131896315208820, guid: 4c072907a56f34b089433d1364076a84, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6297309168555033227, guid: 4c072907a56f34b089433d1364076a84, type: 3}
+      propertyPath: m_Name
+      value: BeeNPCAnimated (11)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4549,22 +4341,6 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 245.69144
       objectReference: {fileID: 0}
-    - target: {fileID: 6297309168555033227, guid: 4c072907a56f34b089433d1364076a84, type: 3}
-      propertyPath: m_Name
-      value: BeeNPCAnimated (4)
-      objectReference: {fileID: 0}
-    - target: {fileID: 2110131896315208820, guid: 4c072907a56f34b089433d1364076a84, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 10.731079
-      objectReference: {fileID: 0}
-    - target: {fileID: 2110131896315208820, guid: 4c072907a56f34b089433d1364076a84, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 33.06931
-      objectReference: {fileID: 0}
-    - target: {fileID: 2110131896315208820, guid: 4c072907a56f34b089433d1364076a84, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 245.69144
-      objectReference: {fileID: 0}
     - target: {fileID: 2110131896315208820, guid: 4c072907a56f34b089433d1364076a84, type: 3}
       propertyPath: m_LocalRotation.w
       value: -0.034037724
@@ -4593,6 +4369,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 178.362
       objectReference: {fileID: 0}
+    - target: {fileID: 6297309168555033227, guid: 4c072907a56f34b089433d1364076a84, type: 3}
+      propertyPath: m_Name
+      value: BeeNPCAnimated (4)
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4611,22 +4391,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1084246996}
     m_Modifications:
-    - target: {fileID: 2110131896315208820, guid: 4c072907a56f34b089433d1364076a84, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 10.206787
-      objectReference: {fileID: 0}
-    - target: {fileID: 2110131896315208820, guid: 4c072907a56f34b089433d1364076a84, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 35.24592
-      objectReference: {fileID: 0}
-    - target: {fileID: 2110131896315208820, guid: 4c072907a56f34b089433d1364076a84, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 245.28186
-      objectReference: {fileID: 0}
-    - target: {fileID: 6297309168555033227, guid: 4c072907a56f34b089433d1364076a84, type: 3}
-      propertyPath: m_Name
-      value: BeeNPCAnimated (3)
-      objectReference: {fileID: 0}
     - target: {fileID: 2110131896315208820, guid: 4c072907a56f34b089433d1364076a84, type: 3}
       propertyPath: m_LocalPosition.x
       value: 10.206787
@@ -4666,6 +4430,10 @@ PrefabInstance:
     - target: {fileID: 2110131896315208820, guid: 4c072907a56f34b089433d1364076a84, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 180.737
+      objectReference: {fileID: 0}
+    - target: {fileID: 6297309168555033227, guid: 4c072907a56f34b089433d1364076a84, type: 3}
+      propertyPath: m_Name
+      value: BeeNPCAnimated (3)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4825,22 +4593,6 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: -63.47
       objectReference: {fileID: 0}
-    - target: {fileID: 6297309168555033227, guid: 4c072907a56f34b089433d1364076a84, type: 3}
-      propertyPath: m_Name
-      value: BeeNPCAnimated (2)
-      objectReference: {fileID: 0}
-    - target: {fileID: 2110131896315208820, guid: 4c072907a56f34b089433d1364076a84, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 72.42
-      objectReference: {fileID: 0}
-    - target: {fileID: 2110131896315208820, guid: 4c072907a56f34b089433d1364076a84, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 68.64
-      objectReference: {fileID: 0}
-    - target: {fileID: 2110131896315208820, guid: 4c072907a56f34b089433d1364076a84, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -63.47
-      objectReference: {fileID: 0}
     - target: {fileID: 2110131896315208820, guid: 4c072907a56f34b089433d1364076a84, type: 3}
       propertyPath: m_LocalRotation.w
       value: -0.003189561
@@ -4869,6 +4621,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 181.426
       objectReference: {fileID: 0}
+    - target: {fileID: 6297309168555033227, guid: 4c072907a56f34b089433d1364076a84, type: 3}
+      propertyPath: m_Name
+      value: BeeNPCAnimated (2)
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4887,14 +4643,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1835567731}
     m_Modifications:
-    - target: {fileID: 2110131896315208820, guid: 4c072907a56f34b089433d1364076a84, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 151.4
-      objectReference: {fileID: 0}
-    - target: {fileID: 6297309168555033227, guid: 4c072907a56f34b089433d1364076a84, type: 3}
-      propertyPath: m_Name
-      value: BeeNPCAnimated (4)
-      objectReference: {fileID: 0}
     - target: {fileID: 2110131896315208820, guid: 4c072907a56f34b089433d1364076a84, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1117.7
@@ -4934,6 +4682,10 @@ PrefabInstance:
     - target: {fileID: 2110131896315208820, guid: 4c072907a56f34b089433d1364076a84, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6297309168555033227, guid: 4c072907a56f34b089433d1364076a84, type: 3}
+      propertyPath: m_Name
+      value: BeeNPCAnimated (4)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5225,10 +4977,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 112152136}
     m_Modifications:
-    - target: {fileID: 6297309168555033227, guid: 4c072907a56f34b089433d1364076a84, type: 3}
-      propertyPath: m_Name
-      value: BeeNPCAnimated
-      objectReference: {fileID: 0}
     - target: {fileID: 2110131896315208820, guid: 4c072907a56f34b089433d1364076a84, type: 3}
       propertyPath: m_LocalPosition.x
       value: 67.51
@@ -5268,6 +5016,10 @@ PrefabInstance:
     - target: {fileID: 2110131896315208820, guid: 4c072907a56f34b089433d1364076a84, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 181.426
+      objectReference: {fileID: 0}
+    - target: {fileID: 6297309168555033227, guid: 4c072907a56f34b089433d1364076a84, type: 3}
+      propertyPath: m_Name
+      value: BeeNPCAnimated
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5527,22 +5279,6 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 249.49393
       objectReference: {fileID: 0}
-    - target: {fileID: 6297309168555033227, guid: 4c072907a56f34b089433d1364076a84, type: 3}
-      propertyPath: m_Name
-      value: BeeNPCAnimated (18)
-      objectReference: {fileID: 0}
-    - target: {fileID: 2110131896315208820, guid: 4c072907a56f34b089433d1364076a84, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 16.169556
-      objectReference: {fileID: 0}
-    - target: {fileID: 2110131896315208820, guid: 4c072907a56f34b089433d1364076a84, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 34.531948
-      objectReference: {fileID: 0}
-    - target: {fileID: 2110131896315208820, guid: 4c072907a56f34b089433d1364076a84, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 249.49393
-      objectReference: {fileID: 0}
     - target: {fileID: 2110131896315208820, guid: 4c072907a56f34b089433d1364076a84, type: 3}
       propertyPath: m_LocalRotation.w
       value: -0.21272661
@@ -5570,6 +5306,10 @@ PrefabInstance:
     - target: {fileID: 2110131896315208820, guid: 4c072907a56f34b089433d1364076a84, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 210.672
+      objectReference: {fileID: 0}
+    - target: {fileID: 6297309168555033227, guid: 4c072907a56f34b089433d1364076a84, type: 3}
+      propertyPath: m_Name
+      value: BeeNPCAnimated (18)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5652,14 +5392,6 @@ PrefabInstance:
     m_TransformParent: {fileID: 1835567731}
     m_Modifications:
     - target: {fileID: 2110131896315208820, guid: 4c072907a56f34b089433d1364076a84, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 151.64
-      objectReference: {fileID: 0}
-    - target: {fileID: 6297309168555033227, guid: 4c072907a56f34b089433d1364076a84, type: 3}
-      propertyPath: m_Name
-      value: BeeNPCAnimated (2)
-      objectReference: {fileID: 0}
-    - target: {fileID: 2110131896315208820, guid: 4c072907a56f34b089433d1364076a84, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1257.14
       objectReference: {fileID: 0}
@@ -5698,6 +5430,10 @@ PrefabInstance:
     - target: {fileID: 2110131896315208820, guid: 4c072907a56f34b089433d1364076a84, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6297309168555033227, guid: 4c072907a56f34b089433d1364076a84, type: 3}
+      propertyPath: m_Name
+      value: BeeNPCAnimated (2)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5966,14 +5702,6 @@ PrefabInstance:
     m_TransformParent: {fileID: 1835567731}
     m_Modifications:
     - target: {fileID: 2110131896315208820, guid: 4c072907a56f34b089433d1364076a84, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 151.49
-      objectReference: {fileID: 0}
-    - target: {fileID: 6297309168555033227, guid: 4c072907a56f34b089433d1364076a84, type: 3}
-      propertyPath: m_Name
-      value: BeeNPCAnimated (3)
-      objectReference: {fileID: 0}
-    - target: {fileID: 2110131896315208820, guid: 4c072907a56f34b089433d1364076a84, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1195.9607
       objectReference: {fileID: 0}
@@ -6012,6 +5740,10 @@ PrefabInstance:
     - target: {fileID: 2110131896315208820, guid: 4c072907a56f34b089433d1364076a84, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6297309168555033227, guid: 4c072907a56f34b089433d1364076a84, type: 3}
+      propertyPath: m_Name
+      value: BeeNPCAnimated (3)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6846,22 +6578,6 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: -282.67
       objectReference: {fileID: 0}
-    - target: {fileID: 6297309168555033227, guid: 4c072907a56f34b089433d1364076a84, type: 3}
-      propertyPath: m_Name
-      value: Ape Regina
-      objectReference: {fileID: 0}
-    - target: {fileID: 2110131896315208820, guid: 4c072907a56f34b089433d1364076a84, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 8.42
-      objectReference: {fileID: 0}
-    - target: {fileID: 2110131896315208820, guid: 4c072907a56f34b089433d1364076a84, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 337.94
-      objectReference: {fileID: 0}
-    - target: {fileID: 2110131896315208820, guid: 4c072907a56f34b089433d1364076a84, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -282.67
-      objectReference: {fileID: 0}
     - target: {fileID: 2110131896315208820, guid: 4c072907a56f34b089433d1364076a84, type: 3}
       propertyPath: m_LocalRotation.w
       value: 0.98809695
@@ -6924,22 +6640,6 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 249.20001
       objectReference: {fileID: 0}
-    - target: {fileID: 6297309168555033227, guid: 4c072907a56f34b089433d1364076a84, type: 3}
-      propertyPath: m_Name
-      value: BeeNPCAnimated
-      objectReference: {fileID: 0}
-    - target: {fileID: 2110131896315208820, guid: 4c072907a56f34b089433d1364076a84, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 17.430054
-      objectReference: {fileID: 0}
-    - target: {fileID: 2110131896315208820, guid: 4c072907a56f34b089433d1364076a84, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 32.63
-      objectReference: {fileID: 0}
-    - target: {fileID: 2110131896315208820, guid: 4c072907a56f34b089433d1364076a84, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 249.20001
-      objectReference: {fileID: 0}
     - target: {fileID: 2110131896315208820, guid: 4c072907a56f34b089433d1364076a84, type: 3}
       propertyPath: m_LocalRotation.w
       value: -0.016510915
@@ -6968,6 +6668,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 183.909
       objectReference: {fileID: 0}
+    - target: {fileID: 6297309168555033227, guid: 4c072907a56f34b089433d1364076a84, type: 3}
+      propertyPath: m_Name
+      value: BeeNPCAnimated
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6986,14 +6690,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1115766886}
     m_Modifications:
-    - target: {fileID: 2110131896315208820, guid: 4c072907a56f34b089433d1364076a84, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 16.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 6297309168555033227, guid: 4c072907a56f34b089433d1364076a84, type: 3}
-      propertyPath: m_Name
-      value: BeeNPCAnimated
-      objectReference: {fileID: 0}
     - target: {fileID: 2110131896315208820, guid: 4c072907a56f34b089433d1364076a84, type: 3}
       propertyPath: m_LocalPosition.x
       value: -12.229126
@@ -7033,6 +6729,10 @@ PrefabInstance:
     - target: {fileID: 2110131896315208820, guid: 4c072907a56f34b089433d1364076a84, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6297309168555033227, guid: 4c072907a56f34b089433d1364076a84, type: 3}
+      propertyPath: m_Name
+      value: BeeNPCAnimated
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -7183,22 +6883,6 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 60.68
       objectReference: {fileID: 0}
-    - target: {fileID: 6297309168555033227, guid: 4c072907a56f34b089433d1364076a84, type: 3}
-      propertyPath: m_Name
-      value: BeeNPCAnimated (4)
-      objectReference: {fileID: 0}
-    - target: {fileID: 2110131896315208820, guid: 4c072907a56f34b089433d1364076a84, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 5.01
-      objectReference: {fileID: 0}
-    - target: {fileID: 2110131896315208820, guid: 4c072907a56f34b089433d1364076a84, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 272.21
-      objectReference: {fileID: 0}
-    - target: {fileID: 2110131896315208820, guid: 4c072907a56f34b089433d1364076a84, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 60.68
-      objectReference: {fileID: 0}
     - target: {fileID: 2110131896315208820, guid: 4c072907a56f34b089433d1364076a84, type: 3}
       propertyPath: m_LocalRotation.w
       value: 0.03682113
@@ -7227,6 +6911,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 181.433
       objectReference: {fileID: 0}
+    - target: {fileID: 6297309168555033227, guid: 4c072907a56f34b089433d1364076a84, type: 3}
+      propertyPath: m_Name
+      value: BeeNPCAnimated (4)
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7245,22 +6933,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1084246996}
     m_Modifications:
-    - target: {fileID: 2110131896315208820, guid: 4c072907a56f34b089433d1364076a84, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 13.302612
-      objectReference: {fileID: 0}
-    - target: {fileID: 2110131896315208820, guid: 4c072907a56f34b089433d1364076a84, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 33.343708
-      objectReference: {fileID: 0}
-    - target: {fileID: 2110131896315208820, guid: 4c072907a56f34b089433d1364076a84, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 239.37039
-      objectReference: {fileID: 0}
-    - target: {fileID: 6297309168555033227, guid: 4c072907a56f34b089433d1364076a84, type: 3}
-      propertyPath: m_Name
-      value: BeeNPCAnimated (8)
-      objectReference: {fileID: 0}
     - target: {fileID: 2110131896315208820, guid: 4c072907a56f34b089433d1364076a84, type: 3}
       propertyPath: m_LocalPosition.x
       value: 13.302612
@@ -7300,6 +6972,10 @@ PrefabInstance:
     - target: {fileID: 2110131896315208820, guid: 4c072907a56f34b089433d1364076a84, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 177.227
+      objectReference: {fileID: 0}
+    - target: {fileID: 6297309168555033227, guid: 4c072907a56f34b089433d1364076a84, type: 3}
+      propertyPath: m_Name
+      value: BeeNPCAnimated (8)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -7387,7 +7063,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4145340466626090031, guid: 5fa028224523b46469f6d8d45bfa3e4a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1184.0204
+      value: 1185.2203
       objectReference: {fileID: 0}
     - target: {fileID: 4145340466626090031, guid: 5fa028224523b46469f6d8d45bfa3e4a, type: 3}
       propertyPath: m_LocalPosition.y
@@ -7450,22 +7126,6 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 248.49896
       objectReference: {fileID: 0}
-    - target: {fileID: 6297309168555033227, guid: 4c072907a56f34b089433d1364076a84, type: 3}
-      propertyPath: m_Name
-      value: BeeNPCAnimated (2)
-      objectReference: {fileID: 0}
-    - target: {fileID: 2110131896315208820, guid: 4c072907a56f34b089433d1364076a84, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 8.7977295
-      objectReference: {fileID: 0}
-    - target: {fileID: 2110131896315208820, guid: 4c072907a56f34b089433d1364076a84, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 32.981647
-      objectReference: {fileID: 0}
-    - target: {fileID: 2110131896315208820, guid: 4c072907a56f34b089433d1364076a84, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 248.49896
-      objectReference: {fileID: 0}
     - target: {fileID: 2110131896315208820, guid: 4c072907a56f34b089433d1364076a84, type: 3}
       propertyPath: m_LocalRotation.w
       value: -0.025665287
@@ -7493,6 +7153,10 @@ PrefabInstance:
     - target: {fileID: 2110131896315208820, guid: 4c072907a56f34b089433d1364076a84, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 183.009
+      objectReference: {fileID: 0}
+    - target: {fileID: 6297309168555033227, guid: 4c072907a56f34b089433d1364076a84, type: 3}
+      propertyPath: m_Name
+      value: BeeNPCAnimated (2)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -8049,22 +7713,6 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 251.30618
       objectReference: {fileID: 0}
-    - target: {fileID: 6297309168555033227, guid: 4c072907a56f34b089433d1364076a84, type: 3}
-      propertyPath: m_Name
-      value: BeeNPCAnimated (17)
-      objectReference: {fileID: 0}
-    - target: {fileID: 2110131896315208820, guid: 4c072907a56f34b089433d1364076a84, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 10.50293
-      objectReference: {fileID: 0}
-    - target: {fileID: 2110131896315208820, guid: 4c072907a56f34b089433d1364076a84, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 32.75437
-      objectReference: {fileID: 0}
-    - target: {fileID: 2110131896315208820, guid: 4c072907a56f34b089433d1364076a84, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 251.30618
-      objectReference: {fileID: 0}
     - target: {fileID: 2110131896315208820, guid: 4c072907a56f34b089433d1364076a84, type: 3}
       propertyPath: m_LocalRotation.w
       value: 0.0008634269
@@ -8093,6 +7741,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 181.909
       objectReference: {fileID: 0}
+    - target: {fileID: 6297309168555033227, guid: 4c072907a56f34b089433d1364076a84, type: 3}
+      propertyPath: m_Name
+      value: BeeNPCAnimated (17)
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8111,22 +7763,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1228238028}
     m_Modifications:
-    - target: {fileID: 2110131896315208820, guid: 4c072907a56f34b089433d1364076a84, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 14.059326
-      objectReference: {fileID: 0}
-    - target: {fileID: 2110131896315208820, guid: 4c072907a56f34b089433d1364076a84, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 16.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2110131896315208820, guid: 4c072907a56f34b089433d1364076a84, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -65.38236
-      objectReference: {fileID: 0}
-    - target: {fileID: 6297309168555033227, guid: 4c072907a56f34b089433d1364076a84, type: 3}
-      propertyPath: m_Name
-      value: ape guida/bottinatrice
-      objectReference: {fileID: 0}
     - target: {fileID: 2110131896315208820, guid: 4c072907a56f34b089433d1364076a84, type: 3}
       propertyPath: m_LocalPosition.x
       value: 14.059326
@@ -8357,14 +7993,6 @@ PrefabInstance:
     m_TransformParent: {fileID: 1835567731}
     m_Modifications:
     - target: {fileID: 2110131896315208820, guid: 4c072907a56f34b089433d1364076a84, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 151.6
-      objectReference: {fileID: 0}
-    - target: {fileID: 6297309168555033227, guid: 4c072907a56f34b089433d1364076a84, type: 3}
-      propertyPath: m_Name
-      value: BeeNPCAnimated (6)
-      objectReference: {fileID: 0}
-    - target: {fileID: 2110131896315208820, guid: 4c072907a56f34b089433d1364076a84, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1205.9
       objectReference: {fileID: 0}
@@ -8404,6 +8032,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6297309168555033227, guid: 4c072907a56f34b089433d1364076a84, type: 3}
+      propertyPath: m_Name
+      value: BeeNPCAnimated (6)
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8423,12 +8055,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 1751323793}
     m_Modifications:
     - target: {fileID: 2804441680575747586, guid: 70d3da9bf3919a04db9a2c17798106e5, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 94.447
+      objectReference: {fileID: 0}
+    - target: {fileID: 2804441680575747586, guid: 70d3da9bf3919a04db9a2c17798106e5, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1183.9971
+      value: 1185.197
       objectReference: {fileID: 0}
     - target: {fileID: 2804441680575747586, guid: 70d3da9bf3919a04db9a2c17798106e5, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 269.73276
+      value: 269.3
       objectReference: {fileID: 0}
     - target: {fileID: 2804441680575747586, guid: 70d3da9bf3919a04db9a2c17798106e5, type: 3}
       propertyPath: m_LocalPosition.z
@@ -8636,22 +8272,6 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 241.03922
       objectReference: {fileID: 0}
-    - target: {fileID: 6297309168555033227, guid: 4c072907a56f34b089433d1364076a84, type: 3}
-      propertyPath: m_Name
-      value: BeeNPCAnimated (10)
-      objectReference: {fileID: 0}
-    - target: {fileID: 2110131896315208820, guid: 4c072907a56f34b089433d1364076a84, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 7.074951
-      objectReference: {fileID: 0}
-    - target: {fileID: 2110131896315208820, guid: 4c072907a56f34b089433d1364076a84, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 33.47561
-      objectReference: {fileID: 0}
-    - target: {fileID: 2110131896315208820, guid: 4c072907a56f34b089433d1364076a84, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 241.03922
-      objectReference: {fileID: 0}
     - target: {fileID: 2110131896315208820, guid: 4c072907a56f34b089433d1364076a84, type: 3}
       propertyPath: m_LocalRotation.w
       value: -0.0031895612
@@ -8679,6 +8299,10 @@ PrefabInstance:
     - target: {fileID: 2110131896315208820, guid: 4c072907a56f34b089433d1364076a84, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 181.426
+      objectReference: {fileID: 0}
+    - target: {fileID: 6297309168555033227, guid: 4c072907a56f34b089433d1364076a84, type: 3}
+      propertyPath: m_Name
+      value: BeeNPCAnimated (10)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -9394,7 +9018,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 7427535428383267944, guid: 257ce28c0b13b7842ba8d105ec28a550, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1156.3
+      value: 1159.3999
       objectReference: {fileID: 0}
     - target: {fileID: 7427535428383267944, guid: 257ce28c0b13b7842ba8d105ec28a550, type: 3}
       propertyPath: m_LocalPosition.y
@@ -9402,7 +9026,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7427535428383267944, guid: 257ce28c0b13b7842ba8d105ec28a550, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 58.2
+      value: 58.1
       objectReference: {fileID: 0}
     - target: {fileID: 7427535428383267944, guid: 257ce28c0b13b7842ba8d105ec28a550, type: 3}
       propertyPath: m_LocalRotation.w
@@ -9733,7 +9357,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4145340466626090031, guid: 5fa028224523b46469f6d8d45bfa3e4a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1184.0242
+      value: 1185.2241
       objectReference: {fileID: 0}
     - target: {fileID: 4145340466626090031, guid: 5fa028224523b46469f6d8d45bfa3e4a, type: 3}
       propertyPath: m_LocalPosition.y
