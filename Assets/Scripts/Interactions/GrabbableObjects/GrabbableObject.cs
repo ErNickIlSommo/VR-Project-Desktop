@@ -6,6 +6,7 @@ public class GrabbableObject : MonoBehaviour, IInteractable
     // in case the object has a RigidBody
     private Rigidbody _rb;
     private Transform _transform;
+    [SerializeField] private GrabbableObjectData _data;
     
     private void Awake()
     {
