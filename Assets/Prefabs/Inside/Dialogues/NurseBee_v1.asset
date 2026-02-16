@@ -25,9 +25,9 @@ MonoBehaviour:
   - _line: "Ognuno ha un cibo preferito, tu devi dar loro il cibo corretto. Una volta
       che avrai finito qui ti mander\xF3 a fare un giro dall\u2019Ape Becchina."
     _shouldProcessed: 0
-  - _line: "Ognuno ha un cibo preferito, tu devi dar loro il cibo corretto. Una volta
-      che avrai finito qui ti mander\xF3 a fare un giro dall\u2019Ape Becchina."
-    _shouldProcessed: 0
   _otherLines:
   - _line: "Non guardarmi cos\xEC, non si nutrono di aria."
+    _shouldProcessed: 0
+  - _line: "Ognuno ha un cibo preferito, tu devi dar loro il cibo corretto. Una volta
+      che avrai finito qui ti mander\xF3 a fare un giro dall\u2019Ape Becchina."
     _shouldProcessed: 0
