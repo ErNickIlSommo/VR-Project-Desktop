@@ -14,9 +14,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogueData
   _speaker: Ape Nutrice
   _mainlines:
-  - _line: "Ottimo lavoro! Adesso che hai visto gli appena nati puoi andare a trovare
-      gli appena morti, torna al piano terra, troverai la stanza davanti all\u2019entrata "
+  - _line: "Oh! Guarda chi si rivede, non ti avevo appena lasciato gi\xF9 dall\u2019ape
+      guida?"
+    _shouldProcessed: 0
+  - _line: ' Ah come crescete in fretta voi piccoletti.'
+    _shouldProcessed: 0
+  - _line: "Gi\xE0 che sei qui, mi daresti una mano con le tue sorelline che sono
+      molto affamate?"
+    _shouldProcessed: 0
+  - _line: "Ognuno ha un cibo preferito, tu devi dar loro il cibo corretto. Una volta
+      che avrai finito qui ti mander\xF3 a fare un giro dall\u2019Ape Becchina."
     _shouldProcessed: 0
   _otherLines:
-  - _line: "Ora vai dalla becchina. \xC8 meno dolce di me, ma ha molto da insegnarti."
+  - _line: "Non guardarmi cos\xEC, non si nutrono di aria."
+    _shouldProcessed: 0
+  - _line: "Ognuno ha un cibo preferito, tu devi dar loro il cibo corretto. Una volta
+      che avrai finito qui ti mander\xF3 a fare un giro dall\u2019Ape Becchina."
     _shouldProcessed: 0

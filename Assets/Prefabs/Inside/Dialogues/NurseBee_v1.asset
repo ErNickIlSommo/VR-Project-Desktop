@@ -12,22 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9def5d3e14bbd4967b7898b2c46146d9, type: 3}
   m_Name: NurseBee_v1
   m_EditorClassIdentifier: Assembly-CSharp::DialogueData
-  _speaker: Ape Nutrice
-  _mainlines:
-  - _line: "Oh! Guarda chi si rivede, non ti avevo appena lasciato gi\xF9 dall\u2019ape
-      guida?"
-    _shouldProcessed: 0
-  - _line: ' Ah come crescete in fretta voi piccoletti.'
-    _shouldProcessed: 0
-  - _line: "Gi\xE0 che sei qui, mi daresti una mano con le tue sorelline che sono
-      molto affamate?"
-    _shouldProcessed: 0
-  - _line: "Ognuno ha un cibo preferito, tu devi dar loro il cibo corretto. Una volta
-      che avrai finito qui ti mander\xF3 a fare un giro dall\u2019Ape Becchina."
-    _shouldProcessed: 0
-  _otherLines:
-  - _line: "Non guardarmi cos\xEC, non si nutrono di aria."
-    _shouldProcessed: 0
-  - _line: "Ognuno ha un cibo preferito, tu devi dar loro il cibo corretto. Una volta
-      che avrai finito qui ti mander\xF3 a fare un giro dall\u2019Ape Becchina."
-    _shouldProcessed: 0
+  _speaker: 
+  _mainlines: []
+  _otherLines: []

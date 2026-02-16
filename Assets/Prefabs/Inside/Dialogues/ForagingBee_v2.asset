@@ -12,15 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9def5d3e14bbd4967b7898b2c46146d9, type: 3}
   m_Name: ForagingBee_v2
   m_EditorClassIdentifier: Assembly-CSharp::DialogueData
-  _speaker: Ape Guida/Bottinatrice
-  _mainlines:
-  - _line: "Ah, guarda un po\u2019 chi \xE8 tornata, hai fatto quello che dovevi
-      fare?"
-    _shouldProcessed: 0
-  - _line: ...
-    _shouldProcessed: 0
-  - _line: "Lo prender\xF3 per un s\xEC, adesso \xE8 ora di passare all\u2019esterno."
-    _shouldProcessed: 0
-  _otherLines:
-  - _line: Allora, andiamo?
-    _shouldProcessed: 0
+  _speaker: 
+  _mainlines: []
+  _otherLines: []
