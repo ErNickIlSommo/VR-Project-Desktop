@@ -1074,7 +1074,7 @@ GameObject:
   - component: {fileID: 1255075854}
   - component: {fileID: 1255075853}
   - component: {fileID: 1255075856}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Cube Dialogue Interaction
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1211,7 +1211,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 4, y: 4, z: 4}
+  m_Size: {x: 5, y: 5, z: 5}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &1265545199
 MonoBehaviour:
@@ -5562,11 +5562,15 @@ MonoBehaviour:
   moveActionName: Move
   lookActionName: Look
   walkSpeed: 5
+  turnSpeed: 12
   rotateSpeed: 5
   cameraTransform: {fileID: 1144725722}
   cameraTarget: {fileID: 0}
   minPitch: -70
   maxPitch: 70
+  animator: {fileID: 0}
+  movingParam: IsWalking
+  animSmooth: 10
 --- !u!114 &7752291755637276631
 MonoBehaviour:
   m_ObjectHideFlags: 0
