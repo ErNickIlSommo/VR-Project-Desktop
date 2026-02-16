@@ -3,9 +3,8 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using UnityEngine.Rendering;
 
-public class GuideBeeDialogue : MonoBehaviour, IInteractable
+public class GuideBeeDialogue : GeneralDialogue, IInteractable
 {
     [SerializeField] TextMeshProUGUI _ui;
     [SerializeField] private GameObject _panel;
@@ -19,12 +18,13 @@ public class GuideBeeDialogue : MonoBehaviour, IInteractable
     private int _mainLength;
     private int _otherLength;
 
-    private int _index;
+    private int _index = 0;
 
     private bool _isMainDialogueDone = false;
 
     private void Awake()
     {
+        base.Awake();
         _panel.SetActive(false);
     }
 
