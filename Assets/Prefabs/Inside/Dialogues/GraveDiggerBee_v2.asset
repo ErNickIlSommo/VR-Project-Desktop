@@ -13,5 +13,14 @@ MonoBehaviour:
   m_Name: GraveDiggerBee_v2
   m_EditorClassIdentifier: Assembly-CSharp::DialogueData
   _speaker: 
-  _mainlines: []
-  _otherLines: []
+  _mainlines:
+  - _line: "Uh, sei meno male di quello che pensassi, magari dopotutto riuscirai
+      a sopravvivere l\xE0 fuori."
+    _shouldProcessed: 0
+  - _line: "Torna dall\u2019ape guida, ti dir\xE0 quello che avrai da fare dopo."
+    _shouldProcessed: 0
+  _otherLines:
+  - _line: "L\xE0 fuori non sar\xE0 pi\xF9 facile. Anzi."
+    _shouldProcessed: 0
+  - _line: "Torna dall\u2019ape guida, ti dir\xE0 quello che avrai da fare dopo."
+    _shouldProcessed: 0
