@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9def5d3e14bbd4967b7898b2c46146d9, type: 3}
-  m_Name: GraveDiggerBee
+  m_Name: GraveDiggerBee_v1
   m_EditorClassIdentifier: Assembly-CSharp::DialogueData
   _speaker: Ape Becchina
   _mainlines:
