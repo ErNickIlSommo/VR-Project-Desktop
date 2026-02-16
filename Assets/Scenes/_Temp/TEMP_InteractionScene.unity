@@ -245,7 +245,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f818afe7fcd2940bdbf7ef35a307c393, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GrabbableObject
-  _data: {fileID: 11400000, guid: 9f96457d541c446cda5d622109822996, type: 2}
+  _objectData: {fileID: 0}
 --- !u!54 &254392
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -968,7 +968,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f818afe7fcd2940bdbf7ef35a307c393, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GrabbableObject
-  _data: {fileID: 11400000, guid: 36962e6cd1b4d442caee3f47b4b8faff, type: 2}
+  _objectData: {fileID: 0}
 --- !u!65 &230057464
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1015,7 +1015,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 7ba05591f8c048f4aba0b95d7573a262, type: 2}
+  - {fileID: 2100000, guid: 97a7cdc7b90ce4d4f9f7c5bdbdab18b3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
