@@ -6,7 +6,7 @@ public class GrabbableObject : MonoBehaviour, IInteractable
     // in case the object has a RigidBody
     private Rigidbody _rb;
     private Transform _transform;
-    [SerializeField] private GrabbableObjectData _data;
+    [SerializeField] private GrabbableObjectData _objectData;
     
     private void Awake()
     {
@@ -38,7 +38,7 @@ public class GrabbableObject : MonoBehaviour, IInteractable
             _rb.isKinematic = true;
         }
         
-        interactor.PlayerInteractionStatus.SetGrabbedObject(_transform, true);
+        interactor.PlayerInteractionStatus.SetGrabbedObject(_transform, _objectData, true);
         _transform.SetParent(interactor.PlayerInteractionStatus.GrabbedSpotPoint, false);
         _transform.localPosition = Vector3.zero;
         _transform.localRotation = Quaternion.identity;
@@ -53,7 +53,7 @@ public class GrabbableObject : MonoBehaviour, IInteractable
             _rb.isKinematic = false;
         } 
         
-        interactor.PlayerInteractionStatus.SetGrabbedObject(null, false);
+        interactor.PlayerInteractionStatus.SetGrabbedObject();
         _transform.SetParent(null, true);
         // Debug.Log("Dropped");
     }
