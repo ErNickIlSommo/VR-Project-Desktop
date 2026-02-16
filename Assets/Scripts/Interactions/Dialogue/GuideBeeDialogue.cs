@@ -18,7 +18,7 @@ public class GuideBeeDialogue : GeneralDialogue, IInteractable
     private int _mainLength;
     private int _otherLength;
 
-    private int _index = 0;
+    private int _index = -1;
 
     private bool _isMainDialogueDone = false;
 
@@ -41,20 +41,24 @@ public class GuideBeeDialogue : GeneralDialogue, IInteractable
     public bool Interact(Interactor interactor)
     {
         if (!_dialogueAsset) return false;
+
+        _index++;
+        
         if (_index == 0)
         {
             BlockMovement(interactor);
             // Show Panel
             _panel.SetActive(true);
         }
-
-        GoToNextLine();
-
+        
         if (IsDialogueFinished())
         {
             UnlockMovement(interactor);
             // Close action
+            return true;
         }
+        
+        GoToNextLine();
         return true;
     }
 
@@ -70,7 +74,7 @@ public class GuideBeeDialogue : GeneralDialogue, IInteractable
         if (!_isMainDialogueDone)
         {
             if (_index < _mainLength) return false;
-            _index = 0;
+            _index = -1;
             _isMainDialogueDone = true;
             _ui.text = "";
             _panel.SetActive(false);
@@ -79,7 +83,7 @@ public class GuideBeeDialogue : GeneralDialogue, IInteractable
 
         // We are in the other dialogue
         if (_index < _otherLength) return false;
-        _index = 0;
+        _index = -1;
         _ui.text = "";
         _panel.SetActive(false);
         return true;

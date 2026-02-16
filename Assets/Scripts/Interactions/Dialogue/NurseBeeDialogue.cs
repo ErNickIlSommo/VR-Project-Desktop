@@ -17,16 +17,21 @@ public class NurseBeeDialogue : GeneralDialogue, IInteractable
     private int[] _otherLengths;
     private int _dialogueDataCount;
 
-    private int _dialogueIndex;
+    [SerializeField] private int _dialogueIndex;
     private int _dialogueDataIndex;
     
-    private bool _isMainDialogueDone;
+    [SerializeField] private bool _isMainDialogueDone;
     [SerializeField] private bool _hasCompletedActivity;
 
     public bool HasCompletedActivity
     {
         get => _hasCompletedActivity;
-        set => _hasCompletedActivity = value;
+        set
+        {
+            _hasCompletedActivity = value;
+            _isMainDialogueDone = false;
+            _dialogueDataIndex = -1;
+        }
     }
 
     private void Awake()
@@ -65,7 +70,7 @@ public class NurseBeeDialogue : GeneralDialogue, IInteractable
         _isMainDialogueDone = false;
         _hasCompletedActivity = false;
         
-        _dialogueIndex = 0;
+        _dialogueIndex = -1;
         _dialogueDataIndex = 0;
     }
     
@@ -73,18 +78,23 @@ public class NurseBeeDialogue : GeneralDialogue, IInteractable
     {
         if (_dialogueAssets == null || _dialogueAssets.Length == 0) return false;
 
+        _dialogueIndex++;
+
         if (_dialogueIndex == 0)
         {
             BlockMovement(interactor);
             _panel.SetActive(true);
         }
-
-        GoToNextLine();
-
+        
         if (IsDialogueFinished())
         {
             UnlockMovement(interactor);
+            return true;
         }
+
+        GoToNextLine();
+
+        
         
         return true;
     }
@@ -112,7 +122,7 @@ public class NurseBeeDialogue : GeneralDialogue, IInteractable
         
         Debug.Log(_speaker + " " + currentDialogue[_dialogueIndex].DialogueLine + "dialogue Index: " + _dialogueIndex);
         
-        _dialogueIndex++;
+        // _dialogueIndex++;
     }
 
     private bool IsDialogueFinished()
@@ -123,7 +133,7 @@ public class NurseBeeDialogue : GeneralDialogue, IInteractable
         if (!_isMainDialogueDone)
         {
             if (_dialogueIndex < _mainLengths[_dialogueDataIndex]) return false;
-            _dialogueIndex = 0;
+            _dialogueIndex = -1;
             _isMainDialogueDone = true;
             _ui.text = "";
             _panel.SetActive(false);
@@ -132,7 +142,7 @@ public class NurseBeeDialogue : GeneralDialogue, IInteractable
         
         // We are in one of the other dialogues
         if (_dialogueIndex < _otherLengths[_dialogueDataIndex]) return false;
-        _dialogueIndex = 0;
+        _dialogueIndex = -1;
         _ui.text = "";
         _panel.SetActive(false);
         return true;
