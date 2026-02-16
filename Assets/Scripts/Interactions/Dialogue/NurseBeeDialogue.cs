@@ -17,11 +17,11 @@ public class NurseBeeDialogue : GeneralDialogue, IInteractable
     private int[] _otherLengths;
     private int _dialogueDataCount;
 
-    [SerializeField] private int _dialogueIndex;
+    private int _dialogueIndex;
     private int _dialogueDataIndex;
     
-    [SerializeField] private bool _isMainDialogueDone;
-    [SerializeField] private bool _hasCompletedActivity;
+    private bool _isMainDialogueDone;
+    private bool _hasCompletedActivity;
 
     public bool HasCompletedActivity
     {
