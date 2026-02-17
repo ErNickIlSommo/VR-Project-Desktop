@@ -1,0 +1,65 @@
+using System;
+using UnityEngine;
+using System.Collections;
+
+public class FoodSpawner : MonoBehaviour, IInteractable
+{
+    [SerializeField] GrabbableObjectData _grabbableObjectData;
+    public GrabbableObjectData GrabbableObjectData => _grabbableObjectData;
+    
+    [SerializeField] private float _cooldown;
+    public float Cooldown { get => _cooldown; set => _cooldown = value; }
+
+    [SerializeField] private float _timer;
+
+    private bool _isInCooldown = false;
+
+    private void Awake()
+    {
+        _cooldown = _grabbableObjectData.Cooldown;
+    }
+
+    public bool Interact(Interactor interactor)
+    {
+        if (_isInCooldown) return false;
+        
+        SpawnObject(interactor);
+        
+        return true;
+    }
+    
+    private void SpawnObject(Interactor interactor)
+    {
+        GameObject spawnedObject = Instantiate(_grabbableObjectData.Object, interactor.PlayerInteractionStatus.GrabbedSpotPoint);
+        
+        GrabbableObject grabbableObject = spawnedObject.GetComponent<GrabbableObject>();
+        
+        grabbableObject.ForceGrab(interactor);
+        
+        // interactor.PlayerInteractionStatus.SetGrabbedObject(spawnedObject.transform, _grabbableObjectData, true);
+        
+        /*_spawnedObject = Instantiate(_grabbableObjectData.Object);
+        transform.SetParent(_objectSpawnPoint, false);
+        transform.localPosition = Vector3.zero;
+        transform.localRotation = Quaternion.identity;*/
+        
+        _timer = 0f;
+        
+        StartCoroutine(Timer());
+        _isInCooldown = true;
+    }
+
+
+    private IEnumerator Timer()
+    {
+        _timer = 0f;
+
+        while (_timer < _cooldown)
+        {
+            _timer += Time.deltaTime;
+            yield return null;
+        }
+        
+        _isInCooldown = false;
+    }
+}
