@@ -10,6 +10,8 @@ public class FoodSpawner : MonoBehaviour, IInteractable
     [SerializeField] private float _cooldown;
     public float Cooldown { get => _cooldown; set => _cooldown = value; }
 
+    [SerializeField] private GameObject _content;
+
     [SerializeField] private float _timer;
 
     [SerializeField] private bool _isInCooldown = false;
@@ -39,13 +41,14 @@ public class FoodSpawner : MonoBehaviour, IInteractable
         
         StartCoroutine(Timer());
         _isInCooldown = true;
+        _content.SetActive(false);
     }
 
 
     private IEnumerator Timer()
     {
         _timer = 0f;
-
+        
         while (_timer < _cooldown)
         {
             _timer += Time.deltaTime;
@@ -53,5 +56,6 @@ public class FoodSpawner : MonoBehaviour, IInteractable
         }
         
         _isInCooldown = false;
+        _content.SetActive(true);
     }
 }

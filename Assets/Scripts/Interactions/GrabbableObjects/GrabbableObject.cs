@@ -93,4 +93,10 @@ public class GrabbableObject : MonoBehaviour, IInteractable
     {
         Drop(interactor);
     }
+    
+    public void ForceDropAndDestroy(Interactor interactor)
+    {
+        Drop(interactor);
+        Destroy(transform.gameObject);
+    }
 }

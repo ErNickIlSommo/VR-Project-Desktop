@@ -51,7 +51,7 @@ public class Larva : MonoBehaviour
         if (_timerRunningCoroutine == null) return false;
         if (_receivedObject == null) return false;
 
-        Debug.Log("Interacting item with id: " + _receivedObject.Id + " my id: " + _receivedObject.Id);
+        // Debug.Log("Interacting item with id: " + _receivedObject.Id + " my id: " + _receivedObject.Id);
         if (_receivedObject.Id == _requestedObject.Id)
         {
             _isRequestCorrect = true;
