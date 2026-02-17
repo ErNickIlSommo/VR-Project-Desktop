@@ -12,7 +12,7 @@ public class FoodSpawner : MonoBehaviour, IInteractable
 
     [SerializeField] private float _timer;
 
-    private bool _isInCooldown = false;
+    [SerializeField] private bool _isInCooldown = false;
 
     private void Awake()
     {
@@ -21,6 +21,7 @@ public class FoodSpawner : MonoBehaviour, IInteractable
 
     public bool Interact(Interactor interactor)
     {
+        // Debug.Log("Start Interaction with spawner");
         if (_isInCooldown) return false;
         
         SpawnObject(interactor);
@@ -35,15 +36,6 @@ public class FoodSpawner : MonoBehaviour, IInteractable
         GrabbableObject grabbableObject = spawnedObject.GetComponent<GrabbableObject>();
         
         grabbableObject.ForceGrab(interactor);
-        
-        // interactor.PlayerInteractionStatus.SetGrabbedObject(spawnedObject.transform, _grabbableObjectData, true);
-        
-        /*_spawnedObject = Instantiate(_grabbableObjectData.Object);
-        transform.SetParent(_objectSpawnPoint, false);
-        transform.localPosition = Vector3.zero;
-        transform.localRotation = Quaternion.identity;*/
-        
-        _timer = 0f;
         
         StartCoroutine(Timer());
         _isInCooldown = true;

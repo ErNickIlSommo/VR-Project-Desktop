@@ -9,7 +9,7 @@ public class GrabbableObjectData : ScriptableObject
     [SerializeField] private string _name;
     public string Name => _name;
     
-    private float _cooldown;
+    [SerializeField] private float _cooldown;
     public float Cooldown => _cooldown;
     
     [SerializeField] private GameObject _object;

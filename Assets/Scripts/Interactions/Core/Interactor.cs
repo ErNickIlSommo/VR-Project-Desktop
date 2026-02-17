@@ -22,6 +22,12 @@ public class Interactor : MonoBehaviour
 
     private void OnInteract()
     {
+        if (CheckIfHasGrabbedObject())
+        {
+            _playerInteractionStatus.GrabbableObject.ForceDrop(this);
+            return;
+        } 
+        
         IInteractable interactable = _interactionTrigger.GetInteractable();
 
         if (interactable == null) return;
@@ -29,5 +35,10 @@ public class Interactor : MonoBehaviour
         interactable.Interact(this);
 
         // se oggetto grabbabile devo triggerare animazione del player (distinguere fra grab e drop)
+    }
+
+    private bool CheckIfHasGrabbedObject()
+    {
+        return _playerInteractionStatus.HasGrabbed;
     }
 }
