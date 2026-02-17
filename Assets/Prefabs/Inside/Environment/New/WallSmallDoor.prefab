@@ -253,6 +253,7 @@ GameObject:
   - component: {fileID: 6063000963531325808}
   - component: {fileID: 4011236013730711198}
   - component: {fileID: 1776316357580281205}
+  - component: {fileID: 3007014251505761637}
   m_Layer: 0
   m_Name: WallSmallDoor_LOD0
   m_TagString: Untagged
@@ -332,3 +333,25 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &3007014251505761637
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4658104528776716357}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -498669075962242518, guid: 48f40258387f95d43a626cae4fc3bea0, type: 3}

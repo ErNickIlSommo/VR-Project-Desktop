@@ -253,6 +253,7 @@ GameObject:
   - component: {fileID: 2794401071832424290}
   - component: {fileID: 2320463132752251171}
   - component: {fileID: 6732183723961491565}
+  - component: {fileID: 2870783862636715535}
   m_Layer: 0
   m_Name: WallBigDoor_LOD0
   m_TagString: Untagged
@@ -332,3 +333,25 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &2870783862636715535
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7376066345159628519}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -5247541723164434958, guid: d6a1c5b5bc08c59459e016966c944e64, type: 3}
