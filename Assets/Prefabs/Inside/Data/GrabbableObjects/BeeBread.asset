@@ -15,4 +15,4 @@ MonoBehaviour:
   id: 1
   _name: 
   _cooldown: 0
-  _object: {fileID: 0}
+  _object: {fileID: 8063126389488308235, guid: ce06fb87f662b954a96acd89104c67d8, type: 3}
