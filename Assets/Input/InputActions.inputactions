@@ -25,22 +25,13 @@
                     "initialStateCheck": true
                 },
                 {
-                    "name": "FlyUp",
-                    "type": "Button",
+                    "name": "Fly",
+                    "type": "Value",
                     "id": "769e1ab1-2fd1-4e62-bc15-9ec0e7aae897",
-                    "expectedControlType": "",
+                    "expectedControlType": "Axis",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
-                    "name": "FlyDown",
-                    "type": "Button",
-                    "id": "ca38473d-69be-4b5d-b05b-40a9e95af78c",
-                    "expectedControlType": "",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
+                    "initialStateCheck": true
                 },
                 {
                     "name": "Interact",
@@ -120,26 +111,70 @@
                     "isPartOfComposite": false
                 },
                 {
-                    "name": "",
-                    "id": "f784ec5a-6363-42e1-9adf-2453f27e9546",
-                    "path": "",
+                    "name": "1D Axis",
+                    "id": "d44c79a9-3576-4db5-b1bf-a713011a24cb",
+                    "path": "1DAxis",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "FlyUp",
-                    "isComposite": false,
+                    "action": "Fly",
+                    "isComposite": true,
                     "isPartOfComposite": false
                 },
                 {
-                    "name": "",
-                    "id": "6cb793eb-3c6e-48f0-8b84-414b974c7669",
-                    "path": "",
+                    "name": "negative",
+                    "id": "69faa560-bc06-4e34-b52d-f8dbc9ef466a",
+                    "path": "<Gamepad>/leftTrigger",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "FlyDown",
+                    "action": "Fly",
                     "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "positive",
+                    "id": "30b22a33-5fd9-4011-8689-54fd67d2c4f6",
+                    "path": "<Gamepad>/rightTrigger",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Fly",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "1D Axis",
+                    "id": "1ae722c2-5629-4291-987d-de6cc8d78530",
+                    "path": "1DAxis",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Fly",
+                    "isComposite": true,
                     "isPartOfComposite": false
+                },
+                {
+                    "name": "negative",
+                    "id": "b2a12d62-e829-4fa7-afb0-4a39a05e3390",
+                    "path": "<Keyboard>/q",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Fly",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "positive",
+                    "id": "b223d2a8-96bd-4910-9006-5af65080eb8d",
+                    "path": "<Keyboard>/r",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Fly",
+                    "isComposite": false,
+                    "isPartOfComposite": true
                 },
                 {
                     "name": "",
