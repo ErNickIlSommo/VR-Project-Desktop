@@ -7,11 +7,11 @@ public class LarvaTester : MonoBehaviour
     [SerializeField] private bool _sendRequest = false;
     [SerializeField] GrabbableObjectData[] _grabbableObjects;
 
-    private Larva _larva;
+    private LarvaInteraction _larva;
 
     private void Awake()
     {
-        _larva = GetComponent<Larva>();
+        _larva = GetComponent<LarvaInteraction>();
     }
 
     private void Update()
@@ -26,6 +26,6 @@ public class LarvaTester : MonoBehaviour
         int index = Random.Range(0, _grabbableObjects.Length);
         var status = _larva.StartRequest(_grabbableObjects[index]);
         
-        Debug.Log("Send request for object with id: " + _grabbableObjects[index] );
+        Debug.Log("Send request for object with name: " + _grabbableObjects[index].Name );
     }
 }
