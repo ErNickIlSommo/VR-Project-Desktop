@@ -89,6 +89,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &4804817205861711944
 GameObject:
@@ -156,7 +157,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -3329611839230016679, guid: fcdf9d1fdf954664f8c7207ea434660d, type: 3}
+  - {fileID: 2809158951226681791, guid: 7189335df9c2db641a92b89a37519748, type: 3}
   - {fileID: -936794110674994927, guid: fcdf9d1fdf954664f8c7207ea434660d, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
@@ -179,6 +180,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &8013879105247685985
 GameObject:
