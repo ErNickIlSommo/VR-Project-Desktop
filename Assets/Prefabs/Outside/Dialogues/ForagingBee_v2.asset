@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9def5d3e14bbd4967b7898b2c46146d9, type: 3}
-  m_Name: ForagingBee_v4
+  m_Name: ForagingBee_v2
   m_EditorClassIdentifier: Assembly-CSharp::DialogueData
   _speaker: 
   _mainlines:
@@ -21,11 +21,16 @@ MonoBehaviour:
   - _line: Per prendere il polline ti devi avvicinare con cautela, non sia mai che
       tu prenda il petalo sbagliato e cada di sotto...
     _shouldProcessed: 0
-  - _line: Per prendere il polline ti devi avvicinare con cautela, non sia mai che
-      tu prenda il petalo sbagliato e cada di sotto...
-    _shouldProcessed: 0
   - _line: "Quando ti avvicini ad un fiore, premi il tasto [Interact], e quando vedi
       che la barra \xE8 salita al massimo significa che non puoi pi\xF9 raccoglierne
       e dovrai riportarlo all'alveare."
     _shouldProcessed: 1
-  _otherLines: []
+  - _line: "Forza, dobbiamo raccogliere pi\xF9 polline possibile!"
+    _shouldProcessed: 0
+  _otherLines:
+  - _line: "Quando ti avvicini ad un fiore, premi il tasto [Interact], e quando vedi
+      che la barra \xE8 salita al massimo significa che non puoi pi\xF9 raccoglierne
+      e dovrai riportarlo all'alveare."
+    _shouldProcessed: 0
+  - _line: "Forza, dobbiamo raccogliere pi\xF9 polline possibile!"
+    _shouldProcessed: 0

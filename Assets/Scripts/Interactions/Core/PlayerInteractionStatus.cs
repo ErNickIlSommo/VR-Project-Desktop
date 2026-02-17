@@ -12,9 +12,20 @@ public class PlayerInteractionStatus : MonoBehaviour
     [SerializeField] private Transform _grabbedObjectTransform;
     public Transform GrabbedObjectTransform => _grabbedObjectTransform;
 
-    public void SetGrabbedObject(Transform grabbedTransform, bool isGrabbing)
+    private GrabbableObjectData _objectData;
+    public GrabbableObjectData ObjectData => _objectData;
+
+    public void SetGrabbedObject(Transform grabbedTransform, GrabbableObjectData data, bool isGrabbing)
     {
         _grabbedObjectTransform = grabbedTransform;
+        _objectData = data;
         _hasGrabbed = isGrabbing;
+    }
+
+    public void SetGrabbedObject()
+    {
+        _grabbedObjectTransform = null;
+        _objectData = null;
+        _hasGrabbed = false;
     }
 }

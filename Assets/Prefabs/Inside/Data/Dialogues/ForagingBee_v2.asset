@@ -10,16 +10,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9def5d3e14bbd4967b7898b2c46146d9, type: 3}
-  m_Name: NurseBee_v2
+  m_Name: ForagingBee_v2
   m_EditorClassIdentifier: Assembly-CSharp::DialogueData
-  _speaker: Ape Nutrice
+  _speaker: 
   _mainlines:
-  - _line: "Ottimo lavoro! Adesso che hai visto gli appena nati puoi andare a trovare
-      gli appena morti, torna al piano terra, troverai la stanza davanti all\u2019entrata "
+  - _line: Vedo che hai completato il compito che ti ha assegnato l'ape nutrice,
+      Complimenti!
+    _shouldProcessed: 0
+  - _line: "Adesso vai dall'ape becchina, sicuramente avr\xE0 bisogno di aiuto"
+    _shouldProcessed: 0
+  - _line: La torvi in questo piano in fondo
     _shouldProcessed: 0
   _otherLines:
-  - _line: "Ora vai dalla becchina. \xC8 meno dolce di me, ma ha molto da insegnarti."
+  - _line: "Adesso vai dall'ape becchina, sicuramente avr\xE0 bisogno di aiuto"
     _shouldProcessed: 0
-  - _line: "Ottimo lavoro! Adesso che hai visto gli appena nati puoi andare a trovare
-      gli appena morti, torna al piano terra, troverai la stanza davanti all\u2019entrata "
+  - _line: La torvi in questo piano in fondo
     _shouldProcessed: 0

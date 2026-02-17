@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9def5d3e14bbd4967b7898b2c46146d9, type: 3}
-  m_Name: GraveDiggerBee
+  m_Name: GraveDiggerBee_v2
   m_EditorClassIdentifier: Assembly-CSharp::DialogueData
   _speaker: Ape Becchina
   _mainlines:
@@ -27,20 +27,9 @@ MonoBehaviour:
     _shouldProcessed: 0
   - _line: "Allora renditi utile e cerca i nostri caduti nell\u2019alveare, "
     _shouldProcessed: 0
-  - _line: " quando li trovi portali nella stanza centrale al piano terra e buttali
+  - _line: "quando li trovi portali nella stanza centrale al piano terra e buttali
       nel fosso sotto l\u2019alveare."
-    _shouldProcessed: 0
-  - _line: '[EOF]'
-    _shouldProcessed: 1
-  - _line: "Uh, sei meno male di quello che pensassi, magari dopotutto riuscirai
-      a sopravvivere l\xE0 fuori."
-    _shouldProcessed: 0
-  - _line: "Torna dall\u2019ape guida, ti dir\xE0 quello che avrai da fare dopo."
     _shouldProcessed: 0
   _otherLines:
   - _line: "Sono ancora l\xEC. Non spariranno da soli."
-    _shouldProcessed: 0
-  - _line: "L\xE0 fuori non sar\xE0 pi\xF9 facile. Anzi."
-    _shouldProcessed: 0
-  - _line: "Torna dall\u2019ape guida, ti dir\xE0 quello che avrai da fare dopo."
     _shouldProcessed: 0
