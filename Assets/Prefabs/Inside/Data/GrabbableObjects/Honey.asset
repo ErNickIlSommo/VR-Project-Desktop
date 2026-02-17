@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Honey
   m_EditorClassIdentifier: Assembly-CSharp::GrabbableObjectData
   id: 2
-  _name: 
+  _name: Miele
   _cooldown: 5
   _object: {fileID: 4246832594410960044, guid: b339c33c9e555c04b913141dd5a3c8b3, type: 3}

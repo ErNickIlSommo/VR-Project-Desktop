@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: RoyalJelly
   m_EditorClassIdentifier: Assembly-CSharp::GrabbableObjectData
   id: 0
-  _name: 
+  _name: Pappa reale
   _cooldown: 5
   _object: {fileID: 8754127164282576309, guid: a2ded674b8abbe7479744f2f500cf823, type: 3}
