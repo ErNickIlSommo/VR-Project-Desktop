@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 537a906f64434419d9174b498f76e366, type: 3}
   m_Name: Water
   m_EditorClassIdentifier: Assembly-CSharp::GrabbableObjectData
-  id: 0
-  _name: 
-  _object: {fileID: 0}
+  id: 5
+  _name: Acqua
+  _cooldown: 5
+  _object: {fileID: 1427285186728203340, guid: 0e52a61de4ef29d4685112d7cd1c77f2, type: 3}

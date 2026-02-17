@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: Corpse
   m_EditorClassIdentifier: Assembly-CSharp::GrabbableObjectData
   id: 0
-  _name: 
+  _name: Corpse
+  _cooldown: 0
   _object: {fileID: 0}

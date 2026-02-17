@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: Pollen
   m_EditorClassIdentifier: Assembly-CSharp::GrabbableObjectData
   id: 0
-  _name: 
-  _object: {fileID: 0}
+  _name: Pollen
+  _cooldown: 5
+  _object: {fileID: 9123827352008579509, guid: d6063d52fd1b6f04a85c45f77f18d54a, type: 3}

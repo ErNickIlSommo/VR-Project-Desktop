@@ -11,21 +11,37 @@ public class PlayerInteractionStatus : MonoBehaviour
 
     [SerializeField] private Transform _grabbedObjectTransform;
     public Transform GrabbedObjectTransform => _grabbedObjectTransform;
+    
+    [SerializeField]  private GameObject _grabbedObject;
+    public GameObject GrabbedObject => _grabbedObject ;
+    
+    [SerializeField] private GrabbableObject _grabbableObject;
+    public GrabbableObject GrabbableObject => _grabbableObject;
 
     private GrabbableObjectData _objectData;
     public GrabbableObjectData ObjectData => _objectData;
 
-    public void SetGrabbedObject(Transform grabbedTransform, GrabbableObjectData data, bool isGrabbing)
-    {
-        _grabbedObjectTransform = grabbedTransform;
-        _objectData = data;
-        _hasGrabbed = isGrabbing;
-    }
-
     public void SetGrabbedObject()
     {
         _grabbedObjectTransform = null;
+        _grabbableObject = null;
         _objectData = null;
         _hasGrabbed = false;
+    }
+
+    public void SetGrabbedObject(GrabbableObject grabbableObject)
+    {
+        _grabbedObjectTransform = grabbableObject.transform;
+        _objectData = grabbableObject.ObjectData;
+        _grabbableObject = grabbableObject;
+        _hasGrabbed = !grabbableObject.IsDropped;
+    }
+    
+    public void SetGrabbedObject(Transform grabbedTransform, GrabbableObjectData data, GrabbableObject grabbableObject, bool isGrabbing)
+    {
+        _grabbedObjectTransform = grabbedTransform;
+        _objectData = data;
+        _grabbableObject = grabbableObject;
+        _hasGrabbed = isGrabbing;
     }
 }

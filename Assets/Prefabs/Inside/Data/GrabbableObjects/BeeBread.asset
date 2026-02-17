@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 537a906f64434419d9174b498f76e366, type: 3}
   m_Name: BeeBread
   m_EditorClassIdentifier: Assembly-CSharp::GrabbableObjectData
-  id: 0
-  _name: 
-  _object: {fileID: 0}
+  id: 1
+  _name: Pane d'api
+  _cooldown: 0
+  _object: {fileID: 8063126389488308235, guid: ce06fb87f662b954a96acd89104c67d8, type: 3}

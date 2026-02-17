@@ -5,7 +5,7 @@ public class GrabbableObject : MonoBehaviour, IInteractable
 {
     // in case the object has a RigidBody
     private Rigidbody _rb;
-    private Transform _transform;
+    
     [SerializeField] private GrabbableObjectData _objectData;
     public GrabbableObjectData ObjectData => _objectData;
 
@@ -15,7 +15,6 @@ public class GrabbableObject : MonoBehaviour, IInteractable
     private void Awake()
     {
         _rb = GetComponent<Rigidbody>();
-        _transform = GetComponent<Transform>();
     }
 
     public bool Interact(Interactor interactor)
@@ -42,12 +41,11 @@ public class GrabbableObject : MonoBehaviour, IInteractable
             _rb.isKinematic = true;
         }
         
-        interactor.PlayerInteractionStatus.SetGrabbedObject(_transform, _objectData, true);
-        _transform.SetParent(interactor.PlayerInteractionStatus.GrabbedSpotPoint, false);
-        _transform.localPosition = Vector3.zero;
-        _transform.localRotation = Quaternion.identity;
-        
         _isDropped = false;
+        interactor.PlayerInteractionStatus.SetGrabbedObject(this);
+        transform.SetParent(interactor.PlayerInteractionStatus.GrabbedSpotPoint, false);
+        transform.localPosition = Vector3.zero;
+        transform.localRotation = Quaternion.identity;
         
         // Debug.Log("Grabbed");
     }
@@ -59,10 +57,11 @@ public class GrabbableObject : MonoBehaviour, IInteractable
             _rb.isKinematic = false;
         } 
         
+        _isDropped = true; 
         interactor.PlayerInteractionStatus.SetGrabbedObject();
-        _transform.SetParent(null, true);
+        transform.SetParent(null, true);
         
-        _isDropped = true;
+        
         // Debug.Log("Dropped");
     }
 
@@ -73,7 +72,7 @@ public class GrabbableObject : MonoBehaviour, IInteractable
         
         // if interactor has already grabbed another object
         return interactor.PlayerInteractionStatus.HasGrabbed && 
-               _transform.name != interactor.PlayerInteractionStatus.GrabbedObjectTransform.name;
+               transform.name != interactor.PlayerInteractionStatus.GrabbedObjectTransform.name;
     }
     
     private bool IsGrabbed(Interactor interactor)
@@ -82,11 +81,22 @@ public class GrabbableObject : MonoBehaviour, IInteractable
         if(!interactor.PlayerInteractionStatus.GrabbedObjectTransform) return false;
         
         return interactor.PlayerInteractionStatus.HasGrabbed && 
-               _transform.name == interactor.PlayerInteractionStatus.GrabbedObjectTransform.name;
+               transform.name == interactor.PlayerInteractionStatus.GrabbedObjectTransform.name;
     }
 
     public void ForceGrab(Interactor interactor)
     {
         Grab(interactor);
+    }
+
+    public void ForceDrop(Interactor interactor)
+    {
+        Drop(interactor);
+    }
+    
+    public void ForceDropAndDestroy(Interactor interactor)
+    {
+        Drop(interactor);
+        Destroy(transform.gameObject);
     }
 }

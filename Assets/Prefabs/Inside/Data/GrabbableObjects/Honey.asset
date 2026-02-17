@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 537a906f64434419d9174b498f76e366, type: 3}
   m_Name: Honey
   m_EditorClassIdentifier: Assembly-CSharp::GrabbableObjectData
-  id: 0
-  _name: 
-  _object: {fileID: 0}
+  id: 2
+  _name: Miele
+  _cooldown: 5
+  _object: {fileID: 4246832594410960044, guid: b339c33c9e555c04b913141dd5a3c8b3, type: 3}
