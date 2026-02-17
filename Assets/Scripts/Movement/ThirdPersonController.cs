@@ -81,7 +81,6 @@ public class ThirdPersonController : MonoBehaviour
         m_moveValue = m_moveAction.ReadValue<Vector2>();
         m_lookValue = m_lookAction.ReadValue<Vector2>();
         m_flyValue = m_flyAction.ReadValue<float>();
-        Debug.Log(m_flyValue);
 
         RotateCamera();
         Move();

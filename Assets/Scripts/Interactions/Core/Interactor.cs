@@ -4,13 +4,11 @@ using UnityEngine.InputSystem;
 
 public class Interactor : MonoBehaviour
 {
-    [SerializeField] private Transform _interactionPoint;
-    [SerializeField] private float  _interactionDistance;
-    [SerializeField] private LayerMask _interactableMask;
-    [SerializeField] private InputActionAsset inputActions;
+    [Header("Trigger")]
+    [SerializeField] private InteractorTrigger _interactionTrigger;
 
-    private readonly Collider[] _colliders = new Collider[3];
-    [SerializeField] private int _numFound;
+    [Header("Actions")]
+    [SerializeField] private InputActionAsset inputActions;
 
     private PlayerInteractionStatus _playerInteractionStatus;
     public InputActionAsset InputActions => inputActions;
@@ -22,26 +20,14 @@ public class Interactor : MonoBehaviour
         _playerInteractionStatus = GetComponent<PlayerInteractionStatus>();
     }
 
-    private void Update()
-    {
-        _numFound = Physics.OverlapSphereNonAlloc(_interactionPoint.position, _interactionDistance, _colliders, _interactableMask);
-    }
-
     private void OnInteract()
     {
-        if (_numFound == 0) return;
-
-        var interactable = _colliders[0].GetComponent<IInteractable>();
+        IInteractable interactable = _interactionTrigger.GetInteractable();
 
         if (interactable == null) return;
-        if (!Keyboard.current.eKey.wasPressedThisFrame) return;
 
         interactable.Interact(this);
-    }
 
-    private void OnDrawGizmos()
-    {
-        Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(_interactionPoint.position, _interactionDistance);
+        // se oggetto grabbabile devo triggerare animazione del player (distinguere fra grab e drop)
     }
 }

@@ -12,13 +12,13 @@ public class GeneralDialogue : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.CompareTag("Player"))
+        if(other.CompareTag("InteractorTrigger"))
             _canvas.SetActive(true);
     }
 
     private void OnTriggerExit(Collider other)
     {
-        if(other.CompareTag("Player"))
+        if(other.CompareTag("InteractorTrigger"))
             _canvas.SetActive(false);
     }
 }
