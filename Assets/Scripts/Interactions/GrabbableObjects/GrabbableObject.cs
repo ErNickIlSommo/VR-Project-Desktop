@@ -84,4 +84,9 @@ public class GrabbableObject : MonoBehaviour, IInteractable
         return interactor.PlayerInteractionStatus.HasGrabbed && 
                _transform.name == interactor.PlayerInteractionStatus.GrabbedObjectTransform.name;
     }
+
+    public void ForceGrab(Interactor interactor)
+    {
+        Grab(interactor);
+    }
 }
