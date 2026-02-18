@@ -40,8 +40,8 @@ public class ThirdPersonController : MonoBehaviour
 
     [SerializeField] private PlayerState m_playerState = PlayerState.Idle;
 
-    private void OnEnable() => inputActions.FindActionMap(actionMapName).Enable();
-    private void OnDisable() => inputActions.FindActionMap(actionMapName).Disable();
+    public void OnEnable() => inputActions.FindActionMap(actionMapName).Enable();
+    public void OnDisable() => inputActions.FindActionMap(actionMapName).Disable();
 
     private void Awake()
     {
