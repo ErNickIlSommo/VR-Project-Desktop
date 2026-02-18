@@ -496,6 +496,11 @@ Transform:
   - {fileID: 1225708608}
   m_Father: {fileID: 938706512}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &68491295 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6323320494744761344, guid: 0714ecce2304548b7a47c774a0696c57, type: 3}
+  m_PrefabInstance: {fileID: 653586066}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &76019114
 GameObject:
   m_ObjectHideFlags: 0
@@ -2746,6 +2751,11 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 591005272}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &602153916 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2418261543782774935, guid: 9d910d8550ade4d3bb04acd235cfbcc4, type: 3}
+  m_PrefabInstance: {fileID: 1115849153}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &603588882
 GameObject:
   m_ObjectHideFlags: 0
@@ -5862,6 +5872,11 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!1 &1249685788 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3614178925627501413, guid: 1a100a09933f647ce887f8af9250553b, type: 3}
+  m_PrefabInstance: {fileID: 933499104}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1278421977
 GameObject:
   m_ObjectHideFlags: 0
@@ -7222,6 +7237,9 @@ MonoBehaviour:
   nurseActivity: {fileID: 1070129357}
   panel: {fileID: 1884007602}
   text: {fileID: 1413239510}
+  foodSpawner1: {fileID: 68491295}
+  foodSpawner2: {fileID: 602153916}
+  foodSpawner3: {fileID: 1249685788}
 --- !u!65 &1586891072
 BoxCollider:
   m_ObjectHideFlags: 0
