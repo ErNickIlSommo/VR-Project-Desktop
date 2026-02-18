@@ -83,13 +83,13 @@ public class InteriorMaster : MonoBehaviour
         }
         
         // Nurse Bee
-        if (dialogueInfo.IndexNPC == 2)
+        if (dialogueInfo.IndexNPC == 2 && nurseBee.HasCompletedActivity1)
         {
             nurseActivity.CanStartActivity = true;
         }
         
         // Corpse Bee
-        if (dialogueInfo.IndexNPC == 3)
+        if (dialogueInfo.IndexNPC == 3 && corpseBee.HasCompletedActivity1)
         {
             corpseActivity.CanStartActivity = true;
         }

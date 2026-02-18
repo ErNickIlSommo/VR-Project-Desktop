@@ -26,7 +26,7 @@ public class NurseTrigger : MonoBehaviour, IInteractable
         
         _canTrigger = nurseActivity.CanStartActivity;
         if (!_canTrigger) return;
-        
+        if (_isAlreadyTriggered) return;
         panel.SetActive(true);
     }
 
@@ -52,6 +52,12 @@ public class NurseTrigger : MonoBehaviour, IInteractable
         _canTrigger = false;
         _isAlreadyTriggered = true;
         panel.SetActive(false);  
+        
+        // gameObject.SetActive(false);
+        gameObject.layer = 0;
+        Collider collider = GetComponent<Collider>();
+        collider.enabled = false;
+        interactor.InteractionTrigger.RemoveInteractable(this);
 
         return true;
     }

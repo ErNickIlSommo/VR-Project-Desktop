@@ -188,7 +188,7 @@ public class DialogueNPCInside : GeneralDialogue, IInteractable
         if (OnDialogueFinished != null)
             OnDialogueFinished.Invoke(
                 new DialogEventInfo(
-                    _dialogueIndex,
+                    indexNPC,
                     _speaker,
                     true
             ));

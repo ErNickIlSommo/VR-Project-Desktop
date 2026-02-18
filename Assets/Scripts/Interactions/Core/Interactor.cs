@@ -14,6 +14,8 @@ public class Interactor : MonoBehaviour
     public InputActionAsset InputActions => inputActions;
 
     public PlayerInteractionStatus PlayerInteractionStatus => _playerInteractionStatus;
+    
+    public InteractorTrigger InteractionTrigger => _interactionTrigger;
 
     private void Awake()
     {
