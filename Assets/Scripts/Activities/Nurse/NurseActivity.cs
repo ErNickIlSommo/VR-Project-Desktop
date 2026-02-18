@@ -13,10 +13,10 @@ public class NurseActivity : MonoBehaviour
     [SerializeField] private int _score = 0;
     [SerializeField] private int _failedRequests = 0;
     
-    private float[] _cooldowns = { 20f, 15f, 13f };
-    private const int _lvl1 = 6;
-    private const int _lvl2 = 9;
-    private const int _lvl3 = 11;
+    [SerializeField] private float[] _cooldowns = { 20f, 15f, 13f, 9f };
+    [SerializeField] private int _lvl1 = 6;
+    [SerializeField] private int _lvl2 = 9;
+    [SerializeField] private int _lvl3 = 11;
     
     [SerializeField] private float _currentCooldown;
 
@@ -92,9 +92,9 @@ public class NurseActivity : MonoBehaviour
         // Generate another request
         var level = larvasManager.Index + 1;
         if(level >= _lvl1) _currentCooldown = _cooldowns[1];
-        else if (level >= _lvl2) _currentCooldown = _cooldowns[2];
-        else if (level >= _lvl3) _currentCooldown = _cooldowns[3];
-        else _currentCooldown = _cooldowns[0];
+        if (level >= _lvl2) _currentCooldown = _cooldowns[2];
+        if (level >= _lvl3) _currentCooldown = _cooldowns[3];
+        // else _currentCooldown = _cooldowns[0];
         
         int ingredientIndex = Random.Range(0, larvaRequestOptions.Count);
         larvasManager

@@ -17,7 +17,10 @@ public class LarvaInteraction : MonoBehaviour, IInteractable
     // Time variables
     [SerializeField] private float _cooldown = 10f;
     [SerializeField] private float _timer = 0f;
+    [SerializeField] private float _waitStartRequest = 3f;
+    [SerializeField] private float _waitTimer = 0f;
     private Coroutine _timerRunningCoroutine; 
+    private Coroutine _timerWaitingCoroutine;
     
     // Flag controlling the request
     [SerializeField] private bool _isRequestRunning = false; 
@@ -71,16 +74,13 @@ public class LarvaInteraction : MonoBehaviour, IInteractable
         
         if (!float.IsNaN(cooldown)) _cooldown = cooldown;
         
-        _isRequestCorrect = false; 
-        _timerRunningCoroutine = StartCoroutine(Timer());
         _requestedObject = requestedObject;
-        _isRequestRunning = true; 
+        _isRequestCorrect = false; 
+        _isRequestRunning = true;
+
+        _timerWaitingCoroutine = StartCoroutine(WaitForStartingRequest());
         
-        /*
-         * Test functionalities
-         */
-        Debug.Log("Started request item: " + _requestedObject.Name);
-        renderer.material.color = _requestColor;
+        
         
         return true;
     }
@@ -183,5 +183,28 @@ public class LarvaInteraction : MonoBehaviour, IInteractable
 
         RefuseIngredient();
         _timerRunningCoroutine = null;
+    }
+
+    private IEnumerator WaitForStartingRequest()
+    {
+        renderer.material.color = _requestColor;
+        Debug.Log(gameObject.name + ":  !!!");
+        
+        _waitTimer = 0f;
+        while (_waitTimer < _waitStartRequest)
+        {
+            _waitTimer += Time.deltaTime;
+            yield return null;
+        }
+        
+        _timerRunningCoroutine = StartCoroutine(Timer());
+        
+        /*
+         * Test functionalities
+         */
+        Debug.Log("Started request item: " + _requestedObject.Name);
+        
+        
+        _timerWaitingCoroutine = null;
     }
 }
