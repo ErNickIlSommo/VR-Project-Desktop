@@ -5,6 +5,7 @@ public class Fader : MonoBehaviour
 {
     [SerializeField] private CanvasGroup canvasGroup;
     [SerializeField] private float fadeDuration = 0.4f;
+    [SerializeField] private ThirdPersonController playerController;
     
     public bool IsFading  { get; private set; }
 
@@ -17,8 +18,9 @@ public class Fader : MonoBehaviour
         float startAlpha = canvasGroup.alpha;
         
         // Block input
+        if (!playerController) yield return null;
+        playerController.OnDisable();
         
-        // 
         float t = 0f;
         while (t < fadeDuration)
         {
@@ -31,8 +33,8 @@ public class Fader : MonoBehaviour
         canvasGroup.alpha = targetAlpha;
         
         // Unlock input
+        playerController.OnEnable();
         
-        // 
         IsFading = false;
     }
 }
