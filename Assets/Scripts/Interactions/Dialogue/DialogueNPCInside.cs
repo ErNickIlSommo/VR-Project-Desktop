@@ -128,12 +128,14 @@ public class DialogueNPCInside : GeneralDialogue, IInteractable
     {
         InputActionMap map = interactor.InputActions.FindActionMap("Controls", true);
         map.FindAction("Move", true).Disable(); 
+        map.FindAction("Fly", true).Disable();
     }
 
     public void UnlockMovement(Interactor interactor)
     {
         InputActionMap map = interactor.InputActions.FindActionMap("Controls", true);
         map.FindAction("Move", true).Enable(); 
+        map.FindAction("Fly", true).Enable(); 
     }
 
     private void GoToNextLine()
