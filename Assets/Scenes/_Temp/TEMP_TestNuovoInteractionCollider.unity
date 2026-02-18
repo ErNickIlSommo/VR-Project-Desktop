@@ -6036,6 +6036,63 @@ Transform:
   - {fileID: 877995491676266587}
   m_Father: {fileID: 3867413631466796472}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1416594190938579485
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 562748914448057737, guid: 0714ecce2304548b7a47c774a0696c57, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 13.4311285
+      objectReference: {fileID: 0}
+    - target: {fileID: 562748914448057737, guid: 0714ecce2304548b7a47c774a0696c57, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.060000002
+      objectReference: {fileID: 0}
+    - target: {fileID: 562748914448057737, guid: 0714ecce2304548b7a47c774a0696c57, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 3.6392016
+      objectReference: {fileID: 0}
+    - target: {fileID: 562748914448057737, guid: 0714ecce2304548b7a47c774a0696c57, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 562748914448057737, guid: 0714ecce2304548b7a47c774a0696c57, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 562748914448057737, guid: 0714ecce2304548b7a47c774a0696c57, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 562748914448057737, guid: 0714ecce2304548b7a47c774a0696c57, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 562748914448057737, guid: 0714ecce2304548b7a47c774a0696c57, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 562748914448057737, guid: 0714ecce2304548b7a47c774a0696c57, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 562748914448057737, guid: 0714ecce2304548b7a47c774a0696c57, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6323320494744761344, guid: 0714ecce2304548b7a47c774a0696c57, type: 3}
+      propertyPath: m_Name
+      value: Pane api_box
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0714ecce2304548b7a47c774a0696c57, type: 3}
 --- !u!1 &1430570289667609300
 GameObject:
   m_ObjectHideFlags: 0
@@ -7586,7 +7643,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8397912271376123991, guid: ef3ab5a4d30ca40fbb4be386b1389448, type: 3}
       propertyPath: m_Name
-      value: Bee Bread Chest
+      value: Bee Bread Chest Spawner
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -9716,9 +9773,10 @@ SceneRoots:
   - {fileID: 813819816}
   - {fileID: 788079451}
   - {fileID: 1328809657}
+  - {fileID: 1069106427}
   - {fileID: 4249613122247158282}
   - {fileID: 4138101285146041284}
   - {fileID: 2362860562619944994}
   - {fileID: 304804968257260063}
   - {fileID: 3951099863593527895}
-  - {fileID: 1069106427}
+  - {fileID: 1416594190938579485}
