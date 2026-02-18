@@ -92,6 +92,7 @@ public class InteriorMaster : MonoBehaviour
         if (dialogueInfo.IndexNPC == 3 && corpseBee.HasCompletedActivity1)
         {
             corpseActivity.CanStartActivity = true;
+            Debug.Log("Master, set CanStartActivity to corpse activity");
         }
         
     }
