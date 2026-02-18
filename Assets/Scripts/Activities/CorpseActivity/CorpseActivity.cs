@@ -37,7 +37,11 @@ public class CorpseActivity : MonoBehaviour
 
     public void StartActivity()
     {
-        if (!_canStartActivity) return;
+        if (!_canStartActivity)
+        {
+            Debug.LogError("Can't start activity");
+            return;
+        }
         corpseCount = 0;
         totalCorpseCount = corpses.Count;
         isActivityRunning = true;

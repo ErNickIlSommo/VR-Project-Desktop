@@ -112,11 +112,13 @@ public class GrabbableObject : MonoBehaviour, IInteractable
     {
         InputActionMap map = interactor.InputActions.FindActionMap("Controls", true);
         map.FindAction("Move", true).Disable(); 
+        // map.Disable();
     }
 
     public void UnlockMovement(Interactor interactor)
     {
         InputActionMap map = interactor.InputActions.FindActionMap("Controls", true);
         map.FindAction("Move", true).Enable(); 
+        // map.Enable();
     }
 }
