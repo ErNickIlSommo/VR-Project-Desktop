@@ -1,13 +1,64 @@
 using UnityEngine;
+using TMPro;
 
 public class CorpseTrigger : MonoBehaviour, IInteractable
 {
+    [SerializeField] private CorpseActivity corpseActivity;
+    [SerializeField] private GameObject panel;
+    [SerializeField] private TextMeshProUGUI text;
 
+    private bool _canTrigger;
+    private bool _isAlreadyTriggered;
     
-    
+    private void Awake()
+    {
+        _canTrigger = corpseActivity.CanStartActivity;
+        _isAlreadyTriggered = false;
+        panel.SetActive(false);
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (!other.CompareTag("Player")) return;
+        
+        Debug.Log("Player Entered in Nurse Trigger");
+        
+        _canTrigger = corpseActivity.CanStartActivity;
+        if (!_canTrigger) return;
+        if (_isAlreadyTriggered) return;
+        panel.SetActive(true);
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (!other.CompareTag("Player")) return;
+            
+        Debug.Log("Player Exited in Nurse Trigger");
+        
+        _canTrigger = corpseActivity.CanStartActivity;
+        if (!_canTrigger) return;
+        if(_isAlreadyTriggered) return;
+        
+        panel.SetActive(false);
+    }
+
     public bool Interact(Interactor interactor)
     {
-        throw new System.NotImplementedException();
+        _canTrigger = corpseActivity.CanStartActivity;
+        if (!_canTrigger) return false;
+        
+        corpseActivity.StartActivity();
+        _canTrigger = false;
+        _isAlreadyTriggered = true;
+        panel.SetActive(false);  
+        
+        // gameObject.SetActive(false);
+        gameObject.layer = 0;
+        Collider collider = GetComponent<Collider>();
+        collider.enabled = false;
+        interactor.InteractionTrigger.RemoveInteractable(this);
+
+        return true;
     }
 
     public void BlockMovement(Interactor interactor)
