@@ -10116,7 +10116,7 @@ MonoBehaviour:
   flyActionName: Fly
   cameraTransform: {fileID: 315345038}
   visualPivot: {fileID: 0}
-  walkSpeed: 7
+  walkSpeed: 20
   turnSpeed: 12
   flySpeed: 20
   heightChangeSpeed: 15
