@@ -8,6 +8,10 @@ public class NurseTrigger : MonoBehaviour, IInteractable
     [SerializeField] private GameObject panel;
     [SerializeField] private TextMeshProUGUI text;
 
+    [SerializeField] private GameObject foodSpawner1;
+    [SerializeField] private GameObject foodSpawner2;
+    [SerializeField] private GameObject foodSpawner3;
+
     private bool _canTrigger;
     private bool _isAlreadyTriggered;
     
@@ -16,6 +20,10 @@ public class NurseTrigger : MonoBehaviour, IInteractable
         _canTrigger = nurseActivity.CanStartActivity;
         _isAlreadyTriggered = false;
         panel.SetActive(false);
+
+        foodSpawner1.layer = 0;
+        foodSpawner2.layer = 0;
+        foodSpawner3.layer = 0;
     }
 
     private void OnTriggerEnter(Collider other)
@@ -55,6 +63,10 @@ public class NurseTrigger : MonoBehaviour, IInteractable
         
         // gameObject.SetActive(false);
         gameObject.layer = 0;
+        foodSpawner1.layer = 6;
+        foodSpawner2.layer = 6;
+        foodSpawner3.layer = 6;
+        
         Collider collider = GetComponent<Collider>();
         collider.enabled = false;
         interactor.InteractionTrigger.RemoveInteractable(this);
