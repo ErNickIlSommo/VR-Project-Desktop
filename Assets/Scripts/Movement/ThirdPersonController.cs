@@ -21,16 +21,12 @@ public class ThirdPersonController : MonoBehaviour
     [SerializeField] private float turnSpeed = 10f;
 
     [Header("Flight")]
+    [SerializeField] private float flySpeed = 7f;
     [SerializeField] private float heightChangeSpeed = 11f;
     [SerializeField] private float gravity = -10f;
 
     [Header("Animation")]
-    [SerializeField] private Animator animator;
-    [SerializeField] private string movingParam = "IsWalking";
-    [SerializeField] private string flyingParam = "IsFlying";
-    [SerializeField] private string transitionUpParam = "IsTransitionUp";
-    [SerializeField] private string transitionDownParam = "IsTransitionDown";
-    [SerializeField] private float animSmooth = 10f;
+    [SerializeField] private PlayerAnimationController animationController;
 
     private CharacterController m_controller;
 
@@ -42,8 +38,7 @@ public class ThirdPersonController : MonoBehaviour
     private float m_flyValue;
     private float m_animSpeed;
 
-    private enum MovementState { Idle, Walk, Fly, FreeFall, GroundUpToWall, Climb }
-    [SerializeField] private MovementState movementState = MovementState.Idle;
+    [SerializeField] private PlayerState m_playerState = PlayerState.Idle;
 
     private void OnEnable() => inputActions.FindActionMap(actionMapName).Enable();
     private void OnDisable() => inputActions.FindActionMap(actionMapName).Disable();
@@ -51,6 +46,7 @@ public class ThirdPersonController : MonoBehaviour
     private void Awake()
     {
         m_controller = GetComponent<CharacterController>();
+
 
         var map = inputActions.FindActionMap(actionMapName, true);
         m_moveAction = map.FindAction(moveActionName, true);
@@ -71,7 +67,7 @@ public class ThirdPersonController : MonoBehaviour
         ApplyGravity();
         UpdateFlight();
 
-        UpdateAnimations();
+        UpdateAnimations(m_playerState, m_moveValue);
     }
 
     private Vector3 GetMoveDirWorld()
@@ -89,78 +85,53 @@ public class ThirdPersonController : MonoBehaviour
 
     private void Move()
     {
-        if (movementState == MovementState.Fly || movementState == MovementState.Climb) return;
-
         Vector3 dir = GetMoveDirWorld();
+
+        float moveSpeed = m_playerState == PlayerState.Fly ? flySpeed : walkSpeed;
 
         if (dir.sqrMagnitude > 0.0001f)
         {
             Quaternion targetRot = Quaternion.LookRotation(dir.normalized, Vector3.up);
             transform.rotation = Quaternion.RotateTowards(transform.rotation, targetRot, turnSpeed * 360f * Time.deltaTime);
+            if (m_controller.isGrounded && m_playerState == PlayerState.Idle)
+                m_playerState = PlayerState.Walk;
+        }
+        else if (m_playerState == PlayerState.Walk)
+        {
+            m_playerState = PlayerState.Idle;
         }
 
-        m_controller.Move(dir * walkSpeed * Time.deltaTime);
-
-        if (m_controller.isGrounded && movementState == MovementState.Idle)
-            movementState = MovementState.Walk;
+        m_controller.Move(dir * moveSpeed * Time.deltaTime);
+ 
     }
 
     private void Fly()
     {
         if (m_flyValue == 0.0f) return;
 
-        if (movementState != MovementState.Fly && m_flyValue >= 0.0f)
-            movementState = MovementState.Fly;
+        if (m_playerState != PlayerState.Fly && m_flyValue >= 0.0f)
+            m_playerState = PlayerState.Fly;
 
         m_controller.Move(Vector3.up * m_flyValue * heightChangeSpeed * Time.deltaTime);
     }
 
     private void ApplyGravity()
     {
-        if (!m_controller.isGrounded && movementState != MovementState.Fly && movementState != MovementState.Climb)
+        if (!m_controller.isGrounded && m_playerState != PlayerState.Fly && m_playerState != PlayerState.Climb)
             m_controller.Move(Vector3.up * gravity * Time.deltaTime);
     }
 
     private void UpdateFlight()
     {
-        if (!m_controller.isGrounded && (movementState == MovementState.Walk || movementState == MovementState.Idle))
-            movementState = MovementState.FreeFall;
+        if (!m_controller.isGrounded && (m_playerState == PlayerState.Walk || m_playerState == PlayerState.Idle))
+            m_playerState = PlayerState.FreeFall;
 
-        if (m_controller.isGrounded && movementState == MovementState.FreeFall)
-            movementState = MovementState.Idle;
+        if (m_controller.isGrounded && (m_playerState == PlayerState.FreeFall || m_playerState == PlayerState.Fly))
+            m_playerState = PlayerState.Idle;
     }
 
-    private void UpdateAnimations()
+    private void UpdateAnimations(PlayerState playerState, Vector2 moveValue)
     {
-        if (animator == null) return;
-
-        bool inTransition = movementState == MovementState.GroundUpToWall;
-
-        if (inTransition)
-        {
-            animator.SetBool(flyingParam, false);
-            animator.SetBool(movingParam, false);
-            return;
-        }
-
-        if (movementState == MovementState.Climb)
-        {
-            animator.SetBool(flyingParam, false);
-            animator.SetBool(movingParam, true);
-            return;
-        }
-
-        if (movementState == MovementState.Fly)
-        {
-            animator.SetBool(flyingParam, true);
-            animator.SetBool(movingParam, false);
-            return;
-        }
-
-        float target = Mathf.Clamp01(m_moveValue.magnitude);
-        m_animSpeed = Mathf.Lerp(m_animSpeed, target, animSmooth * Time.deltaTime);
-
-        animator.SetBool(flyingParam, false);
-        animator.SetBool(movingParam, m_animSpeed > 0.05f);
+        animationController.UpdateAnimations(playerState, moveValue);
     }
 }
