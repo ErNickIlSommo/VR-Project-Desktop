@@ -8,6 +8,8 @@ public class CorpseActivity : MonoBehaviour
     public event Action<bool> OnActivityCompleted;
     
     [SerializeField] Abyss abyss;
+    
+    private bool _canStartActivity;
     [SerializeField] private bool isActivityRunning = false;
     [SerializeField] private bool isActivityCompleted = false;
     [SerializeField] private int corpseCount = 0;
@@ -15,10 +17,14 @@ public class CorpseActivity : MonoBehaviour
 
     [SerializeField] private List<GameObject> corpses;
     
+    
+    public bool CanStartActivity { get => _canStartActivity; set => _canStartActivity = value; }
+    
     public bool IsActivityRunning => isActivityRunning;
     
     private void Awake()
     {
+        _canStartActivity = false;
         isActivityRunning = false;
         isActivityCompleted = false;
         totalCorpseCount = corpses.Count;
@@ -31,6 +37,7 @@ public class CorpseActivity : MonoBehaviour
 
     public void StartActivity()
     {
+        if (!_canStartActivity) return;
         corpseCount = 0;
         totalCorpseCount = corpses.Count;
         isActivityRunning = true;

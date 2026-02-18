@@ -3063,9 +3063,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LarvaInteraction
   _cooldown: 30
+  _timer: 0
+  _waitStartRequest: 3
+  _waitTimer: 0
   _isRequestRunning: 0
   _isRequestCorrect: 0
-  _timer: 0
+  renderer: {fileID: 0}
 --- !u!54 &1069106425
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -3233,8 +3236,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1144725719}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.25340134, y: 0.000000068460345, z: -0.000000017933262, w: 0.9673613}
-  m_LocalPosition: {x: 0, y: 3.45, z: -6.25}
+  m_LocalRotation: {x: 0.06811917, y: 0.000000015557964, z: -0.0000000010622633, w: 0.9976772}
+  m_LocalPosition: {x: 1.76, y: 3.45, z: -14.23}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -9329,23 +9332,15 @@ MonoBehaviour:
   moveActionName: Move
   lookActionName: Look
   flyActionName: Fly
+  cameraTransform: {fileID: 1144725722}
+  visualPivot: {fileID: 0}
   walkSpeed: 5
   turnSpeed: 12
   flySpeed: 15
-  isFlying: 0
-  maxIncline: 5
-  minIncline: -10
   heightChangeSpeed: 12
   gravity: -10
-  rotateSpeed: 5
-  cameraTransform: {fileID: 1144725722}
-  cameraTarget: {fileID: 0}
-  minPitch: -70
-  maxPitch: 70
-  animator: {fileID: 0}
-  movingParam: IsWalking
-  flyingParam: IsFlying
-  animSmooth: 10
+  animationController: {fileID: 0}
+  m_playerState: 0
 --- !u!114 &7752291755637276631
 MonoBehaviour:
   m_ObjectHideFlags: 0

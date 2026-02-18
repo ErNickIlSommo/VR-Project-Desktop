@@ -8,6 +8,7 @@ public class NurseActivity : MonoBehaviour
     public event Action<bool> OnActivityStarted;
     public event Action<bool> OnActivityCompleted;
     
+    private bool _canStartActivity;
     [SerializeField] private bool _isActivityStarted = false;
     [SerializeField] private bool _isActivityCompleted = false;
     [SerializeField] private int _score = 0;
@@ -27,6 +28,7 @@ public class NurseActivity : MonoBehaviour
     
     // Getters and Setters
     
+    public bool CanStartActivity { get => _canStartActivity; set => _canStartActivity = value; }
     
     public bool IsActivityStarted 
     {
@@ -43,12 +45,15 @@ public class NurseActivity : MonoBehaviour
 
     private void Awake()
     {
+        _canStartActivity = false;
+        
         larvasManager.SendInfoToMaster += HandleLarvaTerminated;
         larvasManager.IsLarvasTerminated += HandleAllLarvasTerminated;
     }
 
     public void StartActivity(int howMany = 5000)
     {
+        if(!_canStartActivity) return;
         if (_isActivityStarted) return;
         
         if (howMany <= 0) howMany = 5000;

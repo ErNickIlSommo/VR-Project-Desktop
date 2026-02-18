@@ -1,3 +1,4 @@
+using System;
 using TMPro;
 using UnityEngine;
 using System.Collections.Generic;
@@ -5,9 +6,15 @@ using UnityEngine.InputSystem;
 
 public class DialogueNPCInside : GeneralDialogue, IInteractable
 {
-    [SerializeField] private TextMeshProUGUI _ui;
-    [SerializeField] private GameObject _panel;
+    public event Action<DialogEventInfo> OnDialogueStarted;
+    public event Action<DialogEventInfo> OnDialogueFinished;
+    public event Action<DialogEventInfo> OnDialogueRunning;
+    
+    // [SerializeField] private TextMeshProUGUI _ui;
+    // [SerializeField] private GameObject _panel;
 
+    [SerializeField] private int indexNPC = 0;
+    
     [SerializeField] private DialogueData[] _dialogueAssets;
     private List<Line>[] _mainDialogues;
     private List<Line>[] _otherDialogues;
@@ -88,6 +95,7 @@ public class DialogueNPCInside : GeneralDialogue, IInteractable
     
     public bool Interact(Interactor interactor)
     {
+        Debug.Log("Dialogue Interaction");
         if (_dialogueAssets == null || _dialogueAssets.Length == 0) return false;
         
         _dialogueIndex++;
@@ -95,7 +103,14 @@ public class DialogueNPCInside : GeneralDialogue, IInteractable
         if (_dialogueIndex == 0)
         {
             BlockMovement(interactor);
-            _panel.SetActive(true);
+            
+            if(OnDialogueStarted != null) OnDialogueStarted.Invoke(
+                new DialogEventInfo(
+                    _dialogueIndex,
+                    _speaker,
+                    true
+                ));
+            // _panel.SetActive(true);
         }
 
         if (IsDialogueFinished())
@@ -128,8 +143,16 @@ public class DialogueNPCInside : GeneralDialogue, IInteractable
         var currentDialogue = !_isMainDialogueDone ? 
             _mainDialogues[_dialogueDataIndex] : _otherDialogues[_dialogueDataIndex];
         
-        _ui.text = $"<b>{_speaker}:</b> {currentDialogue[_dialogueIndex].DialogueLine}"; 
+        if (OnDialogueRunning != null)
+            OnDialogueRunning.Invoke(
+                new DialogEventInfo(
+                    _dialogueIndex,
+                    _speaker,
+                    $"<b>{_speaker}:</b> {currentDialogue[_dialogueIndex].DialogueLine}",
+                    true
+            ));
         
+        // _ui.text = $"<b>{_speaker}:</b> {currentDialogue[_dialogueIndex].DialogueLine}"; 
         // Debug.Log(_speaker + " " + currentDialogue[_dialogueIndex].DialogueLine + "dialogue Index: " + _dialogueIndex);
 
     }
@@ -143,16 +166,35 @@ public class DialogueNPCInside : GeneralDialogue, IInteractable
             if (_dialogueIndex < _mainLengths[_dialogueDataIndex]) return false;
             _dialogueIndex = -1;
             _isMainDialogueDone = true;
-            _ui.text = "";
-            _panel.SetActive(false);
+            
+            if (OnDialogueFinished != null)
+                OnDialogueFinished.Invoke(
+                    new DialogEventInfo(
+                        _dialogueIndex,
+                        _speaker,
+                        true
+                ));
+            
+            // _ui.text = "";
+            // _panel.SetActive(false);
             return true;
         }
         
         // We are in one of the other dialogues
         if (_dialogueIndex < _otherLengths[_dialogueDataIndex]) return false;
+        
         _dialogueIndex = -1;
-        _ui.text = "";
-        _panel.SetActive(false);
+        
+        if (OnDialogueFinished != null)
+            OnDialogueFinished.Invoke(
+                new DialogEventInfo(
+                    _dialogueIndex,
+                    _speaker,
+                    true
+            ));
+        // _ui.text = "";
+        // _panel.SetActive(false);
+        
         return true; 
     }
 
