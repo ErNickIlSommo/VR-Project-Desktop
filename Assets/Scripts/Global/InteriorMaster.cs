@@ -18,6 +18,7 @@ public class InteriorMaster : MonoBehaviour
     [SerializeField] private NurseActivity nurseActivity;
     [SerializeField] private CorpseActivity corpseActivity;
 
+    [SerializeField] private GlobalData globalData;
     
     private void Awake()
     {
