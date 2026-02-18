@@ -21,7 +21,7 @@ public class CorpseTrigger : MonoBehaviour, IInteractable
     {
         if (!other.CompareTag("Player")) return;
         
-        Debug.Log("Player Entered in Nurse Trigger");
+        Debug.Log("Player Entered in Corpse Trigger");
         
         _canTrigger = corpseActivity.CanStartActivity;
         if (!_canTrigger) return;
@@ -33,7 +33,7 @@ public class CorpseTrigger : MonoBehaviour, IInteractable
     {
         if (!other.CompareTag("Player")) return;
             
-        Debug.Log("Player Exited in Nurse Trigger");
+        Debug.Log("Player Exited in Corpse Trigger");
         
         _canTrigger = corpseActivity.CanStartActivity;
         if (!_canTrigger) return;
@@ -45,6 +45,9 @@ public class CorpseTrigger : MonoBehaviour, IInteractable
     public bool Interact(Interactor interactor)
     {
         _canTrigger = corpseActivity.CanStartActivity;
+        
+        Debug.Log("Corpse Trigger CanTrigger: " +  _canTrigger);
+        
         if (!_canTrigger) return false;
         
         corpseActivity.StartActivity();

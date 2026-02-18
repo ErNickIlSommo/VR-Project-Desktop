@@ -28,6 +28,11 @@ public class ThirdPersonController : MonoBehaviour
     [Header("Animation")]
     [SerializeField] private PlayerAnimationController animationController;
 
+    [Header("Sound")]
+    [SerializeField] private AudioSource audioSource;
+    [SerializeField] private AudioClip takeOff_SFX;
+    [SerializeField] private AudioClip landing_SFX;
+
     private CharacterController m_controller;
 
     private InputAction m_moveAction;
@@ -67,7 +72,7 @@ public class ThirdPersonController : MonoBehaviour
         ApplyGravity();
         UpdateFlight();
 
-        UpdateAnimations(m_playerState, m_moveValue);
+        // UpdateAnimations(m_playerState, m_moveValue);
     }
 
     private Vector3 GetMoveDirWorld()
@@ -110,7 +115,10 @@ public class ThirdPersonController : MonoBehaviour
         if (m_flyValue == 0.0f) return;
 
         if (m_playerState != PlayerState.Fly && m_flyValue >= 0.0f)
+        {
+            audioSource.PlayOneShot(takeOff_SFX);
             m_playerState = PlayerState.Fly;
+        }
 
         m_controller.Move(Vector3.up * m_flyValue * heightChangeSpeed * Time.deltaTime);
     }
@@ -127,7 +135,10 @@ public class ThirdPersonController : MonoBehaviour
             m_playerState = PlayerState.FreeFall;
 
         if (m_controller.isGrounded && (m_playerState == PlayerState.FreeFall || m_playerState == PlayerState.Fly))
+        {
             m_playerState = PlayerState.Idle;
+            audioSource.PlayOneShot(landing_SFX);
+        } 
     }
 
     private void UpdateAnimations(PlayerState playerState, Vector2 moveValue)

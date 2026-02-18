@@ -13906,8 +13906,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 716184391}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.009013786, y: 0.9855234, z: -0.15992852, w: -0.055545423}
-  m_LocalPosition: {x: 896.91907, y: 90.71265, z: -59.492}
+  m_LocalRotation: {x: -0.0069441344, y: 0.9907835, z: -0.123215176, w: -0.055838365}
+  m_LocalPosition: {x: 896.91077, y: 90.45192, z: -59.565216}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -35540,7 +35540,7 @@ MonoBehaviour:
   VerticalAxis:
     Value: 17.5
     Center: 17.5
-    Range: {x: -10, y: 45}
+    Range: {x: 0, y: 45}
     Wrap: 0
     Recentering:
       Enabled: 0
@@ -35608,8 +35608,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1956460740}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.009013787, y: 0.9855234, z: -0.15992852, w: -0.055545423}
-  m_LocalPosition: {x: 896.91907, y: 90.71265, z: -59.492}
+  m_LocalRotation: {x: -0.006944135, y: 0.9907835, z: -0.12321517, w: -0.05583837}
+  m_LocalPosition: {x: 896.91077, y: 90.45192, z: -59.56522}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -45685,6 +45685,9 @@ MonoBehaviour:
   heightChangeSpeed: 11
   gravity: -10
   animationController: {fileID: 6744020785613235040}
+  audioSource: {fileID: 0}
+  takeOff_SFX: {fileID: 0}
+  landing_SFX: {fileID: 0}
   m_playerState: 0
 --- !u!143 &6744020785613235035
 CharacterController:

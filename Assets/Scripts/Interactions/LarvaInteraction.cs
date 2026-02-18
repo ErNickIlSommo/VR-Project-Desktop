@@ -35,7 +35,8 @@ public class LarvaInteraction : MonoBehaviour, IInteractable
     private Color _requestColor = Color.blue;
     private Color _correctColor = Color.green;
     private Color _incorrectColor = Color.red;
-    
+
+    [SerializeField] private LarvaAnimationController _animationController;
 
     // Getters and Setters
     
@@ -65,6 +66,7 @@ public class LarvaInteraction : MonoBehaviour, IInteractable
     public void InitLarva()
     {
         renderer.material.color = _defaultColor;
+        _animationController.Reset();
     }
 
     public bool StartRequest(GrabbableObjectData requestedObject, float cooldown = float.NaN)
@@ -135,6 +137,7 @@ public class LarvaInteraction : MonoBehaviour, IInteractable
         
         _requestedObject = null;
         _isRequestRunning = false;
+        _animationController.RefuseFood();
 
         /*
          * Test functionalities
@@ -156,7 +159,8 @@ public class LarvaInteraction : MonoBehaviour, IInteractable
         _requestedObject = null;
         _timerRunningCoroutine = null;
         _isRequestRunning = false;
-        
+
+        _animationController.AcceptFood();
         /*
          * Test functionalities
          */
@@ -195,6 +199,7 @@ public class LarvaInteraction : MonoBehaviour, IInteractable
 
     private IEnumerator WaitForStartingRequest()
     {
+        _animationController.RequestFood();
         renderer.material.color = _requestColor;
         Debug.Log(gameObject.name + ":  !!!");
         

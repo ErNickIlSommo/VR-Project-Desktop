@@ -2212,8 +2212,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DialogueNPCInside
   _canvas: {fileID: 2124783003}
-  _ui: {fileID: 1922356319}
-  _panel: {fileID: 1979150302}
+  indexNPC: 0
   _dialogueAssets:
   - {fileID: 11400000, guid: f38d64b90576d43c6b0a63c2fd9c7c8d, type: 2}
   - {fileID: 11400000, guid: 0ba1bc66d2729464785a0488ab75ea5f, type: 2}
@@ -3656,6 +3655,37 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1220076201
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1220076202}
+  m_Layer: 0
+  m_Name: Audio Source
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1220076202
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1220076201}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2430137111600208180}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1255075850
 GameObject:
   m_ObjectHideFlags: 0
@@ -4208,8 +4238,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DialogueNPCInside
   _canvas: {fileID: 1064497040}
-  _ui: {fileID: 1922356319}
-  _panel: {fileID: 1979150302}
+  indexNPC: 0
   _dialogueAssets:
   - {fileID: 11400000, guid: 5b6265e8c64f24e2ba5cf34a2902ea6e, type: 2}
   - {fileID: 11400000, guid: 33066652bb3c84d29ac92f6a3b9a1e3f, type: 2}
@@ -4895,8 +4924,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DialogueNPCInside
   _canvas: {fileID: 977463644}
-  _ui: {fileID: 1922356319}
-  _panel: {fileID: 1979150302}
+  indexNPC: 0
   _dialogueAssets:
   - {fileID: 11400000, guid: fc3371098f65a4b9388054c14122c2b1, type: 2}
   - {fileID: 11400000, guid: 745915b729f3745de8d655db3957f4a3, type: 2}
@@ -5304,8 +5332,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DialogueNPCInside
   _canvas: {fileID: 233771635}
-  _ui: {fileID: 1922356319}
-  _panel: {fileID: 1979150302}
+  indexNPC: 0
   _dialogueAssets:
   - {fileID: 11400000, guid: d0cae70f0dd114312a56107d8866b173, type: 2}
   - {fileID: 11400000, guid: 881e1810f551a462fae3a3879dbc2409, type: 2}
@@ -6645,6 +6672,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1220076202}
   - {fileID: 1024073187}
   - {fileID: 711169305}
   - {fileID: 2036437903}
@@ -9339,6 +9367,8 @@ GameObject:
   - component: {fileID: 7752291755637276620}
   - component: {fileID: 7752291755637276629}
   - component: {fileID: 7752291755637276630}
+  - component: {fileID: 7752291755637276632}
+  - component: {fileID: 7752291755637276633}
   m_Layer: 0
   m_Name: BeeNPCAnimated
   m_TagString: Player
@@ -9427,6 +9457,9 @@ MonoBehaviour:
   heightChangeSpeed: 12
   gravity: -10
   animationController: {fileID: 0}
+  audioSource: {fileID: 7752291755637276632}
+  takeOff_SFX: {fileID: 8300000, guid: a70c204004117c94c9c0bc4e9409a7a6, type: 3}
+  landing_SFX: {fileID: 8300000, guid: b9c0c78074b732a4fa8f03b6918d55d0, type: 3}
   m_playerState: 0
 --- !u!114 &7752291755637276631
 MonoBehaviour:
@@ -9458,6 +9491,125 @@ MonoBehaviour:
   m_DefaultActionMap: Controls
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
+--- !u!82 &7752291755637276632
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7752291755637276619}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 4657817258328345830, guid: 297f7cf9d46d34a4abf0fac931822070, type: 2}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 8300000, guid: a70c204004117c94c9c0bc4e9409a7a6, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!95 &7752291755637276633
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7752291755637276619}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a87d13ed839fd3040806b450d7ed7213, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &7864088880959565518
 GameObject:
   m_ObjectHideFlags: 0

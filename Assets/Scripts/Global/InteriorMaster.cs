@@ -18,6 +18,7 @@ public class InteriorMaster : MonoBehaviour
     [SerializeField] private NurseActivity nurseActivity;
     [SerializeField] private CorpseActivity corpseActivity;
 
+    [SerializeField] private GlobalData globalData;
     
     private void Awake()
     {
@@ -92,6 +93,7 @@ public class InteriorMaster : MonoBehaviour
         if (dialogueInfo.IndexNPC == 3 && corpseBee.HasCompletedActivity1)
         {
             corpseActivity.CanStartActivity = true;
+            Debug.Log("Master, set CanStartActivity to corpse activity");
         }
         
     }

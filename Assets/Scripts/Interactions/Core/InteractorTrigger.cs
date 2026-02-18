@@ -35,6 +35,11 @@ public class InteractorTrigger : MonoBehaviour
     {
         _detectedInteractables.Remove(interactable);
     }
+    
+    public void AddInteractable(IInteractable interactable)
+    {
+        _detectedInteractables.Add(interactable);
+    }
 
     public IInteractable GetInteractable()
     {
