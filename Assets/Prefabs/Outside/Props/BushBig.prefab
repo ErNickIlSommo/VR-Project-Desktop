@@ -100,7 +100,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9000569536319107570}
   - component: {fileID: 7301729326114949830}
-  - component: {fileID: 5281781787299220378}
+  - component: {fileID: 3839728359405516233}
   m_Layer: 0
   m_Name: BushBig
   m_TagString: Untagged
@@ -158,7 +158,7 @@ LODGroup:
     renderers:
     - renderer: {fileID: 2456395011210351636}
   m_Enabled: 1
---- !u!65 &5281781787299220378
+--- !u!65 &3839728359405516233
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -177,8 +177,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 2.95, y: 3.08, z: 1.61}
-  m_Center: {x: 0, y: -0.1, z: 0}
+  m_Size: {x: 2.6630664, y: 2.8169715, z: 1.9643064}
+  m_Center: {x: -0.0742017, y: -0.23961794, z: -0.049806714}
 --- !u!1 &6567619237046988965
 GameObject:
   m_ObjectHideFlags: 0

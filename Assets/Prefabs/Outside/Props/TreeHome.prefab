@@ -192,7 +192,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3634472177311294406}
   - component: {fileID: 9122670180306854564}
-  - component: {fileID: 1405914955698585151}
+  - component: {fileID: 2626260802671344575}
   m_Layer: 0
   m_Name: TreeHome
   m_TagString: Untagged
@@ -250,7 +250,7 @@ LODGroup:
     renderers:
     - renderer: {fileID: 596410622590909341}
   m_Enabled: 1
---- !u!64 &1405914955698585151
+--- !u!64 &2626260802671344575
 MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

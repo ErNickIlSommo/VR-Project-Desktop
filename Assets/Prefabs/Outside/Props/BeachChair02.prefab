@@ -191,6 +191,7 @@ GameObject:
   - component: {fileID: 1515421326748944274}
   - component: {fileID: 3317726882210564555}
   - component: {fileID: 6349396628457446033}
+  - component: {fileID: 3473378859808849336}
   m_Layer: 0
   m_Name: BeachChair02_LOD0
   m_TagString: Untagged
@@ -270,6 +271,28 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &3473378859808849336
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6197556163563692183}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 1661920222858612391, guid: 79ad0907af48d1445a1b1a0f328a0fb7, type: 3}
 --- !u!1 &8704601565998415661
 GameObject:
   m_ObjectHideFlags: 0
@@ -280,7 +303,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2890493286814847480}
   - component: {fileID: 7871032435106726225}
-  - component: {fileID: 4541909456176865340}
   m_Layer: 0
   m_Name: BeachChair02
   m_TagString: Untagged
@@ -333,24 +355,3 @@ LODGroup:
     renderers:
     - renderer: {fileID: 2455933934327279576}
   m_Enabled: 1
---- !u!65 &4541909456176865340
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8704601565998415661}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1.2322693, y: 0.8232521, z: 1.3180351}
-  m_Center: {x: 0.026802063, y: 0.38496834, z: -0.026800156}

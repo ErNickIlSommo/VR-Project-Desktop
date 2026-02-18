@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 516562365239815131}
   - component: {fileID: 4772815676107135749}
-  - component: {fileID: 1024500462405957404}
   m_Layer: 0
   m_Name: TreeFirLight
   m_TagString: Untagged
@@ -68,27 +67,6 @@ LODGroup:
     renderers:
     - renderer: {fileID: 2318946276636960479}
   m_Enabled: 1
---- !u!65 &1024500462405957404
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 321814085343731692}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 10.237064, z: 1}
-  m_Center: {x: 0, y: 5.0736837, z: 0}
 --- !u!1 &3723284259897621708
 GameObject:
   m_ObjectHideFlags: 0
@@ -190,6 +168,7 @@ GameObject:
   - component: {fileID: 5211951888440539292}
   - component: {fileID: 1486791466286532959}
   - component: {fileID: 9167666446226388780}
+  - component: {fileID: 3007557472955486652}
   m_Layer: 0
   m_Name: TreeFirLight_LOD0
   m_TagString: Untagged
@@ -269,6 +248,27 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &3007557472955486652
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3902459571697737184}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 10.237064, z: 1}
+  m_Center: {x: 0, y: 5.0736837, z: 0}
 --- !u!1 &7285844336956548504
 GameObject:
   m_ObjectHideFlags: 0

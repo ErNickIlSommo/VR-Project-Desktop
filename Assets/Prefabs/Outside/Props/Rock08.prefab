@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3502439125047217445}
   - component: {fileID: 6105328246532729313}
   - component: {fileID: 8492711100967585792}
+  - component: {fileID: 9175005031880653436}
   m_Layer: 0
   m_Name: Rock08
   m_TagString: Untagged
@@ -110,5 +111,26 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1.3050692, y: 1.7035837, z: 0.977232}
-  m_Center: {x: -0.0023589432, y: -0.016267447, z: -0.34959558}
+  m_Size: {x: 1.3050692, y: 1.1224955, z: 0.977232}
+  m_Center: {x: -0.0023589134, y: -0.30681157, z: -0.34959707}
+--- !u!65 &9175005031880653436
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4625712799360825461}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.172615, y: 0.65677387, z: 0.43032628}
+  m_Center: {x: 0.029685974, y: 0.50714505, z: -0.07614446}

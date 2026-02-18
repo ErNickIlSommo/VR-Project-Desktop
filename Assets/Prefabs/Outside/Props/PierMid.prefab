@@ -190,9 +190,9 @@ GameObject:
   m_Component:
   - component: {fileID: 2250938539456151060}
   - component: {fileID: 1671956416424561298}
-  - component: {fileID: 1229388290433281799}
-  - component: {fileID: 4995400119604306430}
-  - component: {fileID: 2387488141393916851}
+  - component: {fileID: 6607331392863104902}
+  - component: {fileID: 1919739991106382821}
+  - component: {fileID: 7916096054096812175}
   m_Layer: 0
   m_Name: PierMid
   m_TagString: Untagged
@@ -245,7 +245,7 @@ LODGroup:
     renderers:
     - renderer: {fileID: 523650053946903503}
   m_Enabled: 1
---- !u!65 &1229388290433281799
+--- !u!65 &6607331392863104902
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -264,9 +264,9 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1.9357948, y: 0.264086, z: 1.890358}
-  m_Center: {x: 0.95850563, y: -0.113566995, z: 0.9176216}
---- !u!65 &4995400119604306430
+  m_Size: {x: 1.9384346, y: 0.2034061, z: 1.890358}
+  m_Center: {x: 0.96510124, y: -0.09641826, z: 0.9176216}
+--- !u!65 &1919739991106382821
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -285,9 +285,9 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.22774506, y: 4.0526814, z: 0.21908331}
-  m_Center: {x: 0.9494209, y: -2.0896327, z: 0.045424223}
---- !u!65 &2387488141393916851
+  m_Size: {x: 0.17053986, y: 4.0526814, z: 0.16047117}
+  m_Center: {x: 0.9659805, y: -2.0896327, z: 0.045424223}
+--- !u!65 &7916096054096812175
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -306,7 +306,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.22774506, y: 4.025425, z: 0.17323303}
+  m_Size: {x: 0.22774506, y: 4.025425, z: 0.15813446}
   m_Center: {x: 0.9494209, y: -2.1123462, z: 1.8034439}
 --- !u!1 &6929615629301385020
 GameObject:
