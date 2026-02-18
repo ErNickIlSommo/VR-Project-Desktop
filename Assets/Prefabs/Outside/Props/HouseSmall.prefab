@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 8730528345190059481}
   - component: {fileID: 1661709240768015110}
-  - component: {fileID: 8669451522205500985}
   m_Layer: 0
   m_Name: HouseSmall
   m_TagString: Untagged
@@ -68,27 +67,6 @@ LODGroup:
     renderers:
     - renderer: {fileID: 7488073137978511359}
   m_Enabled: 1
---- !u!65 &8669451522205500985
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 811241441906025316}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 3.0526912, y: 2.6803858, z: 1}
-  m_Center: {x: 0, y: 1.3419739, z: 0}
 --- !u!1 &2802553571416792095
 GameObject:
   m_ObjectHideFlags: 0
@@ -100,6 +78,7 @@ GameObject:
   - component: {fileID: 267615929628517934}
   - component: {fileID: 2775775744191043006}
   - component: {fileID: 2107217353760034203}
+  - component: {fileID: 2522363639306956734}
   m_Layer: 0
   m_Name: HouseSmall_LOD0
   m_TagString: Untagged
@@ -179,6 +158,28 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &2522363639306956734
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2802553571416792095}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -3706156767155487495, guid: ec3f930db3717e2449117b15b9df1ebb, type: 3}
 --- !u!1 &4693378097351286268
 GameObject:
   m_ObjectHideFlags: 0

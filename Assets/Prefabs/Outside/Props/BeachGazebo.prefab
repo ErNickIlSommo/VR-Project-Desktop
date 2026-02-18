@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 7125611901195585044}
   - component: {fileID: 2126276653337920274}
-  - component: {fileID: 5590264750337049710}
   m_Layer: 0
   m_Name: BeachGazebo
   m_TagString: Untagged
@@ -58,27 +57,6 @@ LODGroup:
     renderers:
     - renderer: {fileID: 5849009252467276641}
   m_Enabled: 1
---- !u!65 &5590264750337049710
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1593497986584195848}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 2.7525086, y: 0.5172293, z: 2.7472496}
-  m_Center: {x: 0, y: 1.6404363, z: 0}
 --- !u!1 &3485857786708221582
 GameObject:
   m_ObjectHideFlags: 0
@@ -90,6 +68,7 @@ GameObject:
   - component: {fileID: 2855553032867270895}
   - component: {fileID: 1372590959580766581}
   - component: {fileID: 4002371852919122248}
+  - component: {fileID: 3160993405327054210}
   m_Layer: 0
   m_Name: BeachGazebo_LOD0
   m_TagString: Untagged
@@ -169,6 +148,28 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &3160993405327054210
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3485857786708221582}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -4029053164390446125, guid: e97d5a88768219542935bf48ee604ff4, type: 3}
 --- !u!1 &6402321758954188063
 GameObject:
   m_ObjectHideFlags: 0

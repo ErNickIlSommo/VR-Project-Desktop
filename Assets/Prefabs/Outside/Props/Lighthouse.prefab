@@ -10,9 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 7539904860606027889}
   - component: {fileID: 661104963502042751}
-  - component: {fileID: 916405822155817362}
-  - component: {fileID: 7888443354177699358}
-  - component: {fileID: 8976863711544315092}
   m_Layer: 0
   m_Name: Lighthouse
   m_TagString: Untagged
@@ -70,69 +67,6 @@ LODGroup:
     renderers:
     - renderer: {fileID: 123289277442865240}
   m_Enabled: 1
---- !u!65 &916405822155817362
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5499373022542669988}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1.700511, y: 7.532606, z: 1.769057}
-  m_Center: {x: 0, y: 4.512807, z: 0}
---- !u!65 &7888443354177699358
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5499373022542669988}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 2.6965523, y: 0.8331379, z: 2.7737808}
-  m_Center: {x: 0, y: 6.440886, z: 0}
---- !u!65 &8976863711544315092
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5499373022542669988}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 3.5112858, y: 0.8615783, z: 3.5293357}
-  m_Center: {x: 0, y: 0.4089735, z: 0}
 --- !u!1 &6658012759944995577
 GameObject:
   m_ObjectHideFlags: 0
@@ -144,6 +78,7 @@ GameObject:
   - component: {fileID: 3959149892603773934}
   - component: {fileID: 4448507756355925656}
   - component: {fileID: 949836165251907405}
+  - component: {fileID: 8141143419485042726}
   m_Layer: 0
   m_Name: Lighthouse_LOD0
   m_TagString: Untagged
@@ -223,6 +158,28 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &8141143419485042726
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6658012759944995577}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 5110898714317075292, guid: f420c0a0011f55e4a98c4f9f0d4defac, type: 3}
 --- !u!1 &7492445799331391315
 GameObject:
   m_ObjectHideFlags: 0

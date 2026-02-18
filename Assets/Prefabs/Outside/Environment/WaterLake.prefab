@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5963778232840151497}
   - component: {fileID: 5661127294120700295}
-  - component: {fileID: 8905903422483828452}
+  - component: {fileID: 8117466478646700311}
   m_Layer: 0
   m_Name: WaterLake
   m_TagString: Untagged
@@ -58,7 +58,7 @@ LODGroup:
     renderers:
     - renderer: {fileID: 7980188414734536501}
   m_Enabled: 1
---- !u!64 &8905903422483828452
+--- !u!64 &8117466478646700311
 MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -79,7 +79,7 @@ MeshCollider:
   serializedVersion: 5
   m_Convex: 0
   m_CookingOptions: 30
-  m_Mesh: {fileID: -9147795945146320402, guid: 14401ad28f3b42c46b570d92c65c26d0, type: 3}
+  m_Mesh: {fileID: -3438329276286955024, guid: 14401ad28f3b42c46b570d92c65c26d0, type: 3}
 --- !u!1 &7471895284563059957
 GameObject:
   m_ObjectHideFlags: 0

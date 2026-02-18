@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 8592371092381637797}
   - component: {fileID: 2923268758968454295}
-  - component: {fileID: 2599298296489180237}
   m_Layer: 0
   m_Name: TreeOakYellow
   m_TagString: Untagged
@@ -68,27 +67,6 @@ LODGroup:
     renderers:
     - renderer: {fileID: 8680929457099882493}
   m_Enabled: 1
---- !u!65 &2599298296489180237
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1137871248101003256}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 6.149569, z: 1}
-  m_Center: {x: 0, y: 3.0739777, z: 0}
 --- !u!1 &2913087822065860825
 GameObject:
   m_ObjectHideFlags: 0
@@ -190,6 +168,7 @@ GameObject:
   - component: {fileID: 1769480586434587077}
   - component: {fileID: 2809892563345601994}
   - component: {fileID: 8391645193548808093}
+  - component: {fileID: 3468488924632242089}
   m_Layer: 0
   m_Name: TreeOakYellow_LOD0
   m_TagString: Untagged
@@ -269,6 +248,27 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &3468488924632242089
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4587155530634535362}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 6.149569, z: 1}
+  m_Center: {x: 0, y: 3.0739777, z: 0}
 --- !u!1 &7438295513183912423
 GameObject:
   m_ObjectHideFlags: 0

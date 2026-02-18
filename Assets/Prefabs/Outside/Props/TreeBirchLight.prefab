@@ -280,7 +280,6 @@ GameObject:
   m_Component:
   - component: {fileID: 6787103442077928260}
   - component: {fileID: 1522677574252588557}
-  - component: {fileID: 8374932617945837849}
   m_Layer: 0
   m_Name: TreeBirchLight
   m_TagString: Untagged
@@ -338,27 +337,6 @@ LODGroup:
     renderers:
     - renderer: {fileID: 8038502559519688472}
   m_Enabled: 1
---- !u!65 &8374932617945837849
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6473747312977107978}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 0.61576635, y: 6.375718, z: 0.74401283}
-  m_Center: {x: 0, y: 3.1678338, z: 0.047997475}
 --- !u!1 &7725941488263122961
 GameObject:
   m_ObjectHideFlags: 0
@@ -370,7 +348,7 @@ GameObject:
   - component: {fileID: 1387287394935112170}
   - component: {fileID: 3718155774706361408}
   - component: {fileID: 3184640310633900608}
-  - component: {fileID: 5105517771630656069}
+  - component: {fileID: 255463038798328991}
   m_Layer: 0
   m_Name: TreeBirchLight_LOD0
   m_TagString: Untagged
@@ -450,7 +428,7 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &5105517771630656069
+--- !u!65 &255463038798328991
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -469,5 +447,5 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.69923997, y: 0.5883679, z: 7.755699}
-  m_Center: {x: 0.007847875, y: 0.033094868, z: -3.8777652}
+  m_Size: {x: 0.4443171, y: 0.50981563, z: 7.755699}
+  m_Center: {x: 0.04239526, y: -0.0027546731, z: -3.8778024}

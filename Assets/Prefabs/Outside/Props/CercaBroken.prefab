@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7722322116273467272}
   - component: {fileID: 4071867840118072958}
   - component: {fileID: 2635385282242747590}
-  - component: {fileID: 6848594330816637211}
+  - component: {fileID: 1255158763806099124}
   m_Layer: 0
   m_Name: CercaBroken
   m_TagString: Untagged
@@ -89,9 +89,10 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &6848594330816637211
-BoxCollider:
+--- !u!64 &1255158763806099124
+MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -108,6 +109,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1.3225254, y: 0.7570548, z: 0.16245759}
-  m_Center: {x: 0.56747675, y: 0.3785274, z: 0.000000007235447}
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -2746000570267032406, guid: a7a6587a12f2c9a4e9843596f9acec65, type: 3}

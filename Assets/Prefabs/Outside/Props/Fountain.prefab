@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7062118724596571737}
   - component: {fileID: 7920980068581575620}
   - component: {fileID: 6040258263484122774}
-  - component: {fileID: 6097511854233263340}
+  - component: {fileID: 8242034083789222208}
   m_Layer: 0
   m_Name: Fountain_LOD0
   m_TagString: Untagged
@@ -91,7 +91,7 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &6097511854233263340
+--- !u!64 &8242034083789222208
 MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -110,7 +110,7 @@ MeshCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 5
-  m_Convex: 1
+  m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -6056967194777558296, guid: 700a835c61c215c40ab50c5101530398, type: 3}
 --- !u!1 &2996483253847813391

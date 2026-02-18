@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6504830048092266293}
   - component: {fileID: 8677670339166346073}
-  - component: {fileID: 2456747005031846582}
+  - component: {fileID: 1417530033862812084}
   m_Layer: 0
   m_Name: BushLittle
   m_TagString: Untagged
@@ -68,7 +68,7 @@ LODGroup:
     renderers:
     - renderer: {fileID: 4811423637946887197}
   m_Enabled: 1
---- !u!65 &2456747005031846582
+--- !u!65 &1417530033862812084
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -87,8 +87,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 2.4130507, y: 1.513406, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 2.3125916, y: 1.558994, z: 0.9557104}
+  m_Center: {x: 0.014160156, y: 0.015757203, z: 0.013072491}
 --- !u!1 &1091645918746526411
 GameObject:
   m_ObjectHideFlags: 0

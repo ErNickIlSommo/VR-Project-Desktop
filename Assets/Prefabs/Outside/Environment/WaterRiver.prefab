@@ -190,7 +190,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8494645262941045273}
   - component: {fileID: 8037792083391561476}
-  - component: {fileID: 6888671525816113744}
+  - component: {fileID: 2820117253152957758}
   m_Layer: 0
   m_Name: WaterRiver
   m_TagString: Untagged
@@ -238,7 +238,7 @@ LODGroup:
     renderers:
     - renderer: {fileID: 6771678182242334685}
   m_Enabled: 1
---- !u!64 &6888671525816113744
+--- !u!64 &2820117253152957758
 MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -259,4 +259,4 @@ MeshCollider:
   serializedVersion: 5
   m_Convex: 0
   m_CookingOptions: 30
-  m_Mesh: {fileID: 8950496615781189693, guid: bd308ba3e8a924c4282b7d66bd638b05, type: 3}
+  m_Mesh: {fileID: 884233459385411582, guid: bd308ba3e8a924c4282b7d66bd638b05, type: 3}

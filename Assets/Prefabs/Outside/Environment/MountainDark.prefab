@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7290798848512215696}
   - component: {fileID: 3592622002946092108}
   - component: {fileID: 5518599378080588461}
+  - component: {fileID: 3509597660830382132}
   m_Layer: 0
   m_Name: MountainDark_LOD0
   m_TagString: Untagged
@@ -90,6 +91,28 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &3509597660830382132
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1901003965626180871}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 7235192911195376143, guid: 43f3ee32ea61dca49a2250111ffd57a8, type: 3}
 --- !u!1 &3020827261438284766
 GameObject:
   m_ObjectHideFlags: 0
@@ -190,7 +213,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7169530467825158721}
   - component: {fileID: 7853646737889036313}
-  - component: {fileID: 4999310432095818014}
+  - component: {fileID: 9043188738774256849}
   m_Layer: 0
   m_Name: MountainDark
   m_TagString: Untagged
@@ -238,8 +261,8 @@ LODGroup:
     renderers:
     - renderer: {fileID: 4544302696888895599}
   m_Enabled: 1
---- !u!65 &4999310432095818014
-BoxCollider:
+--- !u!64 &9043188738774256849
+MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -256,6 +279,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 2.5360003, y: 17.070362, z: 2.2439184}
-  m_Center: {x: 0, y: 8.461142, z: 0}
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 0}
