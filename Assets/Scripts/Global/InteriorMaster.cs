@@ -73,9 +73,12 @@ public class InteriorMaster : MonoBehaviour
         dialogueText.text = "";
         dialoguePanel.SetActive(false); 
         
+        Debug.Log("Index NPC: " + dialogueInfo.IndexNPC);
+        
         // Foraging Bee
         if (dialogueInfo.IndexNPC == 1)
         {
+            Debug.Log("Starter dialog done");
             nurseBee.HasCompletedActivity1 = true;
         }
         

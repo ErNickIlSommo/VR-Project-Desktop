@@ -106,7 +106,7 @@ public class DialogueNPCInside : GeneralDialogue, IInteractable
             
             if(OnDialogueStarted != null) OnDialogueStarted.Invoke(
                 new DialogEventInfo(
-                    _dialogueIndex,
+                    indexNPC,
                     _speaker,
                     true
                 ));
@@ -146,7 +146,7 @@ public class DialogueNPCInside : GeneralDialogue, IInteractable
         if (OnDialogueRunning != null)
             OnDialogueRunning.Invoke(
                 new DialogEventInfo(
-                    _dialogueIndex,
+                    indexNPC,
                     _speaker,
                     $"<b>{_speaker}:</b> {currentDialogue[_dialogueIndex].DialogueLine}",
                     true
@@ -170,7 +170,7 @@ public class DialogueNPCInside : GeneralDialogue, IInteractable
             if (OnDialogueFinished != null)
                 OnDialogueFinished.Invoke(
                     new DialogEventInfo(
-                        _dialogueIndex,
+                        indexNPC,
                         _speaker,
                         true
                 ));
