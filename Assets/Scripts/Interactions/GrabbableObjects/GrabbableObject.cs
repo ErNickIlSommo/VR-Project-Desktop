@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class GrabbableObject : MonoBehaviour, IInteractable
 {
@@ -41,11 +42,15 @@ public class GrabbableObject : MonoBehaviour, IInteractable
             _rb.isKinematic = true;
         }
         
+        BlockMovement(interactor);
+        
         _isDropped = false;
         interactor.PlayerInteractionStatus.SetGrabbedObject(this);
         transform.SetParent(interactor.PlayerInteractionStatus.GrabbedSpotPoint, false);
         transform.localPosition = Vector3.zero;
         transform.localRotation = Quaternion.identity;
+        
+        UnlockMovement(interactor);
         
         // Debug.Log("Grabbed");
     }
@@ -56,11 +61,14 @@ public class GrabbableObject : MonoBehaviour, IInteractable
         {
             _rb.isKinematic = false;
         } 
-        
+
+        BlockMovement(interactor); 
+    
         _isDropped = true; 
         interactor.PlayerInteractionStatus.SetGrabbedObject();
         transform.SetParent(null, true);
         
+        UnlockMovement(interactor);
         
         // Debug.Log("Dropped");
     }
@@ -98,5 +106,17 @@ public class GrabbableObject : MonoBehaviour, IInteractable
     {
         Drop(interactor);
         Destroy(transform.gameObject);
+    }
+    
+    public void BlockMovement(Interactor interactor)
+    {
+        InputActionMap map = interactor.InputActions.FindActionMap("Controls", true);
+        map.FindAction("Move", true).Disable(); 
+    }
+
+    public void UnlockMovement(Interactor interactor)
+    {
+        InputActionMap map = interactor.InputActions.FindActionMap("Controls", true);
+        map.FindAction("Move", true).Enable(); 
     }
 }

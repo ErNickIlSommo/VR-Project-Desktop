@@ -33,6 +33,16 @@ public class CrafterSpawner : MonoBehaviour, IInteractable
         return true;
     }
 
+    public void BlockMovement(Interactor interactor)
+    {
+        throw new NotImplementedException();
+    }
+
+    public void UnlockMovement(Interactor interactor)
+    {
+        throw new NotImplementedException();
+    }
+
     private bool IsCorrectIngredient(Interactor interactor)
     {
         int objectDataId = interactor.PlayerInteractionStatus.ObjectData.Id;

@@ -1,6 +1,7 @@
 using System;
 using UnityEngine;
 using System.Collections;
+using UnityEngine.InputSystem;
 
 public class LarvaInteraction : MonoBehaviour, IInteractable
 {
@@ -96,13 +97,19 @@ public class LarvaInteraction : MonoBehaviour, IInteractable
         if (!IsCorrectIngredient(interactor))
         {
             _isRequestCorrect = false;
+            BlockMovement(interactor);
             RefuseIngredient();
+            UnlockMovement(interactor);
             interactor.PlayerInteractionStatus.GrabbableObject.ForceDropAndDestroy(interactor);
             return false;
         }
 
+        BlockMovement(interactor);
+        
         _isRequestCorrect = true;
         interactor.PlayerInteractionStatus.GrabbableObject.ForceDropAndDestroy(interactor);
+        
+        UnlockMovement(interactor);
 
         return true;
     }
@@ -124,6 +131,7 @@ public class LarvaInteraction : MonoBehaviour, IInteractable
             StopCoroutine(_timerRunningCoroutine);
             _timerRunningCoroutine = null;
         }
+        
         
         _requestedObject = null;
         _isRequestRunning = false;
@@ -207,4 +215,16 @@ public class LarvaInteraction : MonoBehaviour, IInteractable
         
         _timerWaitingCoroutine = null;
     }
+    
+    public void BlockMovement(Interactor interactor)
+    {
+        InputActionMap map = interactor.InputActions.FindActionMap("Controls", true);
+        map.FindAction("Move", true).Disable(); 
+    }
+
+    public void UnlockMovement(Interactor interactor)
+    {
+        InputActionMap map = interactor.InputActions.FindActionMap("Controls", true);
+        map.FindAction("Move", true).Enable(); 
+    } 
 }

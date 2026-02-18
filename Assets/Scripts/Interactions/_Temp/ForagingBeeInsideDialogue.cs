@@ -109,13 +109,13 @@ public class ForagingBeeInsideDialogue : GeneralDialogue, IInteractable
         return true;
     }
     
-    private void BlockMovement(Interactor interactor)
+    public void BlockMovement(Interactor interactor)
     {
         InputActionMap map = interactor.InputActions.FindActionMap("Controls", true);
         map.FindAction("Move", true).Disable(); 
     }
 
-    private void UnlockMovement(Interactor interactor)
+    public void UnlockMovement(Interactor interactor)
     {
         InputActionMap map = interactor.InputActions.FindActionMap("Controls", true);
         map.FindAction("Move", true).Enable(); 

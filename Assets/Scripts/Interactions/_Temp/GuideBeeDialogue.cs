@@ -62,7 +62,7 @@ public class GuideBeeDialogue : GeneralDialogue, IInteractable
         return true;
     }
 
-    private void BlockMovement(Interactor interactor)
+    public void BlockMovement(Interactor interactor)
     {
         InputActionMap map = interactor.InputActions.FindActionMap("Controls", true);
         map.FindAction("Move", true).Disable();
@@ -89,7 +89,7 @@ public class GuideBeeDialogue : GeneralDialogue, IInteractable
         return true;
     }
 
-    private void UnlockMovement(Interactor interactor)
+    public void UnlockMovement(Interactor interactor)
     {
         InputActionMap map = interactor.InputActions.FindActionMap("Controls", true);
         map.FindAction("Move", true).Enable();

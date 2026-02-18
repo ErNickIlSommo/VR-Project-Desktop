@@ -1,6 +1,7 @@
 using System;
 using UnityEngine;
 using System.Collections;
+using UnityEngine.InputSystem;
 
 public class FoodSpawner : MonoBehaviour, IInteractable
 {
@@ -26,7 +27,9 @@ public class FoodSpawner : MonoBehaviour, IInteractable
         // Debug.Log("Start Interaction with spawner");
         if (_isInCooldown) return false;
         
+        BlockMovement(interactor);
         SpawnObject(interactor);
+        UnlockMovement(interactor);
         
         return true;
     }
@@ -44,7 +47,6 @@ public class FoodSpawner : MonoBehaviour, IInteractable
         _content.SetActive(false);
     }
 
-
     private IEnumerator Timer()
     {
         _timer = 0f;
@@ -58,4 +60,16 @@ public class FoodSpawner : MonoBehaviour, IInteractable
         _isInCooldown = false;
         _content.SetActive(true);
     }
+    
+    public void BlockMovement(Interactor interactor)
+    {
+        InputActionMap map = interactor.InputActions.FindActionMap("Controls", true);
+        map.FindAction("Move", true).Disable(); 
+    }
+
+    public void UnlockMovement(Interactor interactor)
+    {
+        InputActionMap map = interactor.InputActions.FindActionMap("Controls", true);
+        map.FindAction("Move", true).Enable(); 
+    } 
 }

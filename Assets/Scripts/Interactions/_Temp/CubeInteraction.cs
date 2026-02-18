@@ -7,4 +7,14 @@ public class CubeInteraction : MonoBehaviour, IInteractable
         Debug.Log("Interact");
         return true;
     }
+
+    public void BlockMovement(Interactor interactor)
+    {
+        throw new System.NotImplementedException();
+    }
+
+    public void UnlockMovement(Interactor interactor)
+    {
+        throw new System.NotImplementedException();
+    }
 }
