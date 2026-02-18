@@ -90,6 +90,7 @@ public class InteriorMaster : MonoBehaviour
         {
             corpseActivity.CanStartActivity = true;
         }
+        
     }
     
     /*

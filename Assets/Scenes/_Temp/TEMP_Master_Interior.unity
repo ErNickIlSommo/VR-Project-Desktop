@@ -3334,6 +3334,7 @@ GameObject:
   m_Component:
   - component: {fileID: 781916785}
   - component: {fileID: 781916784}
+  - component: {fileID: 781916786}
   - component: {fileID: 781916783}
   m_Layer: 0
   m_Name: Corpse Activity
@@ -3394,6 +3395,18 @@ Transform:
   - {fileID: 603588886}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &781916786
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 781916782}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1082b925b8d6746d5b6666ea97cba3ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ActivityTrigger
 --- !u!1 &808134378
 GameObject:
   m_ObjectHideFlags: 0
@@ -8405,8 +8418,8 @@ MonoBehaviour:
   nurseBee: {fileID: 142220182}
   corpseBee: {fileID: 1747804682}
   foragingBeeOutside: {fileID: 2083988591}
-  nurseActivity: {fileID: 0}
-  corpseActivity: {fileID: 0}
+  nurseActivity: {fileID: 1070129357}
+  corpseActivity: {fileID: 781916783}
 --- !u!4 &1824953799
 Transform:
   m_ObjectHideFlags: 0
