@@ -437,6 +437,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Fader
   canvasGroup: {fileID: 627946964}
   fadeDuration: 0.4
+  playerController: {fileID: 2101791491}
 --- !u!114 &356938868
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2443,23 +2444,15 @@ MonoBehaviour:
   moveActionName: Move
   lookActionName: Look
   flyActionName: Fly
+  cameraTransform: {fileID: 315345038}
+  visualPivot: {fileID: 0}
   walkSpeed: 7
   turnSpeed: 12
   flySpeed: 20
-  isFlying: 0
-  maxIncline: 5
-  minIncline: -10
   heightChangeSpeed: 15
   gravity: -10
-  rotateSpeed: 5
-  cameraTransform: {fileID: 315345038}
-  cameraTarget: {fileID: 0}
-  minPitch: -70
-  maxPitch: 70
-  animator: {fileID: 2101791495}
-  movingParam: IsWalking
-  flyingParam: IsFlying
-  animSmooth: 10
+  animationController: {fileID: 0}
+  m_playerState: 0
 --- !u!114 &2101791492
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6517,8 +6510,8 @@ SceneRoots:
   - {fileID: 315345038}
   - {fileID: 392118750}
   - {fileID: 1199436673}
-  - {fileID: 2110131896775241150}
   - {fileID: 1272217082}
   - {fileID: 356938871}
   - {fileID: 707108796}
   - {fileID: 1637567109}
+  - {fileID: 2110131896775241150}
