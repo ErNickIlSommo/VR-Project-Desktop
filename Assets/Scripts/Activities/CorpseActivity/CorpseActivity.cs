@@ -13,7 +13,7 @@ public class CorpseActivity : MonoBehaviour
     [SerializeField] private int corpseCount = 0;
     [SerializeField] private int totalCorpseCount;
 
-    [SerializeField] private List<GrabbableObject> corpses;
+    [SerializeField] private List<GameObject> corpses;
     
     public bool IsActivityRunning => isActivityRunning;
     
@@ -22,6 +22,10 @@ public class CorpseActivity : MonoBehaviour
         isActivityRunning = false;
         isActivityCompleted = false;
         totalCorpseCount = corpses.Count;
+        
+        // Disable Objects
+        SetUpCorpse(false);
+        
         abyss.OnCorpseEntered += HandleCorpseEntered;
     }
 
@@ -31,6 +35,9 @@ public class CorpseActivity : MonoBehaviour
         totalCorpseCount = corpses.Count;
         isActivityRunning = true;
         isActivityCompleted = false;
+        
+        SetUpCorpse(true);
+        
         if (OnActivityStarted != null)
             OnActivityStarted.Invoke(true);
     }
@@ -50,5 +57,13 @@ public class CorpseActivity : MonoBehaviour
             OnActivityCompleted.Invoke(true);
             StopActivity();
         }
+    }
+
+    private void SetUpCorpse(bool status)
+    {
+        for (int i = 0; i < corpses.Count; i++)
+        {
+            corpses[i].SetActive(status);
+        } 
     }
 }
