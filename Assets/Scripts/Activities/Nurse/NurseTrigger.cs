@@ -15,6 +15,8 @@ public class NurseTrigger : MonoBehaviour, IInteractable
     private bool _canTrigger;
     private bool _isAlreadyTriggered;
     
+    private Interactor _interactor;
+    
     private void Awake()
     {
         _canTrigger = nurseActivity.CanStartActivity;
@@ -24,6 +26,8 @@ public class NurseTrigger : MonoBehaviour, IInteractable
         foodSpawner1.layer = 0;
         foodSpawner2.layer = 0;
         foodSpawner3.layer = 0;
+
+        nurseActivity.OnActivityCompleted += HandleCompletedActivity;
     }
 
     private void OnTriggerEnter(Collider other)
@@ -69,6 +73,7 @@ public class NurseTrigger : MonoBehaviour, IInteractable
         
         Collider collider = GetComponent<Collider>();
         collider.enabled = false;
+        _interactor = interactor;
         interactor.InteractionTrigger.RemoveInteractable(this);
 
         return true;
@@ -82,5 +87,24 @@ public class NurseTrigger : MonoBehaviour, IInteractable
     public void UnlockMovement(Interactor interactor)
     {
         throw new System.NotImplementedException();
+    }
+
+    private void HandleCompletedActivity(bool status)
+    {
+        Debug.Log("Trigger Received Completed Activity: " + status);
+        if (status) return;
+        
+        _canTrigger = nurseActivity.CanStartActivity;
+        _isAlreadyTriggered = false; 
+        panel.SetActive(false);
+        
+        foodSpawner1.layer = 0;
+        foodSpawner2.layer = 0;
+        foodSpawner3.layer = 0;
+        
+        gameObject.layer = 6;
+        // _interactor.InteractionTrigger.AddInteractable(this);
+        Collider collider = GetComponent<Collider>();
+        collider.enabled = true;
     }
 }
