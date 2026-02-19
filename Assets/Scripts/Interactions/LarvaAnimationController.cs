@@ -3,6 +3,11 @@ using UnityEngine;
 public class LarvaAnimationController : MonoBehaviour
 {
     [SerializeField] private Animator animator;
+    [SerializeField] private AudioSource source;
+
+    [SerializeField] private AudioClip requestClip;
+    [SerializeField] private AudioClip audioClip;
+    [SerializeField] private AudioClip refuseClip;
 
     public void RequestFood()
     {
