@@ -16,12 +16,14 @@ MonoBehaviour:
   _mainlines:
   - _line: "Complimenti, hai completato tutte le attivit\xE0 assegnate."
     _shouldProcessed: 0
-  - _line: "Complimenti, hai completato tutte le attivit\xE0 assegnate."
+  - _line: "Per ora non c'\xE8 pi\xF9 nulla da fare, grazie per il tuo contributo."
     _shouldProcessed: 0
-  - _line: Ora puoi gironzolare come meglio credi.
+  - _line: Ora rientra pure nell'alveare.
     _shouldProcessed: 0
   _otherLines:
-  - _line: Ora puoi gironzolare come meglio credi.
+  - _line: "Complimenti, hai completato tutte le attivit\xE0 assegnate."
     _shouldProcessed: 0
-  - _line: Ci vediamo!
+  - _line: "Per ora non c'\xE8 pi\xF9 nulla da fare, grazie per il tuo contributo."
+    _shouldProcessed: 0
+  - _line: Ora rientra pure nell'alveare.
     _shouldProcessed: 0
