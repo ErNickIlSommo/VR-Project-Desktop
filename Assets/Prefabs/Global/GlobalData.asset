@@ -16,3 +16,4 @@ MonoBehaviour:
   nurseComplete: 0
   corpseComplete: 0
   foragingComplete: 0
+  testVariable: 0

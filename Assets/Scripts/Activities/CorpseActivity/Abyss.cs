@@ -8,17 +8,23 @@ public class Abyss : MonoBehaviour
     public event Action<bool> OnCorpseEntered;
     
     [SerializeField] private Transform playerSpawningPoint;
+
+    [SerializeField] private Animator transition;
     [SerializeField] private Fader fader;
+
+    
+    // [SerializeField] private Fader fader;
     private bool _busy;
 
     private Collider _playerCollider;
-    
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
         {
             _playerCollider = other;
             StartCoroutine(TeleportSequence());
+            // TeleportPlayer();
         }
         if (other.CompareTag("Grabbable"))
         {
@@ -32,6 +38,19 @@ public class Abyss : MonoBehaviour
             
             if(OnCorpseEntered != null && objectData.Id == 0) OnCorpseEntered.Invoke(true);
         }
+    }
+
+    private void TeleportPlayer()
+    {
+        transition.SetTrigger("Start");
+        var cc = _playerCollider.transform.GetComponent<CharacterController>();
+        if(cc) cc.enabled = false;
+        _playerCollider.gameObject.transform.position = new Vector3(
+            playerSpawningPoint.position.x,
+            playerSpawningPoint.position.y,
+            playerSpawningPoint.position.z
+        );
+        if (cc) cc.enabled = true;
     }
 
     private IEnumerator TeleportSequence()

@@ -14,6 +14,7 @@ public class Fader : MonoBehaviour
 
     private IEnumerator FadeTo(float targetAlpha)
     {
+        canvasGroup.interactable = true;
         IsFading = true;
         float startAlpha = canvasGroup.alpha;
         
@@ -36,5 +37,6 @@ public class Fader : MonoBehaviour
         playerController.OnEnable();
         
         IsFading = false;
+        canvasGroup.interactable = true; 
     }
 }

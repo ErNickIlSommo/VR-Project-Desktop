@@ -18,10 +18,22 @@ public class InteriorMaster : MonoBehaviour
     [SerializeField] private NurseActivity nurseActivity;
     [SerializeField] private CorpseActivity corpseActivity;
 
+    [SerializeField] private bool testGlobal;
     [SerializeField] private GlobalData globalData;
-    
+
+    public bool TestGlobal
+    {
+        get => testGlobal;
+        set
+        {
+            testGlobal = value;
+            globalData.TestVariable = value;
+        }
+    }
+
     private void Awake()
     {
+        
         nurseActivity.CanStartActivity = false;
         corpseActivity.CanStartActivity = false;
         
@@ -81,6 +93,7 @@ public class InteriorMaster : MonoBehaviour
         {
             Debug.Log("Starter dialog done");
             nurseBee.HasCompletedActivity1 = true;
+            globalData.FirstTalkComplete = true;
         }
         
         // Nurse Bee
@@ -95,6 +108,12 @@ public class InteriorMaster : MonoBehaviour
             corpseActivity.CanStartActivity = true;
             Debug.Log("Master, set CanStartActivity to corpse activity");
         }
+
+        if (dialogueInfo.IndexNPC == 1 && foragingBeeInside.HasCompletedActivity2)
+        {
+            // Do nothing for now
+            Debug.Log("MASTER: It's time to go outside");
+        }
         
     }
     
@@ -108,6 +127,7 @@ public class InteriorMaster : MonoBehaviour
         nurseBee.HasCompletedActivity2 = true;
         foragingBeeInside.HasCompletedActivity1 = true;
         corpseBee.HasCompletedActivity1 = true;
+        globalData.NurseComplete = true;
     }
     
     private void HandleCorpseActivityTerminated(bool status)
@@ -116,5 +136,6 @@ public class InteriorMaster : MonoBehaviour
         
         corpseBee.HasCompletedActivity2 = true;
         foragingBeeInside.HasCompletedActivity2 = true;
+        globalData.CorpseComplete = true;
     }
 }
