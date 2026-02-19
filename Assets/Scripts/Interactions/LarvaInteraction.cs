@@ -14,6 +14,8 @@ public class LarvaInteraction : MonoBehaviour, IInteractable
     // Request and received Objects
     private GrabbableObjectData _requestedObject;
     private GrabbableObjectData _receivedObject;
+
+    [SerializeField] private BillboardUI ui;
     
     // Time variables
     [SerializeField] private float _cooldown = 10f;
@@ -30,7 +32,7 @@ public class LarvaInteraction : MonoBehaviour, IInteractable
     /*
      * Test functionalities
      */
-    [SerializeField] private Renderer renderer;
+    // [SerializeField] private Renderer renderer;
     private Color _defaultColor = Color.darkGray;
     private Color _requestColor = Color.blue;
     private Color _correctColor = Color.green;
@@ -65,8 +67,9 @@ public class LarvaInteraction : MonoBehaviour, IInteractable
      */
     public void InitLarva()
     {
-        renderer.material.color = _defaultColor;
+        // renderer.material.color = _defaultColor;
         _animationController.Reset();
+        ui.Restart();
     }
 
     public bool StartRequest(GrabbableObjectData requestedObject, float cooldown = float.NaN)
@@ -143,7 +146,8 @@ public class LarvaInteraction : MonoBehaviour, IInteractable
          * Test functionalities
          */
         Debug.Log("Task failed");
-        renderer.material.color = _incorrectColor;
+        ui.OnNope();
+        // renderer.material.color = _incorrectColor;
         
         if (OnRequestTerminated != null) 
             OnRequestTerminated.Invoke(
@@ -165,7 +169,8 @@ public class LarvaInteraction : MonoBehaviour, IInteractable
          * Test functionalities
          */
         Debug.Log("Task succeded");
-        renderer.material.color = _correctColor;
+        ui.Ok();
+        // renderer.material.color = _correctColor;
         
         if (OnRequestTerminated != null) 
             OnRequestTerminated.Invoke(
@@ -200,8 +205,9 @@ public class LarvaInteraction : MonoBehaviour, IInteractable
     private IEnumerator WaitForStartingRequest()
     {
         _animationController.RequestFood();
-        renderer.material.color = _requestColor;
+        // renderer.material.color = _requestColor;
         Debug.Log(gameObject.name + ":  !!!");
+        ui.OnRequest(); 
         
         _waitTimer = 0f;
         while (_waitTimer < _waitStartRequest)
@@ -217,6 +223,15 @@ public class LarvaInteraction : MonoBehaviour, IInteractable
          */
         Debug.Log("Started request item: " + _requestedObject.Name);
         
+        if(_requestedObject.Id == 1)
+            ui.Beebread();
+        
+        if(_requestedObject.Id == 0)
+            ui.Royaljelly();
+        if(_requestedObject.Id == 5)
+            ui.Beebread();
+        
+
         
         _timerWaitingCoroutine = null;
     }

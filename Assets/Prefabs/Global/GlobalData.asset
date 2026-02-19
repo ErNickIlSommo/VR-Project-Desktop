@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: GlobalData
   m_EditorClassIdentifier: Assembly-CSharp::GlobalData
   firstTalkComplete: 1
-  nurseComplete: 1
-  corpseComplete: 1
+  nurseComplete: 0
+  corpseComplete: 0
   foragingComplete: 0
   testVariable: 0
