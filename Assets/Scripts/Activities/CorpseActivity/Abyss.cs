@@ -10,8 +10,8 @@ public class Abyss : MonoBehaviour
     [SerializeField] private Transform playerSpawningPoint;
 
     [SerializeField] private Animator transition;
-    [SerializeField] private Fader fader;
-
+    // [SerializeField] private Fader fader;
+    private Fader fader;
     
     // [SerializeField] private Fader fader;
     private bool _busy;
@@ -23,8 +23,8 @@ public class Abyss : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             _playerCollider = other;
-            StartCoroutine(TeleportSequence());
-            // TeleportPlayer();
+            // StartCoroutine(TeleportSequence());
+            TeleportPlayer();
         }
         if (other.CompareTag("Grabbable"))
         {
@@ -42,7 +42,7 @@ public class Abyss : MonoBehaviour
 
     private void TeleportPlayer()
     {
-        transition.SetTrigger("Start");
+        // transition.SetTrigger("Start");
         var cc = _playerCollider.transform.GetComponent<CharacterController>();
         if(cc) cc.enabled = false;
         _playerCollider.gameObject.transform.position = new Vector3(

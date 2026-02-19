@@ -60,6 +60,7 @@ public class GrabbableObject : MonoBehaviour, IInteractable
         if (_rb)
         {
             _rb.isKinematic = false;
+            
         } 
 
         BlockMovement(interactor); 
@@ -67,6 +68,9 @@ public class GrabbableObject : MonoBehaviour, IInteractable
         _isDropped = true; 
         interactor.PlayerInteractionStatus.SetGrabbedObject();
         transform.SetParent(null, true);
+        
+        Vector3 direction = interactor.PlayerInteractionStatus.GrabbedSpotPoint.forward;
+        _rb.AddForce(direction * 5f, ForceMode.Impulse);
         
         UnlockMovement(interactor);
         

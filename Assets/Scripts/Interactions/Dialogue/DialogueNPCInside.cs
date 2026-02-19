@@ -206,4 +206,9 @@ public class DialogueNPCInside : GeneralDialogue, IInteractable
         if (_hasCompletedActivity1) _dialogueDataIndex = 1;
         if (_hasCompletedActivity2) _dialogueDataIndex = 2; 
     }
+
+    public void ChangeLayer(int layer)
+    {
+        gameObject.layer =  layer;
+    }
 }
