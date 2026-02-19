@@ -229,7 +229,7 @@ public class LarvaInteraction : MonoBehaviour, IInteractable
         if(_requestedObject.Id == 0)
             ui.Royaljelly();
         if(_requestedObject.Id == 5)
-            ui.Beebread();
+            ui.Water();
         
 
         
