@@ -20,6 +20,7 @@ public class InteriorMaster : MonoBehaviour
 
     [SerializeField] private bool testGlobal;
     [SerializeField] private GlobalData globalData;
+    [SerializeField] private Exit exit;
 
     public bool TestGlobal
     {
@@ -113,6 +114,7 @@ public class InteriorMaster : MonoBehaviour
         {
             // Do nothing for now
             Debug.Log("MASTER: It's time to go outside");
+            exit.CanExit = true;
         }
         
     }
@@ -137,5 +139,7 @@ public class InteriorMaster : MonoBehaviour
         corpseBee.HasCompletedActivity2 = true;
         foragingBeeInside.HasCompletedActivity2 = true;
         globalData.CorpseComplete = true;
+        // nurseBee.enabled = false;
+        nurseBee.ChangeLayer(0);
     }
 }

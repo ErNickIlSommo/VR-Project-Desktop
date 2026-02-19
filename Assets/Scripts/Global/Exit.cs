@@ -11,14 +11,26 @@ public class Exit : MonoBehaviour
     [SerializeField] private Animator transition;
     [SerializeField] private float transitionTime = 2f;
 
+    private bool _canExit = false;
+    
+    public bool CanExit { get { return _canExit; }
+        set
+        {
+            _canExit = value;
+            var collider = GetComponent<BoxCollider>();
+            collider.isTrigger = value;
+        } 
+    }
+
     /*private void Start()
     {
         fader.FadeIn();
     }*/
 
-    private void Start()
+    private void Awake()
     {
-        
+        var col = GetComponent<BoxCollider>();
+        col.isTrigger = false;
     }
 
     private void OnTriggerEnter(Collider other)
@@ -26,7 +38,8 @@ public class Exit : MonoBehaviour
         if (!other.CompareTag("Player")) return; 
         
         //transition.SetTrigger("Guard");
-        StartCoroutine(LoadLevel());
+        if (_canExit)
+            StartCoroutine(LoadLevel());
     }
     
 
