@@ -12,7 +12,7 @@ public class InteriorMaster : MonoBehaviour
     [SerializeField] private DialogueNPCInside foragingBeeInside;
     [SerializeField] private DialogueNPCInside nurseBee;
     [SerializeField] private DialogueNPCInside corpseBee;
-    [SerializeField] private DialogueNPCInside foragingBeeOutside;
+    // [SerializeField] private DialogueNPCInside foragingBeeOutside;
 
     // Activities
     [SerializeField] private NurseActivity nurseActivity;
@@ -47,17 +47,23 @@ public class InteriorMaster : MonoBehaviour
         foragingBeeInside.OnDialogueStarted += HandleDialogueStarted;
         nurseBee.OnDialogueStarted += HandleDialogueStarted;
         corpseBee.OnDialogueStarted += HandleDialogueStarted;
+        /*
         foragingBeeOutside.OnDialogueStarted += HandleDialogueStarted;
+        */
 
         foragingBeeInside.OnDialogueRunning += HandleDialogueRunning;
         nurseBee.OnDialogueRunning += HandleDialogueRunning;
         corpseBee.OnDialogueRunning += HandleDialogueRunning;
+        /*
         foragingBeeOutside.OnDialogueRunning += HandleDialogueRunning;
+        */
         
         foragingBeeInside.OnDialogueFinished += HandleDialogueFinished;
         nurseBee.OnDialogueFinished += HandleDialogueFinished;
         corpseBee.OnDialogueFinished += HandleDialogueFinished;
+        /*
         foragingBeeOutside.OnDialogueFinished += HandleDialogueFinished;
+        */
         
         /*
          * Activity Event Handler Initializations
