@@ -10,13 +10,16 @@ public class PlayerAnimationController : MonoBehaviour
 
     public void UpdateAnimations(PlayerState currentState, Vector2 moveValue)
     {
-        //if (currentState != lastState)
-        //{
+        if (currentState != lastState)
+        {
             switch (currentState)
             {
                 case PlayerState.Idle:
                     animator.SetBool("IsWalking", false);
                     animator.SetBool("IsFlying", false);
+                    if (lastState == PlayerState.FreeFall)
+                        animator.SetBool("Falling", false);
+
                     break;
                 case PlayerState.Walk:
                     animator.SetBool("IsWalking", true);
@@ -24,9 +27,17 @@ public class PlayerAnimationController : MonoBehaviour
                     break;
                 case PlayerState.Fly:
                     animator.SetBool("IsFlying", true);
+                    animator.SetBool("IsWalking", false);
                     break;
+                case PlayerState.FreeFall:
+                    animator.SetBool("IsFlying", false);
+                    animator.SetBool("IsWalking", false);
+                    animator.SetBool("Falling", true);
+                    break;
+
             }
-        //}
+            lastState = currentState;
+        }
 
         if (currentState != PlayerState.Idle)
         {

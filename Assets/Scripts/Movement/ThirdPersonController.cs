@@ -72,7 +72,7 @@ public class ThirdPersonController : MonoBehaviour
         ApplyGravity();
         UpdateFlight();
 
-        // UpdateAnimations(m_playerState, m_moveValue);
+        UpdateAnimations(m_playerState, m_moveValue);
     }
 
     private Vector3 GetMoveDirWorld()
