@@ -9919,7 +9919,6 @@ MonoBehaviour:
   foragingBeeInside: {fileID: 216340346}
   nurseBee: {fileID: 142220182}
   corpseBee: {fileID: 1747804682}
-  foragingBeeOutside: {fileID: 2083988591}
   nurseActivity: {fileID: 1070129357}
   corpseActivity: {fileID: 781916783}
   testGlobal: 0
@@ -10443,7 +10442,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a33b2a9c71814dcd9555c7c197b45b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Exit
-  sceneName: TEMP_SwitchSceneB
+  sceneName: Esterior_TEMP
   transition: {fileID: 1701252288}
   transitionTime: 1
 --- !u!54 &2002382430
