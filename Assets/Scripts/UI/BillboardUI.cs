@@ -16,7 +16,6 @@ public class BillboardUI : MonoBehaviour
     [SerializeField] private Image water;
 
     
-    
     void Awake()
     {
         if (targetCamera == null)
@@ -33,13 +32,18 @@ public class BillboardUI : MonoBehaviour
 
     public void Restart()
     {
-        cloud.enabled = false;
-        request.enabled = false;
-        ok.enabled = false;
-        nope.enabled = false;
-        beebread.enabled = false;
-        royaljelly.enabled = false;
-        water.enabled = false; 
+        if (!cloud || !request || !ok || !nope || !beebread || !royaljelly)
+        {
+            Debug.Log("Error restart ui: ");
+            return;
+        }
+          /*cloud.enabled = false;
+          request.enabled = false;
+          ok.enabled = false;
+          nope.enabled = false;
+          beebread.enabled = false;
+          royaljelly.enabled = false;
+          water.enabled = false;*/
     }
 
     public void OnRequest()
