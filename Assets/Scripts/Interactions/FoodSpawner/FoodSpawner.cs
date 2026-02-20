@@ -16,6 +16,7 @@ public class FoodSpawner : MonoBehaviour, IInteractable
     [SerializeField] private float _timer;
 
     [SerializeField] private bool _isInCooldown = false;
+    private bool _canInteract = true;
 
     private void Awake()
     {
@@ -25,13 +26,25 @@ public class FoodSpawner : MonoBehaviour, IInteractable
     public bool Interact(Interactor interactor)
     {
         // Debug.Log("Start Interaction with spawner");
+        if (!_canInteract) return false;
         if (_isInCooldown) return false;
+        if (interactor.PlayerInteractionStatus.HasGrabbed) return false;
         
         BlockMovement(interactor);
         SpawnObject(interactor);
         UnlockMovement(interactor);
         
         return true;
+    }
+    
+    public void EnableInteraction()
+    {
+        _canInteract = true;
+    }
+
+    public void DisableInteraction()
+    {
+        _canInteract = false;
     }
     
     private void SpawnObject(Interactor interactor)
