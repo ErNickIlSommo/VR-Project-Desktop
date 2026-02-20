@@ -10,7 +10,7 @@ public class OutsideMaster : MonoBehaviour
     [SerializeField] private GlobalData globalData;
     [SerializeField] private DialogueNPCInside foragingBee;
     [SerializeField] private Exit exit;
-    [SerializeField] private Flowers outsideActivity;
+    //[SerializeField] private Flowers outsideActivity;
 
     private void Awake()
     {
@@ -21,8 +21,8 @@ public class OutsideMaster : MonoBehaviour
         foragingBee.OnDialogueRunning += HandleDialogueRunning;
         foragingBee.OnDialogueFinished += HandleDialogueFinished;
         
-        outsideActivity.OnActivityFinished += HandleActivityFinished;
-        outsideActivity.OnActivityRunning += HandleOnActivityRunning;
+        //outsideActivity.OnActivityFinished += HandleActivityFinished;
+        //outsideActivity.OnActivityRunning += HandleOnActivityRunning;
     }
 
     private void Start()
@@ -61,7 +61,7 @@ public class OutsideMaster : MonoBehaviour
        if (!dialogueInfo.Status) return;
        dialogueText.text = ""; 
        dialoguePanel.SetActive(false); 
-       outsideActivity.StartActivity();
+       //outsideActivity.StartActivity();
        
        exit.CanExit = true;
     }
