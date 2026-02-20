@@ -6,6 +6,8 @@ using Random = UnityEngine.Random;
 
 public class NewNurse : MonoBehaviour, Activity
 {
+    public Action<bool> ActivityFinished;
+    
     [SerializeField] private List<NewLarva> larvas;
     [SerializeField] private List<FoodSpawner> spawners;
     [SerializeField] private ActivityTrigger _trigger;
