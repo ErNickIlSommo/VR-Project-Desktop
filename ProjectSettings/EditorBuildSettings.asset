@@ -8,6 +8,15 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/_Temp/SampleScene.unity
     guid: 99c9720ab356a0642a771bea13969a05
+  - enabled: 1
+    path: Assets/Scenes/TitleScreen.unity
+    guid: 5cc63fc9af722264dabe398df709e91e
+  - enabled: 1
+    path: Assets/Scenes/Garden__temp.unity
+    guid: 818f77091def7014ea3524fc93ab14a8
+  - enabled: 1
+    path: Assets/Scenes/Alveare.unity
+    guid: 7bf4f40dd5e0dad4fade027a62f42765
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 548693a75238a46c6abca212bc1a14a3, type: 3}
   m_UseUCBPForAssetBundles: 0
