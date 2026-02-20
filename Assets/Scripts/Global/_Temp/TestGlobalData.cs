@@ -14,9 +14,5 @@ public class TestGlobalData : MonoBehaviour
         interiorMaster = GetComponent<InteriorMaster>();
     }
 
-    private void Update()
-    {
-        if (_previous != test)
-            interiorMaster.TestGlobal = test;
-    }
+    
 }

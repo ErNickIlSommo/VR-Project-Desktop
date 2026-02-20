@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6f5594fc383d47f9b610cb3323e472c, type: 3}
   m_Name: GlobalData
   m_EditorClassIdentifier: Assembly-CSharp::GlobalData
-  firstTalkComplete: 1
+  firstTalkComplete: 0
   nurseComplete: 0
   corpseComplete: 0
   foragingComplete: 0

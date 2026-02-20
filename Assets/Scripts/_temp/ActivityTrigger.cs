@@ -39,11 +39,13 @@ public class ActivityTrigger: MonoBehaviour, IInteractable
     public void EnableInteraction()
     {
         _canInteract = true;
+        gameObject.layer = LayerMask.NameToLayer("Interactable");
     }
 
     public void DisableInteraction()
     {
         _canInteract = false;
+        gameObject.layer = LayerMask.NameToLayer("Default");
     }
 
     public void BeDetectable()

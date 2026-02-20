@@ -129,6 +129,7 @@ public class NewNurse : MonoBehaviour, Activity
             _isActivityCompleted = true;
             _isActivityStarted = false;
             foreach (var spawner in spawners) spawner.DisableInteraction();
+            if (ActivityFinished != null) ActivityFinished.Invoke(_isActivityCompleted);
             return;
         }
 

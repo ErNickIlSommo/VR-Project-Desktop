@@ -16,6 +16,7 @@ public class DeadActivity: MonoBehaviour, Activity
 
 
     [SerializeField] private int _corpsesFound = 0;
+    private int _totalCorpse;
 
     private void Awake()
     {
@@ -23,6 +24,7 @@ public class DeadActivity: MonoBehaviour, Activity
         _trigger.DisableInteraction();
         
         foreach (GameObject corps in corpses) corps.SetActive(false);
+        _totalCorpse = corpses.Count;
 
         abyss.OnCorpseEntered += DestroyCorpse;
     }
@@ -53,9 +55,10 @@ public class DeadActivity: MonoBehaviour, Activity
         Debug.Log("DEAD ACTIVITY: Corpse entered");
         
         _corpsesFound++;
-        if (_corpsesFound < corpses.Count) return;
+        if (_corpsesFound < _totalCorpse) return;
         _isActivityStarted = false;
         _isActivityCompleted = true;
+        if (ActivityFinished != null) ActivityFinished.Invoke(_isActivityCompleted);
     }
     
 }

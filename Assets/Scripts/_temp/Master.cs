@@ -13,6 +13,7 @@ public class Master: MonoBehaviour
     [SerializeField] private DialogueNPCInside foragingBee;
     [SerializeField] private DialogueNPCInside nurseBee;
     [SerializeField] private DialogueNPCInside undertakerBee;
+    [SerializeField] private DialogueNPCInside foragingBeeOutside;
     
     // Activities
     [SerializeField] private NewNurse nurseActivity;
@@ -28,6 +29,14 @@ public class Master: MonoBehaviour
         dialogueText.text = "";
         canvasGroup.alpha = 0;
 
+        if (globalData.InsideDone)
+        {
+            foragingBeeOutside.OnDialogueStarted += DialogueStarted;
+            foragingBeeOutside.OnDialogueRunning += DialogueRunning;
+            foragingBeeOutside.OnDialogueFinished += DialogueFinished;
+            return;
+        }
+        
         foragingBee.OnDialogueStarted += DialogueStarted;
         nurseBee.OnDialogueStarted += DialogueStarted;
         undertakerBee.OnDialogueStarted += DialogueStarted;
@@ -42,6 +51,7 @@ public class Master: MonoBehaviour
 
         nurseActivity.ActivityFinished += NurseFinished;
         undertakerActivity.ActivityFinished += UndertakerFinished;
+        
     }
 
     private void DialogueStarted(DialogEventInfo dialogueInfo)
@@ -53,13 +63,14 @@ public class Master: MonoBehaviour
     private void DialogueRunning(DialogEventInfo dialogueInfo)
     {
         if (!dialogueInfo.Status) return;
+        dialogueText.text = dialogueInfo.TextNPC;
     }
 
     private void DialogueFinished(DialogEventInfo dialogueInfo)
     {
         if (!dialogueInfo.Status) return;
         dialogueText.text = "";
-        canvasGroup.alpha = 1;
+        canvasGroup.alpha = 0;
 
         if (dialogueInfo.IndexNPC == 1)
         {
@@ -91,5 +102,15 @@ public class Master: MonoBehaviour
         foragingBee.HasCompletedActivity1 = true;
         undertakerBee.HasCompletedActivity1 = true;
         globalData.NurseComplete = true;
+    }
+
+    private void UndertakerFinished(bool status)
+    {
+        if (!status) return;
+        undertakerBee.HasCompletedActivity2 = true;
+        foragingBee.HasCompletedActivity2 = true;
+        globalData.CorpseComplete = true;
+
+        nurseBee.DisableInteraction();
     }
 }

@@ -26,6 +26,7 @@ public class PlayerInteractionStatus : MonoBehaviour
         _grabbedObjectTransform = null;
         _grabbableObject = null;
         _objectData = null;
+        _grabbedObject = null;
         _hasGrabbed = false;
     }
 
@@ -33,6 +34,7 @@ public class PlayerInteractionStatus : MonoBehaviour
     {
         _grabbedObjectTransform = grabbableObject.transform;
         _objectData = grabbableObject.ObjectData;
+        _grabbedObject = grabbableObject.gameObject;
         _grabbableObject = grabbableObject;
         _hasGrabbed = !grabbableObject.IsDropped;
     }
