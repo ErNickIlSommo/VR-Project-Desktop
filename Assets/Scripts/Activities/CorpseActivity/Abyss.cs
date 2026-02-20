@@ -20,6 +20,7 @@ public class Abyss : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        Debug.Log("Abyss triggered by: " + other.name);
         if (other.CompareTag("Player"))
         {
             _playerCollider = other;
@@ -34,6 +35,7 @@ public class Abyss : MonoBehaviour
             if (!objectData) return;
             // Debug.Log("Entered: " + objectData.Name);
             
+            Debug.Log("ABYSS Destroying: " + objectData.Name);
             Destroy(other.transform.gameObject);
             
             if(OnCorpseEntered != null && objectData.Id == 0) OnCorpseEntered.Invoke(true);
