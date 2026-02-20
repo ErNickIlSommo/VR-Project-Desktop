@@ -15693,6 +15693,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1504219334}
     m_Modifications:
+    - target: {fileID: 2926349486454045871, guid: 5096c4df86ad3804ca7f74b5508a5b20, type: 3}
+      propertyPath: m_Name
+      value: TerrainTurnTight (3)
+      objectReference: {fileID: 0}
     - target: {fileID: 3384588064502656412, guid: 5096c4df86ad3804ca7f74b5508a5b20, type: 3}
       propertyPath: m_LocalPosition.x
       value: 38.75
@@ -15732,10 +15736,6 @@ PrefabInstance:
     - target: {fileID: 3384588064502656412, guid: 5096c4df86ad3804ca7f74b5508a5b20, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2926349486454045871, guid: 5096c4df86ad3804ca7f74b5508a5b20, type: 3}
-      propertyPath: m_Name
-      value: TerrainTurnTight (3)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -23538,6 +23538,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1504219334}
     m_Modifications:
+    - target: {fileID: 1760632409255758264, guid: 5c2c70aceeaecac44aee2768b4325f70, type: 3}
+      propertyPath: m_Name
+      value: TerrainTurn (7)
+      objectReference: {fileID: 0}
     - target: {fileID: 7876015413059523842, guid: 5c2c70aceeaecac44aee2768b4325f70, type: 3}
       propertyPath: m_LocalPosition.x
       value: 38.75
@@ -23577,10 +23581,6 @@ PrefabInstance:
     - target: {fileID: 7876015413059523842, guid: 5c2c70aceeaecac44aee2768b4325f70, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1760632409255758264, guid: 5c2c70aceeaecac44aee2768b4325f70, type: 3}
-      propertyPath: m_Name
-      value: TerrainTurn (7)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -41721,6 +41721,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1897941722}
     m_Modifications:
+    - target: {fileID: 1315271811282832548, guid: e5b7e4b642a9813478be205743e6e6d3, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4522144660253465006, guid: e5b7e4b642a9813478be205743e6e6d3, type: 3}
       propertyPath: m_Name
       value: SignSingle
