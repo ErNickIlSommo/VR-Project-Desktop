@@ -69,11 +69,12 @@ public class LarvaInteraction : MonoBehaviour, IInteractable
     {
         // renderer.material.color = _defaultColor;
         _animationController.Reset();
-        ui.Restart();
+        // ui.Restart();
     }
 
     public bool StartRequest(GrabbableObjectData requestedObject, float cooldown = float.NaN)
     {
+        
         if (_timerRunningCoroutine != null) return false; 
         if (requestedObject == null) return false; 
         if (!float.IsNaN(cooldown)) _cooldown = cooldown;
@@ -93,6 +94,7 @@ public class LarvaInteraction : MonoBehaviour, IInteractable
     
     public bool Interact(Interactor interactor)
     {
+        if (!_isRequestRunning) return false;
         Debug.Log("Larva Interaction started");
         
         if (!interactor.PlayerInteractionStatus.HasGrabbed) return false;
@@ -126,6 +128,7 @@ public class LarvaInteraction : MonoBehaviour, IInteractable
         
         int objectDataId = interactor.PlayerInteractionStatus.ObjectData.Id;
         
+        Debug.Log("Id: " + objectDataId);
         return _requestedObject.Id == objectDataId;
     }
 
@@ -229,9 +232,7 @@ public class LarvaInteraction : MonoBehaviour, IInteractable
         if(_requestedObject.Id == 0)
             ui.Royaljelly();
         if(_requestedObject.Id == 5)
-            ui.Beebread();
-        
-
+            ui.Water();
         
         _timerWaitingCoroutine = null;
     }

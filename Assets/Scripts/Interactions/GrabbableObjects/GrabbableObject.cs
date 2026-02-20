@@ -111,6 +111,12 @@ public class GrabbableObject : MonoBehaviour, IInteractable
         Drop(interactor);
         Destroy(transform.gameObject);
     }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.layer == LayerMask.NameToLayer("Ground"))
+            Destroy(gameObject);
+    }
     
     public void BlockMovement(Interactor interactor)
     {
