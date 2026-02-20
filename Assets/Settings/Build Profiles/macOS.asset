@@ -23,7 +23,7 @@ MonoBehaviour:
   - m_enabled: 1
     m_path: Assets/Scenes/_Temp/TEMP_Master_Interior.unity
   - m_enabled: 1
-    m_path: Assets/Scenes/_Temp/Esterior_TEMP.unity
+    m_path: Assets/Scenes/_Temp/OutsideScene_TEMP.unity
   - m_enabled: 1
     m_path: Assets/Scenes/_Temp/Final_TEMP.unity
   m_HasScriptingDefines: 0
@@ -33,8 +33,6 @@ MonoBehaviour:
   references:
     version: 2
     RefIds:
-    - rid: -2
-      type: {class: , ns: , asm: }
     - rid: 7656286918228312197
       type: {class: OSXStandaloneBuildProfile, ns: UnityEditor.OSXStandalone, asm: UnityEditor.OSXStandalone.Extensions}
       data:
