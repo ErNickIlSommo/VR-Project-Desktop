@@ -14,14 +14,14 @@ public class ThirdPersonController : MonoBehaviour
     [Header("References")]
     [SerializeField] private Transform cameraTransform;
 
-    [SerializeField] private Transform visualPivot;
-
     [Header("Movement")]
     [SerializeField] private float walkSpeed = 7f;
+    [SerializeField] private float walkAcceleration = 0.5f;
     [SerializeField] private float turnSpeed = 10f;
 
     [Header("Flight")]
     [SerializeField] private float flySpeed = 7f;
+    [SerializeField] private float flyAcceleration = 0.5f;
     [SerializeField] private float heightChangeSpeed = 11f;
     [SerializeField] private float gravity = -10f;
 
@@ -57,9 +57,6 @@ public class ThirdPersonController : MonoBehaviour
         m_moveAction = map.FindAction(moveActionName, true);
         m_lookAction = map.FindAction(lookActionName, true);
         m_flyAction = map.FindAction(flyActionName, true);
-
-        if (visualPivot == null)
-            visualPivot = transform;
     }
 
     private void Update()
@@ -72,8 +69,8 @@ public class ThirdPersonController : MonoBehaviour
         ApplyGravity();
         UpdateFlight();
 
-        // UpdateAnimations(m_playerState, m_moveValue);
-        
+        UpdateAnimations(m_playerState, m_moveValue);
+
     }
 
     private Vector3 GetMoveDirWorld()
