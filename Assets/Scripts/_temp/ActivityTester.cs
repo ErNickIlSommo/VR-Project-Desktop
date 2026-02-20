@@ -1,7 +1,7 @@
-using System;
+
 using UnityEngine;
 
-public class NewNurseTester : MonoBehaviour
+public class ActivityTester:  MonoBehaviour
 {
     [SerializeField] private bool _isActivityEnabled;
     private bool _guard = false;
@@ -18,5 +18,5 @@ public class NewNurseTester : MonoBehaviour
         if (!_isActivityEnabled) return;
         _activity.EnableActivity();
         _guard = false;
-    }
+    } 
 }

@@ -9,7 +9,7 @@ public class NewNurse : MonoBehaviour, Activity
     [SerializeField] private List<NewLarva> larvas;
     [SerializeField] private List<FoodSpawner> spawners;
     [SerializeField] private ActivityTrigger _trigger;
-
+    
 
     [SerializeField] private bool _isActivityEnabled = false;
     [SerializeField] private bool _isActivityStarted = false;
