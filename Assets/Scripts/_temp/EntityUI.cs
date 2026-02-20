@@ -5,7 +5,6 @@ using UnityEngine.UI;
 
 public class EntityUI: MonoBehaviour
 {
-    private Camera targetCamera;
     [SerializeField] private CanvasGroup group;
     [SerializeField] private Image targetImage;
     [SerializeField] private LarvaImages larvaImages;
@@ -14,9 +13,6 @@ public class EntityUI: MonoBehaviour
 
     private void Awake()
     {
-        if(targetCamera == null)
-            targetCamera = Camera.main;
-        
         _food = new Dictionary<LarvaSituation, Sprite>(larvaImages.entries.Length);
         foreach (var e in larvaImages.entries)
             _food[e.larvaSituation] = e.sprite;
@@ -45,14 +41,4 @@ public class EntityUI: MonoBehaviour
         targetImage.enabled = sprite  != null;
     }
     
-    void LateUpdate()
-    {
-        if (!targetCamera) return;
-
-        Vector3 dir = transform.position - targetCamera.transform.position;
-
-        if (dir.sqrMagnitude < 0.0001f) return;
-
-        transform.rotation = Quaternion.LookRotation(dir, Vector3.up);
-    }
 }

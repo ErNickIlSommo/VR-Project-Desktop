@@ -15,7 +15,7 @@ public class InteriorMaster : MonoBehaviour
     // [SerializeField] private DialogueNPCInside foragingBeeOutside;
 
     // Activities
-    [SerializeField] private NurseActivity nurseActivity;
+    // [SerializeField] private NurseActivity nurseActivity;
     [SerializeField] private CorpseActivity corpseActivity;
 
     [SerializeField] private bool testGlobal;
@@ -35,7 +35,7 @@ public class InteriorMaster : MonoBehaviour
     private void Awake()
     {
         
-        nurseActivity.CanStartActivity = false;
+        // nurseActivity.CanStartActivity = false;
         corpseActivity.CanStartActivity = false;
         
         dialogueText.text = "";
@@ -68,7 +68,7 @@ public class InteriorMaster : MonoBehaviour
         /*
          * Activity Event Handler Initializations
          */
-        nurseActivity.OnActivityCompleted += HandleNurseActivityTerminated;
+        // nurseActivity.OnActivityCompleted += HandleNurseActivityTerminated;
         corpseActivity.OnActivityCompleted += HandleCorpseActivityTerminated;
     }
 
@@ -106,7 +106,7 @@ public class InteriorMaster : MonoBehaviour
         // Nurse Bee
         if (dialogueInfo.IndexNPC == 2 && nurseBee.HasCompletedActivity1)
         {
-            nurseActivity.CanStartActivity = true;
+            // nurseActivity.CanStartActivity = true;
         }
         
         // Corpse Bee
