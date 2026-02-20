@@ -1225,6 +1225,7 @@ GameObject:
   - component: {fileID: 208627628}
   - component: {fileID: 208627630}
   - component: {fileID: 208627629}
+  - component: {fileID: 208627631}
   m_Layer: 0
   m_Name: Dialogue Panel
   m_TagString: Untagged
@@ -1290,6 +1291,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 208627627}
   m_CullTransparentMesh: 1
+--- !u!225 &208627631
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 208627627}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &216340343
 GameObject:
   m_ObjectHideFlags: 0

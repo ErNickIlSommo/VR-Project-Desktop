@@ -4,6 +4,8 @@ using System.Collections.Generic;
 
 public class DeadActivity: MonoBehaviour, Activity
 {
+    public Action<bool> ActivityFinished;
+    
     [SerializeField] private ActivityTrigger _trigger;
     [SerializeField] private Abyss abyss;
     [SerializeField] private List<GameObject> corpses;

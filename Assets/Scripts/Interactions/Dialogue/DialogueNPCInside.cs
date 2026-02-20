@@ -1,5 +1,4 @@
 using System;
-using TMPro;
 using UnityEngine;
 using System.Collections.Generic;
 using UnityEngine.InputSystem;
@@ -12,6 +11,8 @@ public class DialogueNPCInside : GeneralDialogue, IInteractable
     
     // [SerializeField] private TextMeshProUGUI _ui;
     // [SerializeField] private GameObject _panel;
+
+    private bool _canInteract = true;
 
     [SerializeField] private int indexNPC = 0;
     
@@ -95,6 +96,7 @@ public class DialogueNPCInside : GeneralDialogue, IInteractable
     
     public bool Interact(Interactor interactor)
     {
+        if (!_canInteract) return false;
         Debug.Log("Dialogue Interaction");
         if (_dialogueAssets == null || _dialogueAssets.Length == 0) return false;
         
