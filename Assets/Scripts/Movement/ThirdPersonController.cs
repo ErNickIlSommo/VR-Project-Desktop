@@ -16,12 +16,14 @@ public class ThirdPersonController : MonoBehaviour
 
     [Header("Movement")]
     [SerializeField] private float walkSpeed = 7f;
-    [SerializeField] private float walkAcceleration = 0.5f;
+    [SerializeField] private float walkAcceleration = 8f;
+    [SerializeField] private float walkDeceleration = 30f;
     [SerializeField] private float turnSpeed = 10f;
 
     [Header("Flight")]
     [SerializeField] private float flySpeed = 7f;
     [SerializeField] private float flyAcceleration = 0.5f;
+    [SerializeField] private float flyDeceleration = 30f;
     [SerializeField] private float heightChangeSpeed = 11f;
     [SerializeField] private float gravity = -10f;
 
@@ -36,10 +38,12 @@ public class ThirdPersonController : MonoBehaviour
     private CharacterController m_controller;
 
     private InputAction m_moveAction;
-    private InputAction m_lookAction;
     private InputAction m_flyAction;
 
     private Vector2 m_moveValue;
+    private float m_currentSpeed;
+    private float m_currentVerticalSpeed;
+
     private float m_flyValue;
     private float m_animSpeed;
 
@@ -55,7 +59,6 @@ public class ThirdPersonController : MonoBehaviour
 
         var map = inputActions.FindActionMap(actionMapName, true);
         m_moveAction = map.FindAction(moveActionName, true);
-        m_lookAction = map.FindAction(lookActionName, true);
         m_flyAction = map.FindAction(flyActionName, true);
     }
 
@@ -89,36 +92,59 @@ public class ThirdPersonController : MonoBehaviour
     private void Move()
     {
         Vector3 dir = GetMoveDirWorld();
+        bool hasInput = dir.sqrMagnitude > 0.0001f;
 
-        float moveSpeed = m_playerState == PlayerState.Fly ? flySpeed : walkSpeed;
+        float maxSpeed = (m_playerState == PlayerState.Fly) ? flySpeed : walkSpeed;
+        float accel = (m_playerState == PlayerState.Fly) ? flyAcceleration : walkAcceleration;
+        float decel = (m_playerState == PlayerState.Fly) ? flyDeceleration : walkDeceleration;
 
-        if (dir.sqrMagnitude > 0.0001f)
+        float rate = hasInput ? accel : decel;
+        float targetSpeed = hasInput ? maxSpeed : 0f;
+        m_currentSpeed = Mathf.MoveTowards(m_currentSpeed, targetSpeed, rate * Time.deltaTime);
+
+        Vector3 moveDir = hasInput ? dir.normalized : Vector3.zero;
+
+        if (hasInput)
         {
             Quaternion targetRot = Quaternion.LookRotation(dir.normalized, Vector3.up);
             transform.rotation = Quaternion.RotateTowards(transform.rotation, targetRot, turnSpeed * 360f * Time.deltaTime);
             if (m_controller.isGrounded && m_playerState == PlayerState.Idle)
                 m_playerState = PlayerState.Walk;
         }
-        else if (m_playerState == PlayerState.Walk)
+        else if (m_playerState == PlayerState.Walk && m_currentSpeed <= 0.05f)
         {
             m_playerState = PlayerState.Idle;
         }
 
-        m_controller.Move(dir * moveSpeed * Time.deltaTime);
- 
+        m_controller.Move(moveDir * m_currentSpeed * Time.deltaTime);
+
     }
 
     private void Fly()
     {
-        if (m_flyValue == 0.0f) return;
+        bool hasFlyInput = Mathf.Abs(m_flyValue) > 0.001f;
 
-        if (m_playerState != PlayerState.Fly && m_flyValue >= 0.0f)
+        if (m_playerState != PlayerState.Fly && m_flyValue >= 0.001f)
         {
             audioSource.PlayOneShot(takeOff_SFX);
             m_playerState = PlayerState.Fly;
         }
 
-        m_controller.Move(Vector3.up * m_flyValue * heightChangeSpeed * Time.deltaTime);
+        if (m_playerState != PlayerState.Fly)
+            return;
+
+        float targetVSpeed = hasFlyInput ? (m_flyValue * heightChangeSpeed) : 0f;
+
+        // accel se input, decel se rilasci
+        float rate = hasFlyInput ? flyAcceleration : flyDeceleration;
+
+        m_currentVerticalSpeed = Mathf.MoveTowards(
+            m_currentVerticalSpeed,
+            targetVSpeed,
+            rate * Time.deltaTime
+        );
+
+        m_controller.Move(Vector3.up * m_currentVerticalSpeed * Time.deltaTime);
     }
 
     private void ApplyGravity()
@@ -135,6 +161,7 @@ public class ThirdPersonController : MonoBehaviour
         if (m_controller.isGrounded && (m_playerState == PlayerState.FreeFall || m_playerState == PlayerState.Fly))
         {
             m_playerState = PlayerState.Idle;
+            m_currentVerticalSpeed = 0f;
             audioSource.PlayOneShot(landing_SFX);
         } 
     }

@@ -3259,6 +3259,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Aiuola 06
       objectReference: {fileID: 0}
+    - target: {fileID: 3166030668339773661, guid: e64ca37ca56330541a877aa2949c0526, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -31022,7 +31026,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 4
+  m_Lightmapping: 2
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -46812,12 +46816,14 @@ MonoBehaviour:
   lookActionName: Look
   flyActionName: Fly
   cameraTransform: {fileID: 716184396}
-  walkSpeed: 4
-  walkAcceleration: 0.5
+  walkSpeed: 7
+  walkAcceleration: 8
+  walkDeceleration: 30
   turnSpeed: 7
   flySpeed: 20
-  flyAcceleration: 0.5
-  heightChangeSpeed: 11
+  flyAcceleration: 12
+  flyDeceleration: 30
+  heightChangeSpeed: 15
   gravity: -15
   animationController: {fileID: 6744020785613235040}
   audioSource: {fileID: 6744020785613235042}
@@ -48407,12 +48413,12 @@ Transform:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
+  - {fileID: 1632669348}
   - {fileID: 1243845417}
   - {fileID: 716184396}
   - {fileID: 1956460746}
   - {fileID: 6744020785613235033}
   - {fileID: 1067481580}
-  - {fileID: 1632669348}
   - {fileID: 1836489077}
   - {fileID: 2116103213}
   - {fileID: 1958583987}
