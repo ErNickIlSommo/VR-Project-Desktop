@@ -94,11 +94,13 @@ public class Master: MonoBehaviour
         {
             if (foragingBee.HasCompletedActivity2)
             {
+                // Last dialogue inside the hive
                 goalText.text = "<b>Obiettivo:</b> Esci dall'alveare";
                 exit.CanExit = true;
             }
             else
             {
+                // Start Dialogue
                 nurseBee.HasCompletedActivity1 = true;
                 globalData.FirstTalkComplete = true;
                 goalText.text = "<b>Obiettivo:</b> Cerca l'ape nutrice";
@@ -108,18 +110,19 @@ public class Master: MonoBehaviour
         // Nurse bee
         if (dialogueInfo.IndexNPC == 2)
         {
+            // When you talk with nurse bee but you havent complete the activity
             if (nurseBee.HasCompletedActivity1 && !nurseBee.HasCompletedActivity2)
             {
                 nurseActivity.EnableActivity();
                 goalText.text = "<b>Obiettivo:</b> Sfama le larve";
             }
 
+            // When you talk with nurse bee and you have complete the activity
             if (nurseBee.HasCompletedActivity1 && nurseBee.HasCompletedActivity2)
             {
                 goalText.text = "<b>Obiettivo:</b> Cerca l'ape spazzina"; 
             }
         }
-        // if ()
 
         // Undertaker Bee
         if (dialogueInfo.IndexNPC == 3)
@@ -136,12 +139,6 @@ public class Master: MonoBehaviour
                 goalText.text = "<b>Obiettivo:</b> Parla con l'ape bottinatrice vicino all'entrata"; 
             }
         }
-
-        // Foraging Bee Inside (when all activities are finished)
-        /*if (dialogueInfo.IndexNPC == 1 && foragingBee.HasCompletedActivity2 && !globalData.InsideDone)
-        {
-            exit.CanExit = true;
-        }*/
 
         // Foraging Bee Outside starter dialogue
         if (dialogueInfo.IndexNPC == 1 && globalData.InsideDone)
@@ -161,6 +158,7 @@ public class Master: MonoBehaviour
         }
     }
 
+    // When you start nurse activity
     private void NurseInit(bool status)
     {
         goalText.text = "<b>Obiettivo:</b> Sfama le larve";
