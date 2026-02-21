@@ -18,6 +18,7 @@ public class Master: MonoBehaviour
     // Activities
     [SerializeField] private NewNurse nurseActivity;
     [SerializeField] private DeadActivity undertakerActivity;
+    [SerializeField] private FlowerActivity flowerActivity;
     
     // Global Data
     [SerializeField] private GlobalData globalData;
@@ -34,6 +35,9 @@ public class Master: MonoBehaviour
             foragingBeeOutside.OnDialogueStarted += DialogueStarted;
             foragingBeeOutside.OnDialogueRunning += DialogueRunning;
             foragingBeeOutside.OnDialogueFinished += DialogueFinished;
+            
+            flowerActivity.ActivityRunning += FlowerRunning;
+            flowerActivity.ActivityFinished += FlowerFinished;
             return;
         }
         
@@ -72,25 +76,49 @@ public class Master: MonoBehaviour
         dialogueText.text = "";
         canvasGroup.alpha = 0;
 
-        if (dialogueInfo.IndexNPC == 1)
+        // Foraging Bee Inside
+        if (dialogueInfo.IndexNPC == 1 && !globalData.InsideDone)
         {
-            nurseBee.HasCompletedActivity1 = true;
-            globalData.FirstTalkComplete = true;
+            if (foragingBee.HasCompletedActivity2)
+                exit.CanExit = true;
+            else
+            {
+                nurseBee.HasCompletedActivity1 = true;
+                globalData.FirstTalkComplete = true;
+            }
         }
 
+        // Nurse bee
         if (dialogueInfo.IndexNPC == 2 && nurseBee.HasCompletedActivity1)
         {
             nurseActivity.EnableActivity();
         }
 
+        // Undertaker Bee
         if (dialogueInfo.IndexNPC == 3 && undertakerBee.HasCompletedActivity1)
         {
             undertakerActivity.EnableActivity();
         }
 
-        if (dialogueInfo.IndexNPC == 1 && foragingBee.HasCompletedActivity2)
+        // Foraging Bee Inside (when all activities are finished)
+        /*if (dialogueInfo.IndexNPC == 1 && foragingBee.HasCompletedActivity2 && !globalData.InsideDone)
         {
             exit.CanExit = true;
+        }*/
+
+        // Foraging Bee Outside starter dialogue
+        if (dialogueInfo.IndexNPC == 1 && globalData.InsideDone)
+        {
+            if (foragingBeeOutside.HasCompletedActivity2)
+            {
+                exit.CanExit = true;
+            }
+            else
+            {
+                Debug.Log("Master: Enabling Activity");
+                flowerActivity.EnableActivity();
+                flowerActivity.StartActivity();
+            }
         }
     }
 
@@ -112,5 +140,18 @@ public class Master: MonoBehaviour
         globalData.CorpseComplete = true;
 
         nurseBee.DisableInteraction();
+    }
+
+    private void FlowerRunning(bool status)
+    {
+        if (!status) return;
+        foragingBeeOutside.HasCompletedActivity1 = true;
+    }
+    
+    private void FlowerFinished(bool status)
+    {
+        if (!status) return;
+        foragingBeeOutside.HasCompletedActivity2 = true;
+        // flowerActivity.EnableActivity();
     }
 }

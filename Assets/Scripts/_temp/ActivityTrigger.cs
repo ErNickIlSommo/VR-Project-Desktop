@@ -28,7 +28,7 @@ public class ActivityTrigger: MonoBehaviour, IInteractable
 
     public bool Interact(Interactor interactor)
     {
-        Debug.Log("Trigger interaction");
+        // Debug.Log("Trigger interaction");
         if(!_canInteract) return false;
         _activity.StartActivity();
         _interactor = interactor;
@@ -38,12 +38,14 @@ public class ActivityTrigger: MonoBehaviour, IInteractable
     
     public void EnableInteraction()
     {
+        Debug.Log("Trigger enabled");
         _canInteract = true;
         gameObject.layer = LayerMask.NameToLayer("Interactable");
     }
 
     public void DisableInteraction()
     {
+        Debug.Log("Trigger disabled");
         _canInteract = false;
         gameObject.layer = LayerMask.NameToLayer("Default");
     }
