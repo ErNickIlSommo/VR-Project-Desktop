@@ -53,6 +53,7 @@ public class DeadActivity: MonoBehaviour, Activity
         Debug.Log("DEAD ACTIVITY Started"); 
         scoreCanvasGroup.alpha = 1;
         scoreText.text = $"Cadaveri eliminati: {_corpsesFound}/{_totalCorpse}";
+        _isActivityStarted = true;
         return true;
     }
 

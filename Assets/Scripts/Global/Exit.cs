@@ -12,7 +12,7 @@ public class Exit : MonoBehaviour
     [SerializeField] private float transitionTime = 2f;
     [SerializeField] private GlobalData globalData;
 
-    private bool _canExit = false;
+    [SerializeField] private bool _canExit = false;
     
     public bool CanExit { get { return _canExit; }
         set

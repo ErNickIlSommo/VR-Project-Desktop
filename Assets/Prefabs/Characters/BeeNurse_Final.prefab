@@ -2043,7 +2043,6 @@ GameObject:
   - component: {fileID: 1528918928659863236}
   - component: {fileID: 5700116901235657042}
   - component: {fileID: 493815298554901235}
-  - component: {fileID: 825426254522233720}
   - component: {fileID: 7305525225695937259}
   m_Layer: 6
   m_Name: BeeNurse_Final
@@ -2153,25 +2152,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &825426254522233720
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4937078137223378976}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 73a3fb9d4659741c6b724ee851ab4adf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::NurseBeeDialogue
-  _canvas: {fileID: 8829472244074843807}
-  _ui: {fileID: 0}
-  _panel: {fileID: 0}
-  _dialogueAssets:
-  - {fileID: 11400000, guid: d0cae70f0dd114312a56107d8866b173, type: 2}
-  - {fileID: 11400000, guid: 881e1810f551a462fae3a3879dbc2409, type: 2}
-  - {fileID: 11400000, guid: 0f3b9edf651db4f6f9810d692d8376c1, type: 2}
 --- !u!114 &7305525225695937259
 MonoBehaviour:
   m_ObjectHideFlags: 0
