@@ -7428,7 +7428,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1962491237932652827, guid: 849abab5caf5a174dae24be0e2a49581, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2294544055711328547, guid: 849abab5caf5a174dae24be0e2a49581, type: 3}
       propertyPath: m_LocalScale.y
@@ -14280,7 +14280,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1962491237932652827, guid: 849abab5caf5a174dae24be0e2a49581, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2294544055711328547, guid: 849abab5caf5a174dae24be0e2a49581, type: 3}
       propertyPath: m_LocalScale.y
@@ -31126,7 +31126,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1962491237932652827, guid: 849abab5caf5a174dae24be0e2a49581, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2294544055711328547, guid: 849abab5caf5a174dae24be0e2a49581, type: 3}
       propertyPath: m_LocalScale.y
@@ -37687,7 +37687,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1962491237932652827, guid: 849abab5caf5a174dae24be0e2a49581, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2294544055711328547, guid: 849abab5caf5a174dae24be0e2a49581, type: 3}
       propertyPath: m_LocalScale.y
@@ -41390,7 +41390,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1962491237932652827, guid: 849abab5caf5a174dae24be0e2a49581, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2294544055711328547, guid: 849abab5caf5a174dae24be0e2a49581, type: 3}
       propertyPath: m_LocalScale.y
@@ -46050,7 +46050,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1962491237932652827, guid: 849abab5caf5a174dae24be0e2a49581, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2294544055711328547, guid: 849abab5caf5a174dae24be0e2a49581, type: 3}
       propertyPath: m_LocalScale.y
