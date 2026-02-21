@@ -15605,6 +15605,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3900802548829876266, guid: 742065b2a3eae38488ade4437a17892e, type: 3}
   m_PrefabInstance: {fileID: 701370690}
   m_PrefabAsset: {fileID: 0}
+--- !u!95 &702497361 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 3445112523964703684, guid: 882fb2ff040fb3f4d893f6748e3d4523, type: 3}
+  m_PrefabInstance: {fileID: 1958583987}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &709618071
 GameObject:
   m_ObjectHideFlags: 0
@@ -22850,7 +22855,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Exit
   sceneName: EndScreen
-  transition: {fileID: 0}
+  transition: {fileID: 702497361}
   transitionTime: 1
   globalData: {fileID: 11400000, guid: 3b2c1aabcf6134d7f9a935732cbc7d2e, type: 2}
   _canExit: 0
