@@ -23205,7 +23205,6 @@ MonoBehaviour:
   globalData: {fileID: 11400000, guid: 3b2c1aabcf6134d7f9a935732cbc7d2e, type: 2}
   foragingBee: {fileID: 0}
   exit: {fileID: 0}
-  outsideActivity: {fileID: 1486229775}
 --- !u!1001 &1249446813
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -28324,9 +28323,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26391a393b5fa40c68fc79c29122fd0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Flowers
-  flowers: []
-  counter: 0
-  _numFlowers: 0
 --- !u!4 &1486229776
 Transform:
   m_ObjectHideFlags: 0
@@ -46816,10 +46812,11 @@ MonoBehaviour:
   lookActionName: Look
   flyActionName: Fly
   cameraTransform: {fileID: 716184396}
-  visualPivot: {fileID: 0}
   walkSpeed: 4
+  walkAcceleration: 0.5
   turnSpeed: 7
   flySpeed: 20
+  flyAcceleration: 0.5
   heightChangeSpeed: 11
   gravity: -15
   animationController: {fileID: 6744020785613235040}
