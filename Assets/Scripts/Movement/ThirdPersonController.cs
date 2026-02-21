@@ -21,6 +21,7 @@ public class ThirdPersonController : MonoBehaviour
     [SerializeField] private float turnSpeed = 10f;
 
     [Header("Flight")]
+    [SerializeField] private bool canFly = false;
     [SerializeField] private float flySpeed = 7f;
     [SerializeField] private float flyAcceleration = 0.5f;
     [SerializeField] private float flyDeceleration = 30f;
@@ -68,7 +69,10 @@ public class ThirdPersonController : MonoBehaviour
         m_flyValue = m_flyAction.ReadValue<float>();
 
         Move();
-        Fly();
+        if(canFly)
+        {
+            Fly();
+        }
         ApplyGravity();
         UpdateFlight();
 

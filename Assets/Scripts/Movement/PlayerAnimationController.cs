@@ -72,4 +72,9 @@ public class PlayerAnimationController : MonoBehaviour
     {
         animator.SetTrigger("Drop");
     }
+
+    public void DoPollen()
+    {
+        animator.SetTrigger("Pollen");
+    }
 }

@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using UnityEngine;
+using UnityEngine.Audio;
 using UnityEngine.PlayerLoop;
 
 public class Flower : MonoBehaviour, IInteractable
@@ -8,7 +9,8 @@ public class Flower : MonoBehaviour, IInteractable
     public Action<bool, Flower> OnInteraction;
 
     [SerializeField] private float timeUIToDisappear = 2f;
-    [SerializeField] AudioSource m_AudioSource;
+    [SerializeField] private AudioClip m_AudioClip;
+    private AudioSource m_AudioSource;
     private FlowerUI _ui;
 
     private FlowerState flowerState;
@@ -19,6 +21,7 @@ public class Flower : MonoBehaviour, IInteractable
     private void Awake()
     {
         _ui = GetComponent<FlowerUI>();
+        m_AudioSource = GetComponent<AudioSource>();
     }
 
     public void EnableInteraction()
@@ -38,6 +41,9 @@ public class Flower : MonoBehaviour, IInteractable
         Debug.Log("FLOWER " + gameObject.name + " Interaction");
         if (!_canInteract) return false;
         StartCoroutine(WaitAndUpdateUI());
+        m_AudioSource.PlayOneShot(m_AudioClip);
+        interactor.PlayerInteractionStatus.DoPollenInteraction();
+
         if (OnInteraction != null) OnInteraction.Invoke(true, this);
         return true;
     }

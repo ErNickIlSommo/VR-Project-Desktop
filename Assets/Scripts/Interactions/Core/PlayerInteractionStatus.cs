@@ -55,4 +55,9 @@ public class PlayerInteractionStatus : MonoBehaviour
         _grabbableObject = grabbableObject;
         _hasGrabbed = isGrabbing;
     }
+
+    public void DoPollenInteraction()
+    {
+        _animationController.DoPollen();
+    }
 }
