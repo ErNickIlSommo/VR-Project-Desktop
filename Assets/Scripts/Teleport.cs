@@ -8,18 +8,12 @@ public class Teleport : MonoBehaviour
    {
       if (!other.CompareTag("Player")) return;
       
-      var cc = other.transform.GetComponent<CharacterController>();
-      
-      if (cc) cc.enabled = false;
-      other.gameObject.transform.position = new Vector3(
-         gate.position.x,
-         gate.position.y,
-         gate.position.z
-      );
+        Transform root = other.transform.root; // <-- importante
+        var cc = root.GetComponent<CharacterController>();
+        if (cc) cc.enabled = false;
 
-      // other.gameObject.transform.forward = -other.gameObject.transform.forward;
-      // other.gameObject.transform.Rotate(0f, 180f, 0f);
-      
-      if (cc) cc.enabled = true;
+        root.SetPositionAndRotation(gate.position, gate.rotation);
+
+        if (cc) cc.enabled = true;
    }
 }
