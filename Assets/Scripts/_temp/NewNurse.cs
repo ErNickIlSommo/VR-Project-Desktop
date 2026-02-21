@@ -1,12 +1,18 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
 public class NewNurse : MonoBehaviour, Activity
 {
+    public Action<bool> OnStartActivity;
     public Action<bool> ActivityFinished;
+    
+    // Score HUD
+    [SerializeField] private CanvasGroup scoreCanvasGroup;
+    [SerializeField] private TextMeshProUGUI scoreText;
     
     [SerializeField] private List<NewLarva> larvas;
     [SerializeField] private List<FoodSpawner> spawners;
@@ -60,11 +66,16 @@ public class NewNurse : MonoBehaviour, Activity
         errors = 0;
         
         _trigger.DisableInteraction();
+        
+        if (OnStartActivity != null) OnStartActivity.Invoke(true);
+        
         foreach (FoodSpawner spawner in spawners) spawner.EnableInteraction();
         
         ShuffleLarvas();
         _isActivityStarted = true;
         Debug.Log("Activity Started");
+        scoreCanvasGroup.alpha = 1;
+        scoreText.text = $"Score: {correct}/{larvas.Count}";
         StartCoroutine(Requests());
         
         return true;
@@ -112,6 +123,7 @@ public class NewNurse : MonoBehaviour, Activity
                 break;
             case NewLarva.RequestStatus.CORRECT:
                 correct++;
+                scoreText.text = $"Score: {correct}/{larvas.Count}";
                 break;
             case NewLarva.RequestStatus.WRONG:
                 errors++;
@@ -130,6 +142,7 @@ public class NewNurse : MonoBehaviour, Activity
             _isActivityStarted = false;
             foreach (var spawner in spawners) spawner.DisableInteraction();
             if (ActivityFinished != null) ActivityFinished.Invoke(_isActivityCompleted);
+            scoreCanvasGroup.alpha = 0;
             return;
         }
 
@@ -138,6 +151,8 @@ public class NewNurse : MonoBehaviour, Activity
         foreach (var spawner in spawners) spawner.DisableInteraction();
         
         _isActivityStarted = false;
+        scoreCanvasGroup.alpha = 0;
+        if (ActivityFinished != null) ActivityFinished.Invoke(false);
     }
     
 }

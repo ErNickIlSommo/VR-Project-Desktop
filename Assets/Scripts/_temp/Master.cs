@@ -5,9 +5,16 @@ using UnityEngine;
 
 public class Master: MonoBehaviour
 {
-    // HUD
+    // Dialogue HUD
     [SerializeField] private CanvasGroup canvasGroup;
     [SerializeField] private TextMeshProUGUI dialogueText;
+    
+    // Goal HUD
+    [SerializeField] private TextMeshProUGUI goalText;
+    
+    // Score HUD
+    [SerializeField] private CanvasGroup scoreCanvasGroup;
+    // [SerializeField] private TextMeshProUGUI scoreText;
 
     // Dialogues NPCs
     [SerializeField] private DialogueNPCInside foragingBee;
@@ -29,7 +36,8 @@ public class Master: MonoBehaviour
     {
         dialogueText.text = "";
         canvasGroup.alpha = 0;
-
+        scoreCanvasGroup.alpha = 0;
+        
         if (globalData.InsideDone)
         {
             foragingBeeOutside.OnDialogueStarted += DialogueStarted;
@@ -38,8 +46,12 @@ public class Master: MonoBehaviour
             
             flowerActivity.ActivityRunning += FlowerRunning;
             flowerActivity.ActivityFinished += FlowerFinished;
+            
+            goalText.text = "<b>Obiettivo:</b> Parla con l'ape bottinatrice vicino all'entrata";
             return;
         }
+        
+        goalText.text = "<b>Obiettivo:</b> Parla con l'ape bottinatrice vicino all'entrata"; 
         
         foragingBee.OnDialogueStarted += DialogueStarted;
         nurseBee.OnDialogueStarted += DialogueStarted;
@@ -54,6 +66,7 @@ public class Master: MonoBehaviour
         undertakerBee.OnDialogueFinished += DialogueFinished;
 
         nurseActivity.ActivityFinished += NurseFinished;
+        nurseActivity.OnStartActivity += NurseInit;
         undertakerActivity.ActivityFinished += UndertakerFinished;
         
     }
@@ -80,24 +93,48 @@ public class Master: MonoBehaviour
         if (dialogueInfo.IndexNPC == 1 && !globalData.InsideDone)
         {
             if (foragingBee.HasCompletedActivity2)
+            {
+                goalText.text = "<b>Obiettivo:</b> Esci dall'alveare";
                 exit.CanExit = true;
+            }
             else
             {
                 nurseBee.HasCompletedActivity1 = true;
                 globalData.FirstTalkComplete = true;
+                goalText.text = "<b>Obiettivo:</b> Cerca l'ape nutrice";
             }
         }
 
         // Nurse bee
-        if (dialogueInfo.IndexNPC == 2 && nurseBee.HasCompletedActivity1)
+        if (dialogueInfo.IndexNPC == 2)
         {
-            nurseActivity.EnableActivity();
+            if (nurseBee.HasCompletedActivity1 && !nurseBee.HasCompletedActivity2)
+            {
+                nurseActivity.EnableActivity();
+                goalText.text = "<b>Obiettivo:</b> Sfama le larve";
+            }
+
+            if (nurseBee.HasCompletedActivity1 && nurseBee.HasCompletedActivity2)
+            {
+                goalText.text = "<b>Obiettivo:</b> Cerca l'ape spazzina"; 
+            }
         }
+        // if ()
 
         // Undertaker Bee
-        if (dialogueInfo.IndexNPC == 3 && undertakerBee.HasCompletedActivity1)
+        if (dialogueInfo.IndexNPC == 3)
         {
-            undertakerActivity.EnableActivity();
+            if (undertakerBee.HasCompletedActivity1 && !undertakerBee.HasCompletedActivity2)
+            {
+                undertakerActivity.EnableActivity();
+                undertakerActivity.StartActivity();
+                goalText.text = "<b>Obiettivo:</b> Butta i cadaveri nell'abisso";
+            }
+
+            if (undertakerBee.HasCompletedActivity1 && undertakerBee.HasCompletedActivity2)
+            {
+                goalText.text = "<b>Obiettivo:</b> Parla con l'ape bottinatrice vicino all'entrata"; 
+            }
         }
 
         // Foraging Bee Inside (when all activities are finished)
@@ -111,25 +148,37 @@ public class Master: MonoBehaviour
         {
             if (foragingBeeOutside.HasCompletedActivity2)
             {
+                goalText.text = "<b>Obiettivo:</b> Rientra nell'alveare";
                 exit.CanExit = true;
             }
             else
             {
                 Debug.Log("Master: Enabling Activity");
+                goalText.text = "<b>Obiettivo:</b> Cerca ed impollina i fiori";
                 flowerActivity.EnableActivity();
                 flowerActivity.StartActivity();
             }
         }
     }
 
+    private void NurseInit(bool status)
+    {
+        goalText.text = "<b>Obiettivo:</b> Sfama le larve";
+    }
+    
     private void NurseFinished(bool status)
     {
-        if (!status) return;
+        if (!status)
+        {
+            goalText.text = "Hai sbagliato troppe volte. Rifai l'attività"; 
+            return;
+        }
         
         nurseBee.HasCompletedActivity2 = true;
         foragingBee.HasCompletedActivity1 = true;
         undertakerBee.HasCompletedActivity1 = true;
         globalData.NurseComplete = true;
+        goalText.text = "<b>Obiettivo:</b> Parla con l'ape nutrice";
     }
 
     private void UndertakerFinished(bool status)
@@ -140,6 +189,7 @@ public class Master: MonoBehaviour
         globalData.CorpseComplete = true;
 
         nurseBee.DisableInteraction();
+        goalText.text = "<b>Obiettivo:</b> Parla con l'ape spazzina";
     }
 
     private void FlowerRunning(bool status)
@@ -152,6 +202,7 @@ public class Master: MonoBehaviour
     {
         if (!status) return;
         foragingBeeOutside.HasCompletedActivity2 = true;
+        goalText.text = "<b>Obiettivo:</b> Parla con l'ape bottinatrice";
         // flowerActivity.EnableActivity();
     }
 }

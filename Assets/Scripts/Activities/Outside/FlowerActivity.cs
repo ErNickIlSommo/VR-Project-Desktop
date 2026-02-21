@@ -2,11 +2,16 @@
 using System;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class FlowerActivity: MonoBehaviour, Activity
 {
     public Action<bool> ActivityRunning;
     public Action<bool> ActivityFinished;
+    
+    // Score HUD
+    [SerializeField] private CanvasGroup scoreCanvasGroup;
+    [SerializeField] private TextMeshProUGUI scoreText;
     
     // [SerializeField] private ActivityTrigger _trigger;
     [SerializeField] private List<Flower> flowers;
@@ -38,6 +43,8 @@ public class FlowerActivity: MonoBehaviour, Activity
 
         _pollinatedFlowers = 0;
         
+        scoreCanvasGroup.alpha = 1f;
+        scoreText.text = $"Fiori impollinati: {_pollinatedFlowers}/{flowers.Count}";
         // _trigger.DisableInteraction();
         _isActivityStarted = true;
         
@@ -60,6 +67,7 @@ public class FlowerActivity: MonoBehaviour, Activity
         if (!status) return;
 
         _pollinatedFlowers++;
+        scoreText.text = $"Fiori impollinati: {_pollinatedFlowers}/{flowers.Count}";
         flower.DisableInteraction();
         if (_pollinatedFlowers < flowers.Count)
         {
@@ -69,6 +77,7 @@ public class FlowerActivity: MonoBehaviour, Activity
         _isActivityStarted = false;
         _isActivityCompleted = true;
         _isActivityEnabled = false;
+        scoreCanvasGroup.alpha = 0f;
         if (ActivityFinished != null) ActivityFinished.Invoke(_isActivityCompleted);
     }
 }

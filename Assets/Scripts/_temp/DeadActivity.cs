@@ -1,12 +1,17 @@
 using System;
 using UnityEngine;
 using System.Collections.Generic;
+using TMPro;
 
 public class DeadActivity: MonoBehaviour, Activity
 {
     public Action<bool> ActivityFinished;
     
-    [SerializeField] private ActivityTrigger _trigger;
+    // Score HUD
+    [SerializeField] private CanvasGroup scoreCanvasGroup;
+    [SerializeField] private TextMeshProUGUI scoreText;
+    
+    // [SerializeField] private ActivityTrigger _trigger;
     [SerializeField] private Abyss abyss;
     [SerializeField] private List<GameObject> corpses;
     
@@ -20,8 +25,8 @@ public class DeadActivity: MonoBehaviour, Activity
 
     private void Awake()
     {
-        _trigger.Activity = this;
-        _trigger.DisableInteraction();
+        // _trigger.Activity = this;
+        // _trigger.DisableInteraction();
         
         foreach (GameObject corps in corpses) corps.SetActive(false);
         _totalCorpse = corpses.Count;
@@ -32,7 +37,7 @@ public class DeadActivity: MonoBehaviour, Activity
     public void EnableActivity()
     {
         _isActivityEnabled = true;
-        _trigger.EnableInteraction();
+        // _trigger.EnableInteraction();
     }
     
     public bool StartActivity()
@@ -43,9 +48,11 @@ public class DeadActivity: MonoBehaviour, Activity
 
         _corpsesFound = 0;
         
-        _trigger.DisableInteraction();
+        // _trigger.DisableInteraction();
         foreach (GameObject corps in corpses) corps.SetActive(true);
         Debug.Log("DEAD ACTIVITY Started"); 
+        scoreCanvasGroup.alpha = 1;
+        scoreText.text = $"Cadaveri eliminati: {_corpsesFound}/{_totalCorpse}";
         return true;
     }
 
@@ -55,9 +62,11 @@ public class DeadActivity: MonoBehaviour, Activity
         Debug.Log("DEAD ACTIVITY: Corpse entered");
         
         _corpsesFound++;
+        scoreText.text = $"Cadaveri eliminati: {_corpsesFound}/{_totalCorpse}";
         if (_corpsesFound < _totalCorpse) return;
         _isActivityStarted = false;
         _isActivityCompleted = true;
+        scoreCanvasGroup.alpha = 0;
         if (ActivityFinished != null) ActivityFinished.Invoke(_isActivityCompleted);
     }
     
