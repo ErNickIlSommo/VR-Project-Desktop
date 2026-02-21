@@ -15,5 +15,5 @@ MonoBehaviour:
   entries:
   - flowerState: 0
     sprite: {fileID: 21300000, guid: 16a847d0fc8a7bf4088ca84c982cdb4d, type: 3}
-  - flowerState: 0
-    sprite: {fileID: 0}
+  - flowerState: 1
+    sprite: {fileID: 21300000, guid: 8245773042b63504da51012661e9a364, type: 3}
