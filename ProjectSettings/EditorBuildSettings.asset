@@ -12,7 +12,7 @@ EditorBuildSettings:
     path: Assets/Scenes/TitleScreen.unity
     guid: 5cc63fc9af722264dabe398df709e91e
   - enabled: 1
-    path: Assets/Scenes/Garden__temp.unity
+    path: Assets/Scenes/Garden.unity
     guid: 818f77091def7014ea3524fc93ab14a8
   - enabled: 1
     path: Assets/Scenes/Alveare.unity

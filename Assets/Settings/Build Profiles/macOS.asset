@@ -21,11 +21,9 @@ MonoBehaviour:
   m_OverrideGlobalSceneList: 1
   m_Scenes:
   - m_enabled: 1
-    m_path: Assets/Scenes/_Temp/Test/TEMP_Master_Interior.unity
+    m_path: Assets/Scenes/Garden.unity
   - m_enabled: 1
-    m_path: Assets/Scenes/_Temp/Test/OutsideScene_TEMP.unity
-  - m_enabled: 1
-    m_path: Assets/Scenes/_Temp/Test/Final_TEMP.unity
+    m_path: Assets/Scenes/EndScreen.unity
   m_HasScriptingDefines: 0
   m_ScriptingDefines: []
   m_PlayerSettingsYaml:
