@@ -226,4 +226,6 @@ public class DialogueNPCInside : GeneralDialogue, IInteractable
     {
         gameObject.layer =  layer;
     }
+    
+    
 }

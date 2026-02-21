@@ -17,4 +17,14 @@ public class CubeInteraction : MonoBehaviour, IInteractable
     {
         throw new System.NotImplementedException();
     }
+
+    public void UIShow(Interactor interactor)
+    {
+        throw new System.NotImplementedException();
+    }
+
+    public void UIHide(Interactor interactor)
+    {
+        throw new System.NotImplementedException();
+    }
 }

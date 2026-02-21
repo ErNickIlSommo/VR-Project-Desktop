@@ -38,16 +38,16 @@ MonoBehaviour:
     _shouldProcessed: 0
   - _line: Urgh, e va bene.
     _shouldProcessed: 0
-  - _line: Per muoverti usa i comandi [Move],
+  - _line: Per muoverti usa i tasti W, A, S, D,
     _shouldProcessed: 1
-  - _line: Usa [Interact] per interagire.
+  - _line: Usa R per interagire.
     _shouldProcessed: 1
   _otherLines:
   - _line: Ancora qui?
     _shouldProcessed: 0
-  - _line: "Come ti ho gi\xE0 detto, usa [Move] per muoverti"
+  - _line: "Come ti ho gi\xE0 detto, usa i tasti W, A, S, D per muoverti"
     _shouldProcessed: 1
-  - _line: e [Interact] per interagire.
+  - _line: e premi R per interagire.
     _shouldProcessed: 1
   - _line: Adesso vai. Il secondo piano non si avvicina da solo.
     _shouldProcessed: 0

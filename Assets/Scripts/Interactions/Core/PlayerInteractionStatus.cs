@@ -22,10 +22,15 @@ public class PlayerInteractionStatus : MonoBehaviour
     public GrabbableObjectData ObjectData => _objectData;
 
     private PlayerAnimationController _animationController;
+    
+    private CharacterController _characterController;
+    
+    public CharacterController CharacterController => _characterController;
 
     private void Awake()
     {
         _animationController = GetComponent<PlayerAnimationController>();
+        _characterController = GetComponent<CharacterController>();
     }
 
     public void SetGrabbedObject()

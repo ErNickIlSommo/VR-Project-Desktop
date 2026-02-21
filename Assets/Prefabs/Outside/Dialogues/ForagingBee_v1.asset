@@ -25,21 +25,20 @@ MonoBehaviour:
     _shouldProcessed: 0
   - _line: Ce la fai a volare?
     _shouldProcessed: 0
-  - _line: 'dovresti essere abbastanza grande per farlo: premi [Fly] per sbattere
-      le ali per prendere il volo.'
+  - _line: 'dovresti essere abbastanza grande per farlo: premi E per salire e Q per
+      scendere.'
     _shouldProcessed: 1
-  - _line: Trova i fiori in zona, facci sopra e usa [Interact] per raccoglier il
-      polline
+  - _line: Trova i fiori in zona, facci sopra e premi il tasto R per raccogliere
+      il polline
     _shouldProcessed: 1
   - _line: "Vedrai che sar\xE0 facile. Ora va!"
     _shouldProcessed: 0
   _otherLines:
   - _line: "Dai, non aver paura non \xE8 cos\xEC difficile."
     _shouldProcessed: 0
-  - _line: Utilizza il tasto [Fly] per sbattere le ali e prendere il volo.
+  - _line: Premi E per salire e Q per scendere.
     _shouldProcessed: 1
-  - _line: Trova i fiori in zona, facci sopra e usa [Interact] per raccoglier il
-      polline
+  - _line: Trova i fiori in zona, facci sopra e usa R per raccoglier il polline
     _shouldProcessed: 1
   - _line: "Vedrai che sar\xE0 facile. Ora va!"
     _shouldProcessed: 0
