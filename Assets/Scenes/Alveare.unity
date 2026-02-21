@@ -6092,6 +6092,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LarvaAnimationController
   animator: {fileID: 217486663}
+  source: {fileID: 0}
+  requestClip: {fileID: 0}
+  audioClip: {fileID: 0}
+  refuseClip: {fileID: 0}
 --- !u!95 &217486663
 Animator:
   serializedVersion: 7
@@ -11671,13 +11675,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9506d310652e80e4e863f0842d7ecfd4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BillboardUI
-  cloud: {fileID: 0}
-  request: {fileID: 0}
-  ok: {fileID: 0}
-  nope: {fileID: 0}
-  beebread: {fileID: 0}
-  royaljelly: {fileID: 0}
-  water: {fileID: 0}
 --- !u!114 &417273040
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11855,6 +11852,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LarvaAnimationController
   animator: {fileID: 417618252}
+  source: {fileID: 0}
+  requestClip: {fileID: 0}
+  audioClip: {fileID: 0}
+  refuseClip: {fileID: 0}
 --- !u!95 &417618252
 Animator:
   serializedVersion: 7
@@ -12432,6 +12433,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LarvaAnimationController
   animator: {fileID: 425462598}
+  source: {fileID: 0}
+  requestClip: {fileID: 0}
+  audioClip: {fileID: 0}
+  refuseClip: {fileID: 0}
 --- !u!95 &425462598
 Animator:
   serializedVersion: 7
@@ -17512,6 +17517,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LarvaAnimationController
   animator: {fileID: 628010045}
+  source: {fileID: 0}
+  requestClip: {fileID: 0}
+  audioClip: {fileID: 0}
+  refuseClip: {fileID: 0}
 --- !u!95 &628010045
 Animator:
   serializedVersion: 7
@@ -23957,6 +23966,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LarvaAnimationController
   animator: {fileID: 920827090}
+  source: {fileID: 0}
+  requestClip: {fileID: 0}
+  audioClip: {fileID: 0}
+  refuseClip: {fileID: 0}
 --- !u!95 &920827090
 Animator:
   serializedVersion: 7
@@ -25760,6 +25773,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LarvaAnimationController
   animator: {fileID: 987305126}
+  source: {fileID: 0}
+  requestClip: {fileID: 0}
+  audioClip: {fileID: 0}
+  refuseClip: {fileID: 0}
 --- !u!95 &987305126
 Animator:
   serializedVersion: 7
@@ -26100,6 +26117,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LarvaAnimationController
   animator: {fileID: 994228909}
+  source: {fileID: 0}
+  requestClip: {fileID: 0}
+  audioClip: {fileID: 0}
+  refuseClip: {fileID: 0}
 --- !u!95 &994228909
 Animator:
   serializedVersion: 7
@@ -28509,6 +28530,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LarvaAnimationController
   animator: {fileID: 1070225417}
+  source: {fileID: 0}
+  requestClip: {fileID: 0}
+  audioClip: {fileID: 0}
+  refuseClip: {fileID: 0}
 --- !u!95 &1070225417
 Animator:
   serializedVersion: 7
@@ -33864,6 +33889,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LarvaAnimationController
   animator: {fileID: 1330643354}
+  source: {fileID: 0}
+  requestClip: {fileID: 0}
+  audioClip: {fileID: 0}
+  refuseClip: {fileID: 0}
 --- !u!95 &1330643354
 Animator:
   serializedVersion: 7
@@ -36589,6 +36618,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LarvaAnimationController
   animator: {fileID: 1423131698}
+  source: {fileID: 0}
+  requestClip: {fileID: 0}
+  audioClip: {fileID: 0}
+  refuseClip: {fileID: 0}
 --- !u!95 &1423131698
 Animator:
   serializedVersion: 7
@@ -38014,6 +38047,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LarvaAnimationController
   animator: {fileID: 1443830788}
+  source: {fileID: 0}
+  requestClip: {fileID: 0}
+  audioClip: {fileID: 0}
+  refuseClip: {fileID: 0}
 --- !u!95 &1443830788
 Animator:
   serializedVersion: 7
@@ -40455,7 +40492,6 @@ MonoBehaviour:
   foragingBeeInside: {fileID: 2075992344}
   nurseBee: {fileID: 180209816}
   corpseBee: {fileID: 1336807005}
-  nurseActivity: {fileID: 1149604931}
   corpseActivity: {fileID: 1053185775}
   testGlobal: 0
   globalData: {fileID: 11400000, guid: 3b2c1aabcf6134d7f9a935732cbc7d2e, type: 2}
@@ -41838,6 +41874,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LarvaAnimationController
   animator: {fileID: 1628569260}
+  source: {fileID: 0}
+  requestClip: {fileID: 0}
+  audioClip: {fileID: 0}
+  refuseClip: {fileID: 0}
 --- !u!95 &1628569260
 Animator:
   serializedVersion: 7
@@ -46281,6 +46321,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LarvaAnimationController
   animator: {fileID: 1800564370}
+  source: {fileID: 0}
+  requestClip: {fileID: 0}
+  audioClip: {fileID: 0}
+  refuseClip: {fileID: 0}
 --- !u!95 &1800564370
 Animator:
   serializedVersion: 7
@@ -46708,6 +46752,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LarvaAnimationController
   animator: {fileID: 1823971450}
+  source: {fileID: 0}
+  requestClip: {fileID: 0}
+  audioClip: {fileID: 0}
+  refuseClip: {fileID: 0}
 --- !u!95 &1823971450
 Animator:
   serializedVersion: 7
@@ -50635,6 +50683,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LarvaAnimationController
   animator: {fileID: 1976233698}
+  source: {fileID: 0}
+  requestClip: {fileID: 0}
+  audioClip: {fileID: 0}
+  refuseClip: {fileID: 0}
 --- !u!95 &1976233698
 Animator:
   serializedVersion: 7
@@ -63840,6 +63892,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LarvaAnimationController
   animator: {fileID: 8590724897300938513}
+  source: {fileID: 0}
+  requestClip: {fileID: 0}
+  audioClip: {fileID: 0}
+  refuseClip: {fileID: 0}
 --- !u!114 &8590724897300938512
 MonoBehaviour:
   m_ObjectHideFlags: 0
