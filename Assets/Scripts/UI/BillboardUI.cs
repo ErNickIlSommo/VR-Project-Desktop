@@ -18,7 +18,7 @@ public class BillboardUI : MonoBehaviour
     {
         if (!targetCamera)
         {
-            Debug.Log("Ciao");
+            // Debug.Log("Ciao");
             return;
         }
 
