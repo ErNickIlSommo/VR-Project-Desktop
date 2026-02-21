@@ -7,7 +7,7 @@ public class GeneralDialogue : MonoBehaviour
 
     protected void Awake()
     {
-        _canvas.SetActive(false);
+        //_canvas.SetActive(false);
     }
 
     private void OnTriggerEnter(Collider other)

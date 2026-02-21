@@ -14,7 +14,7 @@ public class MainMenu : MonoBehaviour
     public void PlayGame()
     {
         _masterInitializer.Initialize();
-        SceneManager.LoadScene("Hive");
+        SceneManager.LoadScene("Alveare");
     }
 
     public void QuitGame()
