@@ -15185,7 +15185,8 @@ GameObject:
   - component: {fileID: 786071207}
   - component: {fileID: 786071210}
   - component: {fileID: 786071209}
-  - component: {fileID: 786071208}
+  - component: {fileID: 786071212}
+  - component: {fileID: 786071211}
   m_Layer: 0
   m_Name: InteractorTrigger
   m_TagString: Untagged
@@ -15203,32 +15204,11 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 1.05, z: 1.5}
-  m_LocalScale: {x: 1.8, y: 1.8, z: 1.5}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 2.4, y: 2.4, z: 2}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 6744020785613235033}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &786071208
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 786071206}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &786071209
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -15286,6 +15266,42 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 786071206}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &786071211
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 786071206}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18272c0cf33f5b248aa1b287d9778b95, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InteractorTrigger
+  _interactableMask:
+    serializedVersion: 2
+    m_Bits: 64
+--- !u!135 &786071212
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 786071206}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0.000061035156}
 --- !u!1001 &792643829
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -23204,8 +23220,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5cae9ff00468c451087d5c41d274b622, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::OutsideMaster
-  dialoguePanel: {fileID: 1958583989}
-  dialogueText: {fileID: 1958583988}
+  dialoguePanel: {fileID: 0}
+  dialogueText: {fileID: 0}
   globalData: {fileID: 11400000, guid: 3b2c1aabcf6134d7f9a935732cbc7d2e, type: 2}
   foragingBee: {fileID: 0}
   exit: {fileID: 0}
@@ -36542,22 +36558,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 882fb2ff040fb3f4d893f6748e3d4523, type: 3}
---- !u!114 &1958583988 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3299720322261704819, guid: 882fb2ff040fb3f4d893f6748e3d4523, type: 3}
-  m_PrefabInstance: {fileID: 1958583987}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
---- !u!1 &1958583989 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6732575821230958444, guid: 882fb2ff040fb3f4d893f6748e3d4523, type: 3}
-  m_PrefabInstance: {fileID: 1958583987}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1967533165
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -46396,7 +46396,7 @@ GameObject:
   - component: {fileID: 6744020785613235041}
   - component: {fileID: 6744020785613235042}
   m_Layer: 0
-  m_Name: BeeCharacter_02
+  m_Name: Player Bee
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -46782,6 +46782,7 @@ Transform:
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 612899597}
+  - {fileID: 786071207}
   - {fileID: 5392964037854240342}
   - {fileID: 2388955637057336263}
   - {fileID: 7190011721244806792}
@@ -46795,7 +46796,6 @@ Transform:
   - {fileID: 267107250924267324}
   - {fileID: 3985803996708544986}
   - {fileID: 1448571504604054600}
-  - {fileID: 786071207}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: -165, z: 0}
 --- !u!114 &6744020785613235034

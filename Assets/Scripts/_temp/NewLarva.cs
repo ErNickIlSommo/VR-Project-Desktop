@@ -45,9 +45,9 @@ public class NewLarva: MonoBehaviour, IInteractable
         
         int objectDataId = interactor.PlayerInteractionStatus.ObjectData.Id;
         
-        BlockMovement(interactor);
+        //BlockMovement(interactor);
         interactor.PlayerInteractionStatus.GrabbableObject.ForceDropAndDestroy(interactor);
-        UnlockMovement(interactor);
+        //UnlockMovement(interactor);
         
         if (_requestedFood.Id == objectDataId)
         {

@@ -5,10 +5,16 @@ public class ActivityTrigger: MonoBehaviour, IInteractable
 {
     private Activity _activity;
     [SerializeField] private bool _canInteract = false;
+    [SerializeField] private CanvasGroup canvas;
 
     private Interactor _interactor;
     
     public Activity Activity { get { return _activity; } set { _activity = value; } }
+
+    private void Awake()
+    {
+        canvas.alpha = 0;
+    }
 
     private void OnTriggerEnter(Collider other)
     {
@@ -17,6 +23,7 @@ public class ActivityTrigger: MonoBehaviour, IInteractable
         Debug.Log("Player entered");
         // Update ui
         Debug.Log(other.name);
+        canvas.alpha = 1;
     }
 
     private void OnTriggerExit(Collider other)
@@ -24,6 +31,7 @@ public class ActivityTrigger: MonoBehaviour, IInteractable
         if (!_canInteract) return;
         if (!other.CompareTag("Player")) return;
         // update UI
+        canvas.alpha = 0;
     }
 
     public bool Interact(Interactor interactor)

@@ -16,7 +16,11 @@ public class BillboardUI : MonoBehaviour
 
     void LateUpdate()
     {
-        if (!targetCamera) return;
+        if (!targetCamera)
+        {
+            Debug.Log("Ciao");
+            return;
+        }
 
         Vector3 dir = transform.position - targetCamera.transform.position;
 

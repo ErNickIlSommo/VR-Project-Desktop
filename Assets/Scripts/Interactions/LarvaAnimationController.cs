@@ -6,7 +6,7 @@ public class LarvaAnimationController : MonoBehaviour
     [SerializeField] private AudioSource source;
 
     [SerializeField] private AudioClip requestClip;
-    [SerializeField] private AudioClip audioClip;
+    [SerializeField] private AudioClip acceptClip;
     [SerializeField] private AudioClip refuseClip;
 
     public void RequestFood()
