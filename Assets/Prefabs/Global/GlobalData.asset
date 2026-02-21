@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::GlobalData
   firstTalkComplete: 1
   nurseComplete: 1
-  corpseComplete: 1
+  corpseComplete: 0
   foragingComplete: 0
-  insideDone: 1
+  insideDone: 0

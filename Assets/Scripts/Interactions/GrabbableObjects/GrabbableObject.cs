@@ -57,6 +57,7 @@ public class GrabbableObject : MonoBehaviour, IInteractable
 
     private void Drop(Interactor interactor)
     {
+        if (!interactor.PlayerInteractionStatus.CharacterController.isGrounded) return;
         if (_rb)
         {
             _rb.isKinematic = false;
