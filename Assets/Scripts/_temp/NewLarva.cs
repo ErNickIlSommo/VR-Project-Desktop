@@ -1,6 +1,9 @@
 using System;
 using System.Collections;
+using Unity.Mathematics;
 using UnityEngine;
+using Random = UnityEngine.Random;
+
 using UnityEngine.InputSystem;
 
 public class NewLarva: MonoBehaviour, IInteractable
@@ -26,6 +29,14 @@ public class NewLarva: MonoBehaviour, IInteractable
     {
         ui = GetComponent<EntityUI>();
         animationController = GetComponent<LarvaAnimationController>();
+        float rand = Random.Range(0, 2);
+        StartCoroutine(StartAnimation(rand));
+    }
+
+    private IEnumerator StartAnimation(float rand)
+    {
+        yield return new WaitForSeconds(rand);
+        animationController.Reset();
     }
 
     private void Start()
