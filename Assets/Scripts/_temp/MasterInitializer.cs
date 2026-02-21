@@ -5,7 +5,16 @@ public class MasterInitializer : MonoBehaviour
 {
    [SerializeField] GlobalData globalData;
 
-   private void Awake()
+   /*private void Awake()
+   {
+      globalData.FirstTalkComplete = false;
+      globalData.NurseComplete = false;
+      globalData.CorpseComplete = false;
+      globalData.ForagingComplete = false;
+      globalData.InsideDone = false;
+   }*/
+
+   public void Initialize()
    {
       globalData.FirstTalkComplete = false;
       globalData.NurseComplete = false;
