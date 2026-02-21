@@ -10,6 +10,7 @@ public class Exit : MonoBehaviour
     // [SerializeField] private Fader fader;
     [SerializeField] private Animator transition;
     [SerializeField] private float transitionTime = 2f;
+    [SerializeField] private GlobalData globalData;
 
     private bool _canExit = false;
     
@@ -51,6 +52,7 @@ public class Exit : MonoBehaviour
         yield return new WaitForSeconds(transitionTime);
         
         // yield return fader.FadeOut();
+        globalData.InsideDone = true;
         SceneManager.LoadScene(sceneName);
     }
 }

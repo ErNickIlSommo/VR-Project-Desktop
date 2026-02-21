@@ -92,7 +92,11 @@ public class DialogueNPCInside : GeneralDialogue, IInteractable
         _dialogueIndex = -1;
         _dialogueDataIndex = 0;
     }
-    
+
+    public void DisableInteraction()
+    {
+        _canInteract = false;
+    }
     
     public bool Interact(Interactor interactor)
     {

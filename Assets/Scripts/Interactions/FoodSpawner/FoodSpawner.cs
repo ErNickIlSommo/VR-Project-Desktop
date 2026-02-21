@@ -16,7 +16,7 @@ public class FoodSpawner : MonoBehaviour, IInteractable
     [SerializeField] private float _timer;
 
     [SerializeField] private bool _isInCooldown = false;
-    private bool _canInteract = true;
+    [SerializeField] private bool _canInteract = true;
 
     private void Awake()
     {

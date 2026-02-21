@@ -22,15 +22,7 @@ public class InteriorMaster : MonoBehaviour
     [SerializeField] private GlobalData globalData;
     [SerializeField] private Exit exit;
 
-    public bool TestGlobal
-    {
-        get => testGlobal;
-        set
-        {
-            testGlobal = value;
-            globalData.TestVariable = value;
-        }
-    }
+    
 
     private void Awake()
     {

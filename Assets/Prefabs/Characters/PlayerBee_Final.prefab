@@ -3499,7 +3499,7 @@ GameObject:
   - component: {fileID: 7853231466017690504}
   - component: {fileID: 4248333757868107282}
   m_Layer: 0
-  m_Name: PlayerBee
+  m_Name: PlayerBee_Final
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
