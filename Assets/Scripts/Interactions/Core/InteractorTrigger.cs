@@ -17,6 +17,7 @@ public class InteractorTrigger : MonoBehaviour
         var interactable = other.GetComponent<IInteractable>();
         if (interactable == null) return;
 
+
         _detectedInteractables.Add(interactable);
 
     }

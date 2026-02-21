@@ -69,4 +69,14 @@ public class ActivityTrigger: MonoBehaviour, IInteractable
     public void UnlockMovement(Interactor interactor)
     {
     }
+
+    public void UIShow(Interactor interactor)
+    {
+        return;
+    }
+
+    public void UIHide(Interactor interactor)
+    {
+        return;
+    }
 }
