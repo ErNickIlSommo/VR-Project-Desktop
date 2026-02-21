@@ -23489,7 +23489,7 @@ MonoBehaviour:
       Enabled: 1
       Input:
         InputAction: {fileID: -4813682525108733414, guid: 2fadae8a29fe24f4eb259207adfcde23, type: 3}
-        Gain: 1
+        Gain: 0.8
         CancelDeltaTime: 1
       InputValue: 0
       Driver:
@@ -23500,7 +23500,7 @@ MonoBehaviour:
       Enabled: 1
       Input:
         InputAction: {fileID: -4813682525108733414, guid: 2fadae8a29fe24f4eb259207adfcde23, type: 3}
-        Gain: -1
+        Gain: 0.8
         CancelDeltaTime: 1
       InputValue: 0
       Driver:
@@ -26467,8 +26467,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 1.992}
-  m_SizeDelta: {x: 1, y: 1.3}
+  m_AnchoredPosition: {x: 0, y: 2.78}
+  m_SizeDelta: {x: 1, y: 1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!225 &1162614100
 CanvasGroup:
