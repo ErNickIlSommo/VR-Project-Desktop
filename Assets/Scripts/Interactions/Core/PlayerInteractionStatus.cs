@@ -21,6 +21,13 @@ public class PlayerInteractionStatus : MonoBehaviour
     private GrabbableObjectData _objectData;
     public GrabbableObjectData ObjectData => _objectData;
 
+    private PlayerAnimationController _animationController;
+
+    private void Awake()
+    {
+        _animationController = GetComponent<PlayerAnimationController>();
+    }
+
     public void SetGrabbedObject()
     {
         _grabbedObjectTransform = null;
@@ -28,6 +35,7 @@ public class PlayerInteractionStatus : MonoBehaviour
         _objectData = null;
         _grabbedObject = null;
         _hasGrabbed = false;
+        _animationController.Drop();
     }
 
     public void SetGrabbedObject(GrabbableObject grabbableObject)
@@ -37,8 +45,9 @@ public class PlayerInteractionStatus : MonoBehaviour
         _grabbedObject = grabbableObject.gameObject;
         _grabbableObject = grabbableObject;
         _hasGrabbed = !grabbableObject.IsDropped;
+        _animationController.Grab();
     }
-    
+
     public void SetGrabbedObject(Transform grabbedTransform, GrabbableObjectData data, GrabbableObject grabbableObject, bool isGrabbing)
     {
         _grabbedObjectTransform = grabbedTransform;

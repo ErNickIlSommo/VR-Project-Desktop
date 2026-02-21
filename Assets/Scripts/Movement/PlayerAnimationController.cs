@@ -62,4 +62,14 @@ public class PlayerAnimationController : MonoBehaviour
 
         lastState = currentState;
     }
+
+    public void Grab()
+    {
+        animator.SetTrigger("Grab");
+    }
+
+    public void Drop()
+    {
+        animator.SetTrigger("Drop");
+    }
 }

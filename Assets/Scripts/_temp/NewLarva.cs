@@ -9,6 +9,8 @@ public class NewLarva: MonoBehaviour, IInteractable
     
     private bool _canInteract = false;
     private GrabbableObjectData _requestedFood;
+
+    private LarvaAnimationController animationController;
     
     public enum RequestStatus
     {
@@ -23,6 +25,12 @@ public class NewLarva: MonoBehaviour, IInteractable
     private void Awake()
     {
         ui = GetComponent<EntityUI>();
+        animationController = GetComponent<LarvaAnimationController>();
+    }
+
+    private void Start()
+    {
+        
     }
 
     public void EnableInteraction()
@@ -54,12 +62,14 @@ public class NewLarva: MonoBehaviour, IInteractable
             _requestStatus = RequestStatus.CORRECT;
             // Update UI
             ui.UpdateImage(LarvaSituation.Correct);
+            animationController.AcceptFood();
             return true;
         }
 
         _requestStatus = RequestStatus.WRONG;
         // Update UI
-        ui.UpdateImage(LarvaSituation.Wrong); 
+        ui.UpdateImage(LarvaSituation.Wrong);
+        animationController.RefuseFood();
         _canInteract = false;
         return true;
     }
@@ -76,6 +86,7 @@ public class NewLarva: MonoBehaviour, IInteractable
         if (_requestedFood.Id == 5) ui.UpdateImage(LarvaSituation.Water);
         
         ui.Show();
+        animationController.RequestFood();
 
         float timer = 0f;
         while (timer < cooldown)
@@ -90,7 +101,8 @@ public class NewLarva: MonoBehaviour, IInteractable
         {
             _requestStatus = RequestStatus.WRONG;
             ui.UpdateImage(LarvaSituation.Wrong);
-            
+            animationController.RefuseFood();
+
         }
         yield return new WaitForSeconds(2f); 
         ui.Hide();

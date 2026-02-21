@@ -1,6 +1,7 @@
 using System;
-using UnityEngine;
 using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.Audio;
 using UnityEngine.InputSystem;
 
 public class DialogueNPCInside : GeneralDialogue, IInteractable
@@ -31,6 +32,10 @@ public class DialogueNPCInside : GeneralDialogue, IInteractable
     [SerializeField] private bool _isMainDialogueDone;
     [SerializeField] private bool _hasCompletedActivity1;
     [SerializeField] private bool _hasCompletedActivity2;
+
+    [SerializeField] private AudioSource audioSource;
+    [SerializeField] private AudioClip talking_SFX;
+    [SerializeField] private Animator animator;
 
     public bool HasCompletedActivity1
     {
@@ -109,8 +114,11 @@ public class DialogueNPCInside : GeneralDialogue, IInteractable
         if (_dialogueIndex == 0)
         {
             BlockMovement(interactor);
-            
-            if(OnDialogueStarted != null) OnDialogueStarted.Invoke(
+
+            audioSource.PlayOneShot(talking_SFX);
+            animator.SetBool("Talking", true);
+
+            if (OnDialogueStarted != null) OnDialogueStarted.Invoke(
                 new DialogEventInfo(
                     indexNPC,
                     _speaker,
@@ -121,6 +129,7 @@ public class DialogueNPCInside : GeneralDialogue, IInteractable
 
         if (IsDialogueFinished())
         {
+            animator.SetBool("Talking", false);
             UnlockMovement(interactor);
             return true;
         }
