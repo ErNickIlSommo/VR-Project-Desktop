@@ -115,6 +115,8 @@ public class NewLarva: MonoBehaviour, IInteractable
             animationController.RefuseFood();
 
         }
+
+        _canInteract = false;
         yield return new WaitForSeconds(2f); 
         ui.Hide();
     }
